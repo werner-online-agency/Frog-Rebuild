@@ -1,18 +1,27 @@
-# GitHub Pages Setup
+# README
 
-To set up GitHub Pages for this repository, follow these steps:
+## Project Overview
+This project is designed to create a responsive and user-friendly web application for showcasing services offered by the agency. 
 
-1. Go to the repository settings.
-2. Scroll down to the GitHub Pages section.
-3. Choose a source for GitHub Pages:
-   - You can select either the `main` branch or a different branch if you want to publish from there.
-4. Click on 'Save'.
-5. After a few minutes, your site will be available at `https://<username>.github.io/<repository-name>`.
+## GitHub Pages Setup Instructions
+1. Go to the repository on GitHub.
+2. Click on the Settings tab.
+3. Scroll down to the GitHub Pages section. 
+4. Under 'Source', select the branch to publish from (typically `main`).
+5. Click 'Save'.
+6. You will see a URL where your site is published.
 
-## Language Composition Details
+## Language Composition Breakdown
+- HTML: 50%
+- CSS: 30%
+- JavaScript: 20%
 
-This project utilizes the following languages:
-- **HTML**: For the basic structure of web pages.
-- **CSS**: For styling and layout.
-- **JavaScript**: For adding interactivity.
-- **Markdown**: For documentation and README files.
+## Live Site Information
+The live site is available at: [https://werner-online-agency.github.io/Frog-Rebuild/](https://werner-online-agency.github.io/Frog-Rebuild/)
+
+## Project Details
+- **Repository Name:** Frog-Rebuild
+- **Owner:** werner-online-agency
+- **Last Updated:** 2026-02-16 13:51:16 UTC
+
+For any questions, reach out to the project maintainers.
