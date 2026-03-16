@@ -3,18 +3,55 @@
    Modern JavaScript for Enhanced UX
    ============================================ */
 
+const FroggApp = {
+    hasInitialized: false,
+    elementorHookBound: false,
+
+    initAll() {
+        if (this.hasInitialized) return;
+
+        Preloader.init();
+        Header.init();
+        MobileNav.init();
+        SmoothScroll.init();
+        ScrollAnimations.init();
+        CounterAnimation.init();
+        TestimonialSlider.init();
+        FormHandlers.init();
+        BackToTop.init();
+        ServicesTabs.init();
+        ResourcesSection.init();
+
+        this.hasInitialized = true;
+    },
+
+    reinitDynamicUI() {
+        Header.init();
+        MobileNav.init();
+        ServicesTabs.init();
+    },
+
+    bindElementor() {
+        if (this.elementorHookBound) return;
+        this.elementorHookBound = true;
+
+        if (!window.jQuery) return;
+
+        window.jQuery(window).on('elementor/frontend/init', () => {
+            if (!window.elementorFrontend?.hooks) return;
+
+            window.elementorFrontend.hooks.addAction('frontend/element_ready/global', () => {
+                this.reinitDynamicUI();
+            });
+
+            this.reinitDynamicUI();
+        });
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize all modules
-    Preloader.init();
-    Header.init();
-    MobileNav.init();
-    SmoothScroll.init();
-    ScrollAnimations.init();
-    CounterAnimation.init();
-    TestimonialSlider.init();
-    FormHandlers.init();
-    BackToTop.init();
-    ServicesTabs.init();
+    FroggApp.initAll();
+    FroggApp.bindElementor();
 });
 
 /* ============================================
@@ -46,13 +83,17 @@ const Preloader = {
 const Header = {
     header: null,
     lastScroll: 0,
+    isBound: false,
 
     init() {
-        this.header = document.getElementById('header');
+        this.header = document.querySelector('.frogg-header') || document.getElementById('header');
         if (!this.header) return;
 
         this.handleScroll();
+        if (this.isBound) return;
+
         window.addEventListener('scroll', () => this.handleScroll(), { passive: true });
+        this.isBound = true;
     },
 
     handleScroll() {
@@ -75,26 +116,34 @@ const MobileNav = {
     toggle: null,
     nav: null,
     navLinks: null,
+    isEscapeBound: false,
 
     init() {
-        this.toggle = document.getElementById('mobileToggle');
-        this.nav = document.getElementById('nav');
-        this.navLinks = document.querySelectorAll('.nav-link');
+        this.toggle = document.getElementById('mobileToggle') || document.querySelector('.frogg-mobile-toggle');
+        this.nav = document.getElementById('nav') || document.querySelector('.frogg-mobile-menu');
+        this.navLinks = document.querySelectorAll('.nav-link, .frogg-mobile-menu a');
 
         if (!this.toggle || !this.nav) return;
+        if (this.toggle.dataset.froggBound === '1') return;
 
         this.toggle.addEventListener('click', () => this.toggleMenu());
+        this.toggle.dataset.froggBound = '1';
         
         this.navLinks.forEach(link => {
+            if (link.dataset.froggNavBound === '1') return;
             link.addEventListener('click', () => this.closeMenu());
+            link.dataset.froggNavBound = '1';
         });
 
         // Close on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && this.nav.classList.contains('active')) {
-                this.closeMenu();
-            }
-        });
+        if (!this.isEscapeBound) {
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && this.nav?.classList.contains('active')) {
+                    this.closeMenu();
+                }
+            });
+            this.isEscapeBound = true;
+        }
     },
 
     toggleMenu() {
@@ -418,15 +467,34 @@ const TestimonialSlider = {
    SERVICES TABS
    ============================================ */
 const ServicesTabs = {
+    getPanelId(btn) {
+        const dataTab = btn.dataset.tab;
+        if (dataTab) return dataTab;
+
+        const dataTarget = btn.dataset.target;
+        if (dataTarget) return dataTarget.replace('#', '');
+
+        const tabId = btn.id || '';
+        if (tabId.startsWith('new-tab-')) {
+            return `new-panel-${tabId.replace('new-tab-', '')}`;
+        }
+
+        return null;
+    },
+
     init() {
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabPanels = document.querySelectorAll('.tab-panel');
+        // Support old and Elementor/new tab styles
+        const tabBtns = document.querySelectorAll('.tab-btn, .tab-btn-v2, .new-tab-btn');
+        const tabPanels = document.querySelectorAll('.tab-panel, .tab-panel-v2, .new-tab-panel');
         
         if (!tabBtns.length) return;
         
         tabBtns.forEach(btn => {
+            if (btn.dataset.froggTabBound === '1') return;
+
             btn.addEventListener('click', () => {
-                const tabId = btn.dataset.tab;
+                const tabId = this.getPanelId(btn);
+                if (!tabId) return;
                 
                 // Remove active class from all buttons and panels
                 tabBtns.forEach(b => b.classList.remove('active'));
@@ -439,6 +507,8 @@ const ServicesTabs = {
                     panel.classList.add('active');
                 }
             });
+
+            btn.dataset.froggTabBound = '1';
         });
     }
 };
@@ -741,3 +811,277 @@ const MagneticButtons = {
 //     CustomCursor.init();
 //     MagneticButtons.init();
 // });
+
+/* ============================================
+   RESOURCES SECTION - INTERACTIVE FEATURES
+   ============================================ */
+const ResourcesSection = {
+    carousel: null,
+    currentSlide: 0,
+    totalSlides: 0,
+    autoplayInterval: null,
+    
+    init() {
+        this.initCarousel();
+        this.initFilters();
+        this.initParticles();
+        this.initStatsAnimation();
+        this.initNewsletterForm();
+    },
+    
+    // Carousel Functionality
+    initCarousel() {
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.featured-slide');
+        const prevBtn = document.getElementById('carouselPrev');
+        const nextBtn = document.getElementById('carouselNext');
+        const dotsContainer = document.getElementById('carouselDots');
+        
+        if (!track || slides.length === 0) return;
+        
+        this.totalSlides = slides.length;
+        
+        // Set up event listeners
+        if (prevBtn) prevBtn.addEventListener('click', () => this.prevSlide());
+        if (nextBtn) nextBtn.addEventListener('click', () => this.nextSlide());
+        
+        // Dot navigation
+        if (dotsContainer) {
+            const dots = dotsContainer.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => this.goToSlide(index));
+            });
+        }
+        
+        // Start autoplay
+        this.startAutoplay();
+        
+        // Pause on hover
+        const carouselWrapper = document.querySelector('.carousel-wrapper');
+        if (carouselWrapper) {
+            carouselWrapper.addEventListener('mouseenter', () => this.stopAutoplay());
+            carouselWrapper.addEventListener('mouseleave', () => this.startAutoplay());
+        }
+        
+        // Touch swipe support
+        this.initTouchSwipe(track);
+    },
+    
+    goToSlide(index) {
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.featured-slide');
+        const dots = document.querySelectorAll('.carousel-dots .dot');
+        
+        if (index < 0) index = this.totalSlides - 1;
+        if (index >= this.totalSlides) index = 0;
+        
+        this.currentSlide = index;
+        
+        // Update track position
+        track.style.transform = `translateX(-${index * 100}%)`;
+        
+        // Update active states
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+        
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    },
+    
+    nextSlide() {
+        this.goToSlide(this.currentSlide + 1);
+    },
+    
+    prevSlide() {
+        this.goToSlide(this.currentSlide - 1);
+    },
+    
+    startAutoplay() {
+        this.stopAutoplay();
+        this.autoplayInterval = setInterval(() => this.nextSlide(), 5000);
+    },
+    
+    stopAutoplay() {
+        if (this.autoplayInterval) {
+            clearInterval(this.autoplayInterval);
+            this.autoplayInterval = null;
+        }
+    },
+    
+    initTouchSwipe(track) {
+        let startX = 0;
+        let endX = 0;
+        
+        track.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        }, { passive: true });
+        
+        track.addEventListener('touchmove', (e) => {
+            endX = e.touches[0].clientX;
+        }, { passive: true });
+        
+        track.addEventListener('touchend', () => {
+            const diff = startX - endX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    this.nextSlide();
+                } else {
+                    this.prevSlide();
+                }
+            }
+        });
+    },
+    
+    // Filter Functionality
+    initFilters() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.resource-card');
+        
+        if (filterBtns.length === 0 || cards.length === 0) return;
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+                
+                // Update active state
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Filter cards with animation
+                cards.forEach((card, index) => {
+                    const category = card.dataset.category;
+                    const shouldShow = filter === 'all' || category === filter;
+                    
+                    if (shouldShow) {
+                        card.classList.remove('hide');
+                        card.classList.add('show');
+                        card.style.animationDelay = `${index * 0.1}s`;
+                    } else {
+                        card.classList.add('hide');
+                        card.classList.remove('show');
+                    }
+                });
+            });
+        });
+    },
+    
+    // Floating Particles
+    initParticles() {
+        const container = document.getElementById('resourcesParticles');
+        if (!container) return;
+        
+        const particleCount = 30;
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'floating-particle';
+            particle.style.cssText = `
+                position: absolute;
+                width: ${Math.random() * 4 + 2}px;
+                height: ${Math.random() * 4 + 2}px;
+                background: rgba(22, 98, 237, ${Math.random() * 0.3 + 0.1});
+                border-radius: 50%;
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+                animation: particleFloat ${Math.random() * 10 + 15}s linear infinite;
+                animation-delay: ${Math.random() * -20}s;
+            `;
+            container.appendChild(particle);
+        }
+        
+        // Add keyframes dynamically
+        if (!document.getElementById('particleKeyframes')) {
+            const style = document.createElement('style');
+            style.id = 'particleKeyframes';
+            style.textContent = `
+                @keyframes particleFloat {
+                    0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+                    10% { opacity: 1; }
+                    90% { opacity: 1; }
+                    100% { transform: translate(${Math.random() > 0.5 ? '' : '-'}100px, -100vh) rotate(360deg); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    },
+    
+    // Stats Animation with Intersection Observer
+    initStatsAnimation() {
+        const statBoxes = document.querySelectorAll('.stat-box');
+        const statsSection = document.querySelector('.resources-stats');
+        
+        if (!statsSection || statBoxes.length === 0) return;
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    statBoxes.forEach((box, index) => {
+                        setTimeout(() => {
+                            box.classList.add('animated');
+                            
+                            // Animate counter
+                            const valueEl = box.querySelector('.stat-value');
+                            if (valueEl) {
+                                const target = parseInt(valueEl.dataset.count) || 0;
+                                this.animateCounter(valueEl, target);
+                            }
+                            
+                            // Animate progress bar
+                            const progressBar = box.querySelector('.progress-bar');
+                            if (progressBar) {
+                                const progress = progressBar.dataset.progress || 0;
+                                box.style.setProperty('--progress-width', `${progress}%`);
+                            }
+                        }, index * 150);
+                    });
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        observer.observe(statsSection);
+    },
+    
+    animateCounter(element, target) {
+        const duration = 2000;
+        const steps = 60;
+        const stepDuration = duration / steps;
+        const increment = target / steps;
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            element.textContent = Math.round(current).toLocaleString();
+        }, stepDuration);
+    },
+    
+    // Newsletter Form
+    initNewsletterForm() {
+        const form = document.getElementById('resourcesNewsletter');
+        if (!form) return;
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = form.querySelector('input[type="email"]');
+            const btn = form.querySelector('button');
+            
+            if (email && email.value) {
+                // Simulate submission
+                btn.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+                btn.style.background = '#22c55e';
+                email.value = '';
+                
+                setTimeout(() => {
+                    btn.innerHTML = 'Subscribe <i class="fas fa-paper-plane"></i>';
+                    btn.style.background = '';
+                }, 3000);
+            }
+        });
+    }
+};

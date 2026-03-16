@@ -1,0 +1,670 @@
+/* ============================================
+   FROGG SERVICES SECTION V2 - ELEMENTOR CSS
+   Container-based tabs (no deprecated widgets)
+   Add to Elementor > Custom CSS or 
+   WordPress Customizer > Additional CSS
+   ============================================ */
+
+/* CSS Custom Properties */
+:root {
+    --primary-50: #eff6ff;
+    --primary-100: #dbeafe;
+    --primary-400: #60a5fa;
+    --primary-500: #1662ed;
+    --primary-600: #1e40af;
+    --primary-700: #1e3a8a;
+    --accent-100: #fef3c7;
+    --gray-50: #f9fafb;
+    --gray-200: #e5e7eb;
+    --gray-600: #6b7280;
+    --gradient-primary: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-700) 100%);
+    --gradient-dark: linear-gradient(135deg, #111827 0%, #1e3a8a 100%);
+    --gradient-accent: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+}
+
+/* ============================================
+   SECTION BACKGROUND PATTERN
+   ============================================ */
+
+.frogg-services-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.services-bg-pattern {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.services-bg-pattern::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 20% 80%, var(--primary-100) 0%, transparent 30%),
+        radial-gradient(circle at 80% 20%, var(--accent-100) 0%, transparent 30%);
+    opacity: 0.5;
+}
+
+/* ============================================
+   SECTION HEADER STYLING
+   ============================================ */
+
+.section-tag {
+        display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--primary-50);
+    color: var(--primary-700);
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.section-tag-how {
+        display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--primary-100);
+    color: var(--primary-700);
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+
+.section-title {
+    line-height: 1.2 !important;
+}
+
+.gradient-text {
+    background: var(--gradient-primary) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    display: inline-block;
+}
+
+.section-subtitle {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   CONTAINER-BASED TABS (New Approach)
+   ============================================ */
+
+.services-tabs-wrapper {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Tab Navigation Bar */
+.tabs-nav {
+    display: flex;
+    background: var(--gray-50);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.tabs-nav > .elementor-element {
+    flex: 1;
+}
+
+/* Tab Button Styling */
+.tab-btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    background: transparent !important;
+}
+
+/* Default/Inactive Tab State - Gray */
+.tab-btn .tab-btn-icon,
+.tab-btn .tab-btn-icon i,
+.tab-btn .elementor-icon i,
+.tab-btn .elementor-icon svg {
+    color: #6b7280 !important;
+    fill: #6b7280 !important;
+    transition: all 0.3s ease;
+}
+
+.tab-btn .tab-btn-text .elementor-heading-title {
+    color: #6b7280 !important;
+    transition: all 0.3s ease;
+}
+
+.tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width 0.3s ease;
+    border-radius: 3px 3px 0 0;
+}
+
+.tab-btn:not(.active):hover {
+    background: var(--gradient-primary) !important;
+}
+
+.tab-btn:not(.active):hover::after {
+    width: 60px;
+}
+
+.tab-btn:not(.active):hover .tab-btn-icon,
+.tab-btn:not(.active):hover .tab-btn-icon i,
+.tab-btn:not(.active):hover .elementor-icon i,
+.tab-btn:not(.active):hover .elementor-icon svg,
+.tab-btn:not(.active):hover .tab-btn-text .elementor-heading-title {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+}
+
+/* Active Tab State - Blue gradient with white text/icons */
+.tab-btn.active {
+    background: var(--gradient-primary) !important;
+}
+
+.tab-btn.active::after {
+    width: 60px;
+}
+
+.tab-btn.active .tab-btn-icon,
+.tab-btn.active .tab-btn-icon i,
+.tab-btn.active .elementor-icon i,
+.tab-btn.active .elementor-icon svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+}
+
+.tab-btn.active .tab-btn-text .elementor-heading-title {
+    color: #ffffff !important;
+}
+
+/* First tab active by default (CSS fallback) */
+.tabs-nav > .elementor-element:first-child .tab-btn {
+    background: var(--gradient-primary) !important;
+}
+
+.tabs-nav > .elementor-element:first-child .tab-btn .tab-btn-icon,
+.tabs-nav > .elementor-element:first-child .tab-btn .tab-btn-icon i,
+.tabs-nav > .elementor-element:first-child .tab-btn .elementor-icon i {
+    color: #ffffff !important;
+}
+
+.tabs-nav > .elementor-element:first-child .tab-btn .tab-btn-text .elementor-heading-title {
+    color: #ffffff !important;
+}
+
+.tabs-nav > .elementor-element:first-child .tab-btn::after {
+    width: 60px;
+}
+
+/* When JS adds active class elsewhere, reset first tab */
+.tabs-nav > .elementor-element:not(:first-child) .tab-btn.active ~ .elementor-element:first-child .tab-btn,
+.tabs-nav:has(.tab-btn.active:not(:first-child)) > .elementor-element:first-child .tab-btn {
+    background: transparent !important;
+}
+
+.tabs-nav:has(.tab-btn.active) > .elementor-element:first-child .tab-btn:not(.active) {
+    background: transparent !important;
+}
+
+.tabs-nav:has(.tab-btn.active) > .elementor-element:first-child .tab-btn:not(.active) .tab-btn-icon,
+.tabs-nav:has(.tab-btn.active) > .elementor-element:first-child .tab-btn:not(.active) .tab-btn-icon i,
+.tabs-nav:has(.tab-btn.active) > .elementor-element:first-child .tab-btn:not(.active) .elementor-icon i {
+    color: #6b7280 !important;
+}
+
+.tabs-nav:has(.tab-btn.active) > .elementor-element:first-child .tab-btn:not(.active) .tab-btn-text .elementor-heading-title {
+    color: #6b7280 !important;
+}
+
+.tabs-nav:has(.tab-btn.active) > .elementor-element:first-child .tab-btn:not(.active)::after {
+    width: 0;
+}
+
+/* Tab Content Panels */
+.tabs-content {
+    position: relative;
+}
+
+.tab-panel {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-panel.active {
+    display: flex !important;
+}
+
+/* First panel visible by default */
+.tabs-content > .tab-panel:first-child {
+    display: flex !important;
+}
+
+/* Hide first panel when another is active */
+.tabs-content:has(.tab-panel.active:not(:first-child)) > .tab-panel:first-child:not(.active) {
+    display: none !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tab Icon Box */
+.tab-icon-box {
+    flex-shrink: 0;
+}
+
+/* Tab Text Content */
+.tab-text {
+    flex: 1;
+}
+
+/* ============================================
+   SERVICE CARDS GRID
+   ============================================ */
+
+.services-grid {
+    width: 100%;
+}
+
+/* Service Card Base */
+.service-card {
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2) !important;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Featured Card Variant */
+.service-card.featured {
+    position: relative;
+}
+
+.service-card.featured::before {
+    background: var(--gradient-accent);
+}
+
+/* Gradient Card Variant */
+.service-card.service-card-gradient::before {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scaleX(1);
+}
+
+.service-card.service-card-gradient:hover {
+    box-shadow: 0 25px 50px -12px rgba(22, 98, 237, 0.5) !important;
+}
+
+/* Featured Badge */
+.featured-badge {
+    position: absolute !important;
+    top: 16px !important;
+    right: 16px !important;
+    z-index: 5;
+}
+
+/* Service Icon Box */
+.service-icon {
+    position: relative;
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: rotate(0deg) scale(1.1);
+}
+
+/* ============================================
+   SERVICE LINK STYLING (Fixed)
+   ============================================ */
+
+.service-link-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: gap 0.3s ease;
+}
+
+.service-link-wrapper:hover {
+    gap: 12px;
+}
+
+.service-link-text .elementor-heading-title {
+    transition: color 0.3s ease;
+}
+
+.service-link-icon {
+    transition: transform 0.3s ease;
+}
+
+.service-link-wrapper:hover .service-link-icon {
+    transform: translateX(4px);
+}
+
+/* Make the entire link wrapper clickable */
+.service-link-wrapper a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+/* ============================================
+   ICON LIST (SERVICE FEATURES) STYLING
+   ============================================ */
+
+.service-features .elementor-icon-list-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.service-features .elementor-icon-list-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.service-features .elementor-icon-list-icon {
+    width: 16px !important;
+    min-width: 16px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-features .elementor-icon-list-icon i {
+    font-size: 12px !important;
+}
+
+.service-features .elementor-icon-list-text {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .services-grid > .elementor-element {
+        width: 48% !important;
+        min-width: 280px !important;
+    }
+    
+    .tabs-nav {
+        flex-wrap: wrap;
+    }
+    
+    .tabs-nav > .elementor-element {
+        flex: 1 1 50%;
+    }
+    
+    .tab-btn {
+        padding: 20px 16px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .tab-panel {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 32px !important;
+    }
+    
+    .tab-icon-box {
+        margin: 0 auto 20px !important;
+    }
+    
+    .services-grid > .elementor-element {
+        width: 100% !important;
+        min-width: 100% !important;
+    }
+    
+    .tabs-nav > .elementor-element {
+        flex: 1 1 50%;
+    }
+    
+    .section-title .elementor-heading-title {
+        font-size: 32px !important;
+    }
+    
+    .frogg-services-section {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+    
+    /* Featured badge repositioning */
+    .featured-badge {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        margin-bottom: 16px;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabs-nav > .elementor-element {
+        flex: 1 1 100%;
+    }
+    
+    .tab-btn {
+        flex-direction: row !important;
+        justify-content: center !important;
+        padding: 16px !important;
+        gap: 12px !important;
+    }
+    
+    .tab-panel {
+        padding: 24px !important;
+    }
+    
+    .section-title .elementor-heading-title {
+        font-size: 28px !important;
+    }
+}
+
+/* ============================================
+   ANIMATION EFFECTS
+   ============================================ */
+
+/* Entrance Animations */
+.service-card {
+    animation: slideUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.service-card:nth-child(1) { animation-delay: 0s; }
+.service-card:nth-child(2) { animation-delay: 0.1s; }
+.service-card:nth-child(3) { animation-delay: 0.2s; }
+.service-card:nth-child(4) { animation-delay: 0.3s; }
+.service-card:nth-child(5) { animation-delay: 0.4s; }
+.service-card:nth-child(6) { animation-delay: 0.5s; }
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    .frogg-services-section {
+        background: #fff !important;
+        padding: 40px 0 !important;
+    }
+    
+    .service-card {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ddd;
+    }
+    
+    .services-bg-pattern {
+        display: none;
+    }
+    
+    .tab-panel {
+        display: block !important;
+        page-break-inside: avoid;
+    }
+}
+
+/* ============================================
+   JAVASCRIPT FOR TAB SWITCHING
+   Add this to your theme's JS or use a
+   plugin like "Insert Headers and Footers"
+   ============================================ */
+
+/*
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+    
+    tabBtns.forEach((btn, index) => {
+        btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            tabBtns.forEach(b => {
+                b.classList.remove('active');
+                // Reset icon and text colors
+                const icon = b.querySelector('.tab-btn-icon');
+                const text = b.querySelector('.tab-btn-text .elementor-heading-title');
+                if (icon) icon.style.color = '#6b7280';
+                if (text) text.style.color = '#6b7280';
+                b.style.background = 'transparent';
+            });
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            const activeIcon = this.querySelector('.tab-btn-icon');
+            const activeText = this.querySelector('.tab-btn-text .elementor-heading-title');
+            if (activeIcon) activeIcon.style.color = '#ffffff';
+            if (activeText) activeText.style.color = '#ffffff';
+            this.style.background = 'linear-gradient(135deg, #1662ed 0%, #1e3a8a 100%)';
+            
+            // Hide all panels
+            tabPanels.forEach(panel => {
+                panel.classList.remove('active');
+                panel.style.display = 'none';
+            });
+            
+            // Show corresponding panel
+            if (tabPanels[index]) {
+                tabPanels[index].classList.add('active');
+                tabPanels[index].style.display = 'flex';
+            }
+        });
+    });
+});
+</script>
+*/
+
+
+/* ============================================
+   JAVASCRIPT FOR TAB SWITCHING
+   Add this to your theme's JS or use a
+   plugin like "Insert Headers and Footers"
+   ============================================ */
+
+/*
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+    
+    tabBtns.forEach((btn, index) => {
+        btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            tabBtns.forEach(b => {
+                b.classList.remove('active');
+                // Reset icon and text colors
+                const icon = b.querySelector('.tab-btn-icon');
+                const text = b.querySelector('.tab-btn-text .elementor-heading-title');
+                if (icon) icon.style.color = '#6b7280';
+                if (text) text.style.color = '#6b7280';
+                b.style.background = 'transparent';
+            });
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            const activeIcon = this.querySelector('.tab-btn-icon');
+            const activeText = this.querySelector('.tab-btn-text .elementor-heading-title');
+            if (activeIcon) activeIcon.style.color = '#ffffff';
+            if (activeText) activeText.style.color = '#ffffff';
+            this.style.background = 'linear-gradient(135deg, #1662ed 0%, #1e3a8a 100%)';
+            
+            // Hide all panels
+            tabPanels.forEach(panel => {
+                panel.classList.remove('active');
+                panel.style.display = 'none';
+            });
+            
+            // Show corresponding panel
+            if (tabPanels[index]) {
+                tabPanels[index].classList.add('active');
+                tabPanels[index].style.display = 'flex';
+            }
+        });
+    });
+});
+</script>
+*/
+
+

@@ -1,0 +1,493 @@
+/* ============================================
+   FROGG SERVICES TABS V2 - ELEMENTOR CSS
+   Add this CSS to: Appearance > Customize > Additional CSS
+   Or: Elementor > Custom CSS (Pro)
+   ============================================ */
+
+/* ========================
+   MAIN WRAPPER
+   ======================== */
+.frog-tabs-wrapper {
+    background: #fff;
+    border-radius: 24px !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+    overflow: hidden !important;
+    border: 1px solid #f3f4f6;
+    margin-bottom: 60px;
+}
+
+/* ========================
+   TAB NAVIGATION
+   ======================== */
+.frog-tabs-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    background: linear-gradient(to right, #f9fafb, #fff, #f9fafb) !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    padding: 0 !important;
+    gap: 0 !important;
+}
+
+.frog-tab-btn {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 16px !important;
+    padding: 24px !important;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    border-right: 1px solid #e5e7eb !important;
+}
+
+.frog-tab-btn:last-child {
+    border-right: none !important;
+}
+
+.frog-tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 60%;
+    height: 4px;
+    background: linear-gradient(135deg, #1662ed 0%, #1e3a8a 100%);
+    border-radius: 4px 4px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.frog-tab-btn:hover {
+    background: rgba(22, 98, 237, 0.03) !important;
+}
+
+.frog-tab-btn.active {
+    background: linear-gradient(to bottom, rgba(22, 98, 237, 0.08), rgba(22, 98, 237, 0.02)) !important;
+}
+
+.frog-tab-btn.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Tab Icon Box */
+.frog-tab-icon {
+    width: 50px !important;
+    min-width: 50px !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    border-radius: 12px !important;
+    background: #f3f4f6 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.frog-tab-btn:hover .frog-tab-icon {
+    background: #dbeafe !important;
+}
+
+.frog-tab-btn:hover .frog-tab-icon i,
+.frog-tab-btn:hover .frog-tab-icon svg {
+    color: #1662ed !important;
+    fill: #1662ed !important;
+}
+
+.frog-tab-btn.active .frog-tab-icon {
+    background: linear-gradient(135deg, #1662ed 0%, #1e3a8a 100%) !important;
+    box-shadow: 0 4px 15px rgba(22, 98, 237, 0.3) !important;
+}
+
+.frog-tab-btn.active .frog-tab-icon i,
+.frog-tab-btn.active .frog-tab-icon svg {
+    color: #fff !important;
+    fill: #fff !important;
+}
+
+/* Tab Text */
+.frog-tab-text {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+    text-align: left !important;
+}
+
+.frog-tab-label {
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    color: #374151 !important;
+    transition: all 0.3s ease;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.frog-tab-btn:hover .frog-tab-label {
+    color: #2563eb !important;
+}
+
+.frog-tab-btn.active .frog-tab-label {
+    color: #2563eb !important;
+}
+
+.frog-tab-sublabel {
+    font-size: 12px !important;
+    color: #9ca3af !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.frog-tab-btn.active .frog-tab-sublabel {
+    color: #6b7280 !important;
+}
+
+/* ========================
+   TAB CONTENT / PANELS
+   ======================== */
+.frog-tabs-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.frog-tab-panel {
+    display: none !important;
+    opacity: 0;
+    animation: tabFadeSlide 0.5s ease forwards;
+}
+
+.frog-tab-panel.active {
+    display: flex !important;
+    opacity: 1;
+}
+
+@keyframes tabFadeSlide {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========================
+   PANEL IMAGE SECTION
+   ======================== */
+.frog-panel-image {
+    position: relative !important;
+    overflow: hidden !important;
+    width: 50% !important;
+}
+
+.frog-image-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(135deg, rgba(22, 98, 237, 0.3) 0%, rgba(30, 58, 110, 0.5) 100%) !important;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Floating Stats */
+.frog-floating-stat {
+    position: absolute !important;
+    background: #fff !important;
+    border-radius: 12px !important;
+    padding: 12px 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+    z-index: 10;
+    animation: floatBounce 3s ease-in-out infinite;
+}
+
+.frog-stat-1 {
+    top: 20% !important;
+    left: 20px !important;
+    animation-delay: 0s;
+}
+
+.frog-stat-2 {
+    bottom: 20% !important;
+    right: 20px !important;
+    animation-delay: 1.5s;
+}
+
+@keyframes floatBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ========================
+   PANEL CONTENT SECTION
+   ======================== */
+.frog-panel-content {
+    width: 50% !important;
+    padding: 48px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    background: linear-gradient(135deg, #fff 0%, #f9fafb 100%) !important;
+}
+
+/* Content Badge */
+.frog-content-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: #dbeafe !important;
+    padding: 8px 20px !important;
+    border-radius: 50px !important;
+    width: fit-content !important;
+    margin-bottom: 20px !important;
+}
+
+.frog-content-badge span,
+.frog-content-badge .elementor-heading-title {
+    color: #2563eb !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+.frog-content-badge i,
+.frog-content-badge svg {
+    color: #2563eb !important;
+    fill: #2563eb !important;
+    font-size: 14px !important;
+}
+
+/* Highlight Text */
+.frog-highlight {
+    color: #1662ed !important;
+}
+
+/* Lead Text */
+.frog-lead-text {
+    font-size: 18px !important;
+    color: #4b5563 !important;
+    line-height: 1.7 !important;
+    font-weight: 500 !important;
+    margin-bottom: 10px !important;
+}
+
+/* ========================
+   FEATURE PILLS
+   ======================== */
+.frog-feature-pills {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-top: auto !important;
+}
+
+.frog-pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: #f3f4f6 !important;
+    padding: 8px 16px !important;
+    border-radius: 50px !important;
+    transition: all 0.3s ease;
+    width: auto !important;
+    flex: unset !important;
+}
+
+.frog-pill span,
+.frog-pill .elementor-heading-title {
+    color: #374151 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+.frog-pill i,
+.frog-pill svg {
+    color: #22c55e !important;
+    fill: #22c55e !important;
+    font-size: 12px !important;
+}
+
+.frog-pill:hover {
+    background: #1662ed !important;
+}
+
+.frog-pill:hover span,
+.frog-pill:hover .elementor-heading-title {
+    color: #fff !important;
+}
+
+.frog-pill:hover i,
+.frog-pill:hover svg {
+    color: #fff !important;
+    fill: #fff !important;
+}
+
+/* ========================
+   RESPONSIVE STYLES
+   ======================== */
+@media (max-width: 1200px) {
+    .frog-tab-btn {
+        padding: 20px 16px !important;
+    }
+    
+    .frog-tab-icon {
+        width: 45px !important;
+        min-width: 45px !important;
+        height: 45px !important;
+        min-height: 45px !important;
+    }
+    
+    .frog-tab-label {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .frog-tabs-nav {
+        flex-wrap: wrap !important;
+    }
+    
+    .frog-tab-btn {
+        flex: 1 1 50% !important;
+        max-width: 50% !important;
+        border-bottom: 1px solid #e5e7eb !important;
+    }
+    
+    .frog-tab-btn:nth-child(2) {
+        border-right: none !important;
+    }
+    
+    .frog-tab-btn:nth-child(3),
+    .frog-tab-btn:nth-child(4) {
+        border-bottom: none !important;
+    }
+    
+    .frog-tab-panel {
+        flex-direction: column !important;
+    }
+    
+    .frog-panel-image {
+        width: 100% !important;
+        height: 300px !important;
+        min-height: 300px !important;
+    }
+    
+    .frog-panel-content {
+        width: 100% !important;
+        padding: 32px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .frog-tab-btn {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 20px !important;
+    }
+    
+    .frog-tab-text {
+        text-align: center !important;
+    }
+    
+    .frog-tab-sublabel {
+        display: none !important;
+    }
+    
+    .frog-panel-content h3,
+    .frog-panel-content .elementor-heading-title {
+        font-size: 22px !important;
+    }
+    
+    .frog-floating-stat {
+        padding: 8px 14px !important;
+    }
+    
+    .frog-stat-1 {
+        top: 15% !important;
+        left: 10px !important;
+    }
+    
+    .frog-stat-2 {
+        bottom: 15% !important;
+        right: 10px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .frog-tabs-nav {
+        flex-direction: column !important;
+    }
+    
+    .frog-tab-btn {
+        flex: 1 !important;
+        max-width: 100% !important;
+        flex-direction: row !important;
+        border-right: none !important;
+        border-bottom: 1px solid #e5e7eb !important;
+    }
+    
+    .frog-tab-btn:last-child {
+        border-bottom: none !important;
+    }
+    
+    .frog-tab-text {
+        text-align: left !important;
+    }
+    
+    .frog-tab-sublabel {
+        display: block !important;
+    }
+    
+    .frog-tab-btn::after {
+        width: 4px;
+        height: 60%;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) scaleX(0);
+        border-radius: 0 4px 4px 0;
+    }
+    
+    .frog-tab-btn.active::after {
+        transform: translateY(-50%) scaleX(1);
+    }
+    
+    .frog-panel-image {
+        height: 250px !important;
+        min-height: 250px !important;
+    }
+    
+    .frog-panel-content {
+        padding: 24px !important;
+    }
+    
+    .frog-panel-content h3,
+    .frog-panel-content .elementor-heading-title {
+        font-size: 20px !important;
+    }
+    
+    .frog-feature-pills {
+        gap: 6px !important;
+    }
+    
+    .frog-pill {
+        font-size: 12px !important;
+        padding: 6px 12px !important;
+    }
+}
+
+/* ========================
+   TAB SWITCHING JAVASCRIPT
+   ======================== */
+/*
+Add this script to Elementor > Custom Code or your theme's footer:
+
+
+*/

@@ -1,0 +1,432 @@
+/**
+ * FROGG Resources Section Styles
+ * Use with: frogg-resources-section.json
+ */
+
+/* ==========================================
+   Section Container
+   ========================================== */
+.frogg-resources-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Orbs (add via custom CSS or HTML widget) */
+.frogg-resources-section::before,
+.frogg-resources-section::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+    pointer-events: none;
+    animation: orbFloat 20s ease-in-out infinite;
+}
+
+.frogg-resources-section::before {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(22, 98, 237, 0.4) 0%, transparent 70%);
+    top: -200px;
+    left: -200px;
+}
+
+.frogg-resources-section::after {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(38, 73, 176, 0.3) 0%, transparent 70%);
+    bottom: -150px;
+    right: -150px;
+    animation-delay: -10s;
+}
+
+@keyframes orbFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -30px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+/* ==========================================
+   Section Header
+   ========================================== */
+.frogg-resources-section .resources-header {
+    position: relative;
+    z-index: 2;
+}
+
+.frogg-resources-section .section-tag {
+    display: inline-block;
+}
+
+.frogg-resources-section .section-title .gradient-text {
+    background: linear-gradient(135deg, #1662ed 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==========================================
+   Filter Tabs
+   ========================================== */
+.frogg-resources-section .resources-filter {
+    position: relative;
+    z-index: 2;
+}
+
+.frogg-resources-section .filter-btn {
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.frogg-resources-section .filter-btn:hover {
+    border-color: rgba(22, 98, 237, 0.5) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(22, 98, 237, 0.2);
+}
+
+.frogg-resources-section .filter-btn:hover .elementor-widget-icon i,
+.frogg-resources-section .filter-btn:hover .elementor-widget-heading {
+    color: #ffffff !important;
+}
+
+.frogg-resources-section .filter-btn.active {
+    border-color: transparent !important;
+}
+
+/* ==========================================
+   Featured Carousel
+   ========================================== */
+.frogg-resources-section .featured-carousel {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.frogg-resources-section .featured-content {
+    position: relative;
+    z-index: 1;
+}
+
+.frogg-resources-section .featured-image {
+    position: relative;
+}
+
+.frogg-resources-section .featured-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(22, 98, 237, 0.3) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.frogg-resources-section .featured-image img,
+.frogg-resources-section .featured-image-img img {
+    transition: transform 0.6s ease;
+}
+
+.frogg-resources-section .featured-carousel:hover .featured-image img,
+.frogg-resources-section .featured-carousel:hover .featured-image-img img {
+    transform: scale(1.05);
+}
+
+.frogg-resources-section .btn-glass {
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.frogg-resources-section .btn-glass:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    transform: translateX(5px);
+}
+
+/* ==========================================
+   Resource Cards Grid
+   ========================================== */
+.frogg-resources-section .resources-grid {
+    position: relative;
+    z-index: 2;
+}
+
+.frogg-resources-section .resource-card {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    flex: 1 1 300px;
+    max-width: 380px;
+}
+
+.frogg-resources-section .resource-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(22, 98, 237, 0.4) !important;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(22, 98, 237, 0.2);
+}
+
+.frogg-resources-section .resource-card-image img {
+    transition: transform 0.6s ease;
+}
+
+.frogg-resources-section .resource-card:hover .resource-card-image img {
+    transform: scale(1.1);
+}
+
+.frogg-resources-section .resource-card h4,
+.frogg-resources-section .resource-card .elementor-heading-title {
+    transition: color 0.3s ease;
+}
+
+.frogg-resources-section .resource-card:hover h4,
+.frogg-resources-section .resource-card:hover .resource-card-content .elementor-heading-title {
+    color: #93c5fd !important;
+}
+
+.frogg-resources-section .resource-link {
+    transition: all 0.3s ease;
+}
+
+.frogg-resources-section .resource-link:hover {
+    background-color: #1662ed !important;
+    transform: translateX(5px);
+}
+
+.frogg-resources-section .resource-link:hover i {
+    color: #ffffff !important;
+}
+
+/* ==========================================
+   Stats Bar
+   ========================================== */
+.frogg-resources-section .resources-stats {
+    position: relative;
+    z-index: 2;
+}
+
+.frogg-resources-section .stat-box {
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 200px;
+}
+
+.frogg-resources-section .stat-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1662ed, #1e3a8a);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.frogg-resources-section .stat-box:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    transform: translateY(-5px);
+    border-color: rgba(22, 98, 237, 0.3) !important;
+}
+
+.frogg-resources-section .stat-box:hover::before {
+    transform: scaleX(1);
+}
+
+/* ==========================================
+   Newsletter CTA
+   ========================================== */
+.frogg-resources-section .resources-cta {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.frogg-resources-section .resources-cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(22, 98, 237, 0.1) 0%, transparent 50%);
+    animation: ctaPulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes ctaPulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.frogg-resources-section .newsletter-input-group {
+    transition: all 0.3s ease;
+}
+
+.frogg-resources-section .newsletter-input-group:hover,
+.frogg-resources-section .newsletter-input-group:focus-within {
+    border-color: #1662ed !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 0 20px rgba(22, 98, 237, 0.3);
+}
+
+.frogg-resources-section .btn-primary:hover {
+    background-color: #1e3a8a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(22, 98, 237, 0.4);
+}
+
+/* ==========================================
+   Responsive Styles
+   ========================================== */
+
+/* Large Tablet */
+@media (max-width: 1200px) {
+    .frogg-resources-section .resources-grid .resource-card {
+        width: calc(50% - 12px) !important;
+    }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .frogg-resources-section .featured-carousel {
+        flex-direction: column !important;
+    }
+    
+    .frogg-resources-section .featured-content,
+    .frogg-resources-section .featured-image-wrap {
+        width: 100% !important;
+    }
+    
+    .frogg-resources-section .featured-image-wrap {
+        order: -1;
+        min-height: 250px !important;
+    }
+    
+    .frogg-resources-section .featured-content {
+        padding: 32px !important;
+    }
+    
+    .frogg-resources-section .featured-content h3 {
+        font-size: 28px !important;
+    }
+    
+    .frogg-resources-section .resources-stats {
+        flex-wrap: wrap !important;
+    }
+    
+    .frogg-resources-section .stat-box {
+        width: calc(50% - 12px) !important;
+    }
+    
+    .frogg-resources-section .resources-cta {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 32px !important;
+    }
+    
+    .frogg-resources-section .resources-cta-content {
+        align-items: center !important;
+    }
+    
+    .frogg-resources-section .resources-newsletter {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    
+    .frogg-resources-section .newsletter-input-group {
+        width: 100% !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .frogg-resources-section {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+    
+    .frogg-resources-section .resources-header {
+        margin-bottom: 40px !important;
+    }
+    
+    .frogg-resources-section .section-title {
+        font-size: 32px !important;
+    }
+    
+    .frogg-resources-section .resources-filter {
+        margin-bottom: 40px !important;
+    }
+    
+    .frogg-resources-section .filter-btn {
+        padding: 10px 16px !important;
+    }
+    
+    .frogg-resources-section .filter-btn span {
+        display: none;
+    }
+    
+    .frogg-resources-section .resources-grid {
+        flex-direction: column !important;
+    }
+    
+    .frogg-resources-section .resource-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .frogg-resources-section .stat-box {
+        width: 100% !important;
+    }
+    
+    .frogg-resources-section .featured-meta {
+        flex-wrap: wrap !important;
+        gap: 12px !important;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .frogg-resources-section .section-title {
+        font-size: 26px !important;
+    }
+    
+    .frogg-resources-section .featured-content h3 {
+        font-size: 22px !important;
+    }
+    
+    .frogg-resources-section .stat-value {
+        font-size: 32px !important;
+    }
+    
+    .frogg-resources-section .resources-cta h3 {
+        font-size: 22px !important;
+    }
+}
+
+/* ==========================================
+   Animation Effects
+   ========================================== */
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.frogg-resources-section .resource-card {
+    animation: cardReveal 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.frogg-resources-section .resource-card:nth-child(1) { animation-delay: 0.1s; }
+.frogg-resources-section .resource-card:nth-child(2) { animation-delay: 0.2s; }
+.frogg-resources-section .resource-card:nth-child(3) { animation-delay: 0.3s; }
+
+.frogg-resources-section .stat-box {
+    animation: cardReveal 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.frogg-resources-section .stat-box:nth-child(1) { animation-delay: 0.1s; }
+.frogg-resources-section .stat-box:nth-child(2) { animation-delay: 0.2s; }
+.frogg-resources-section .stat-box:nth-child(3) { animation-delay: 0.3s; }
+.frogg-resources-section .stat-box:nth-child(4) { animation-delay: 0.4s; }

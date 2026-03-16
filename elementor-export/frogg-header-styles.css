@@ -1,0 +1,376 @@
+/* ============================================
+   FROGG RECRUITMENT - HEADER STYLES
+   Elementor Pro Header Template Styles
+   ============================================ */
+
+/* CSS Custom Properties */
+:root {
+    /* Primary Colors */
+    --frogg-primary-500: #1662ed;
+    --frogg-primary-600: #2649b0;
+    --frogg-primary-700: #1e3a8a;
+    
+    /* Neutral Colors */
+    --frogg-gray-600: #4b5563;
+    --frogg-gray-800: #1f2937;
+    --frogg-white: #ffffff;
+    
+    /* Transitions */
+    --frogg-transition-base: 300ms ease;
+    --frogg-transition-fast: 150ms ease;
+}
+
+/* ============================================
+   HEADER BASE STYLES
+   ============================================ */
+.frogg-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all var(--frogg-transition-base) !important;
+    /* DEFAULT: White background (failsafe if JS doesn't load) */
+    background: #ffffff !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* TRANSPARENT STATE: Over hero section */
+.frogg-header:not(.scrolled) {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* SCROLLED STATE: White background with shadow */
+.frogg-header.scrolled {
+    background: #ffffff !important;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1) !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+/* ============================================
+   LOGO STYLES
+   ============================================ */
+/* DEFAULT: Normal logo (for scrolled/white background) */
+.frogg-logo-img img {
+    height: 45px !important;
+    width: auto !important;
+    object-fit: contain;
+    transition: filter var(--frogg-transition-base);
+}
+
+/* TRANSPARENT STATE: White/inverted logo */
+.frogg-header:not(.scrolled) .frogg-logo-img img {
+    filter: brightness(0) invert(1);
+}
+
+/* ============================================
+   NAVIGATION MENU STYLES
+   ============================================ */
+.frogg-nav-menu .elementor-nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+/* DEFAULT STATE: Dark links (for white/scrolled background) */
+.frogg-nav-menu .elementor-nav-menu a {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--frogg-gray-600) !important;
+    padding: 8px 0;
+    position: relative;
+    transition: color var(--frogg-transition-fast);
+}
+
+.frogg-nav-menu .elementor-nav-menu a::after {
+    display: none;
+}
+
+.frogg-nav-menu .elementor-nav-menu a.current,
+.frogg-nav-menu .elementor-nav-menu a.active {
+    color: var(--frogg-primary-600) !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+}
+
+/* TRANSPARENT STATE: White links (over dark hero - use :not(.scrolled)) */
+.frogg-header:not(.scrolled) .frogg-nav-menu .elementor-nav-menu a {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.frogg-header:not(.scrolled) .frogg-nav-menu .elementor-nav-menu a.current,
+.frogg-header:not(.scrolled) .frogg-nav-menu .elementor-nav-menu a.active {
+    color: #ffffff !important;
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+/* Outline Button (View Vacancies) - DEFAULT: Blue border for white background */
+.frogg-btn-outline .elementor-button {
+    background: transparent !important;
+    border: 2px solid var(--frogg-primary-500) !important;
+    color: var(--frogg-primary-500) !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 10px;
+    transition: all var(--frogg-transition-base);
+}
+
+/* Hover removed */
+
+/* TRANSPARENT STATE: White border for dark background */
+.frogg-header:not(.scrolled) .frogg-btn-outline .elementor-button {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+}
+
+/* Hover removed */
+
+/* Primary Button (Get Started) */
+.frogg-btn-primary .elementor-button {
+    background: var(--frogg-primary-500) !important;
+    color: var(--frogg-white);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(22, 98, 237, 0.3);
+    transition: all var(--frogg-transition-base);
+}
+
+/* Hover removed */
+
+/* ============================================
+   MOBILE TOGGLE STYLES
+   ============================================ */
+.frogg-mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* DEFAULT: Dark toggle lines for white background */
+.toggle-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--frogg-gray-800);
+    transition: all var(--frogg-transition-base);
+}
+
+/* TRANSPARENT STATE: White toggle lines for dark background */
+.frogg-header:not(.scrolled) .toggle-line {
+    background: var(--frogg-white);
+}
+
+.frogg-mobile-toggle.active .toggle-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.frogg-mobile-toggle.active .toggle-line:nth-child(2) {
+    opacity: 0;
+}
+
+.frogg-mobile-toggle.active .toggle-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* ============================================
+   MOBILE MENU PANEL
+   ============================================ */
+.frogg-mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0f172a;
+    z-index: 199;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 24px 40px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+
+.frogg-mobile-menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.frogg-mobile-menu .elementor-nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.frogg-mobile-menu .elementor-nav-menu a {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--frogg-white);
+    transition: color var(--frogg-transition-fast);
+}
+
+.frogg-mobile-menu .elementor-nav-menu a:hover,
+.frogg-mobile-menu .elementor-nav-menu a.current {
+    color: #60a5fa;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablet Breakpoint */
+@media screen and (max-width: 1024px) {
+    .frogg-nav-menu {
+        display: none !important;
+    }
+    
+    .frogg-btn-outline {
+        display: none !important;
+    }
+    
+    .frogg-btn-primary {
+        display: none !important;
+    }
+    
+    .frogg-mobile-toggle {
+        display: flex !important;
+    }
+}
+
+/* Mobile Breakpoint */
+@media screen and (max-width: 767px) {
+    .frogg-header .elementor-container {
+        padding: 0 16px !important;
+    }
+    
+    .frogg-logo-img img {
+        height: 36px !important;
+    }
+    
+    .frogg-mobile-menu .elementor-nav-menu a {
+        font-size: 20px;
+    }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.frogg-header {
+    animation: fadeInDown 0.6s ease forwards;
+}
+
+
+
+/* ============================================
+   DROPDOWN MENU STYLES (if needed)
+   ============================================ */
+.frogg-nav-menu .elementor-nav-menu--dropdown {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+    margin-top: 8px;
+}
+
+.frogg-nav-menu .elementor-nav-menu--dropdown a {
+    color: var(--frogg-gray-600) !important;
+    padding: 10px 24px !important;
+    font-size: 14px !important;
+}
+
+.frogg-nav-menu .elementor-nav-menu--dropdown a:hover {
+    color: var(--frogg-primary-500) !important;
+    background: rgba(22, 98, 237, 0.05);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Focus states for accessibility */
+.frogg-nav-menu .elementor-nav-menu a:focus,
+.frogg-btn-outline .elementor-button:focus,
+.frogg-btn-primary .elementor-button:focus {
+    outline: 2px solid var(--frogg-primary-500);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   JAVASCRIPT FOR SCROLL BEHAVIOR
+   Add this to your WordPress site via:
+   - Elementor > Custom Code (Pro)
+   - Theme Customizer > Additional JS
+   - Code Snippets plugin
+   ============================================ */
+
+/*
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.frogg-header');
+    
+    if (header) {
+        // Add scrolled class on scroll
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Check initial scroll position
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        }
+    }
+    
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.frogg-mobile-toggle');
+    const mobileMenu = document.querySelector('.frogg-mobile-menu');
+    
+    if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+    }
+});
+</script>
+*/

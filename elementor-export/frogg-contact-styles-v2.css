@@ -1,0 +1,458 @@
+/**
+ * FROGG Contact Section Styles v2
+ * Use with: frogg-contact-section-v2.json
+ * Matches original HTML design exactly
+ */
+
+/* ==========================================
+   Section Container
+   ========================================== */
+.contact {
+    padding: 120px 0;
+    position: relative;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+/* ==========================================
+   Background & Skewed Divider
+   ========================================== */
+.contact-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, #1f2937 0%, #030712 100%);
+    z-index: 0;
+}
+
+.contact-shape {
+    position: absolute;
+    top: 0;
+    right: -100px;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(135deg, #1f2937 0%, #030712 100%);
+    transform: skewX(-5deg);
+    z-index: 1;
+}
+
+/* ==========================================
+   Content Grid
+   ========================================== */
+.contact-grid {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    gap: 96px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   Contact Info (Left Side - Dark)
+   ========================================== */
+.contact-info {
+    flex: 1;
+    color: #ffffff;
+    padding-right: 48px;
+}
+
+.contact-info .section-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #60a5fa !important;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+}
+
+.contact-info .section-title {
+    color: #ffffff !important;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.contact-info .section-title .gradient-text {
+    background: linear-gradient(135deg, #1662ed 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-text,
+.contact-info .contact-text,
+.contact-info .contact-text p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+}
+
+/* ==========================================
+   Contact Details Items
+   ========================================== */
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(10px);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    background: rgba(22, 98, 237, 0.3) !important;
+    transform: scale(1.1);
+}
+
+.contact-icon i,
+.contact-icon .elementor-icon i,
+.contact-icon svg {
+    font-size: 20px;
+    color: #60a5fa !important;
+    fill: #60a5fa !important;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-content h4,
+.contact-content .elementor-heading-title {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    margin-bottom: 4px;
+}
+
+.contact-content p,
+.contact-content .elementor-text-editor p {
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    margin-bottom: 4px;
+}
+
+.contact-link,
+.contact-content a,
+.contact-link-wrapper a {
+    font-size: 14px !important;
+    color: #60a5fa !important;
+    text-decoration: none;
+    display: inline;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover,
+.contact-content a:hover,
+.contact-link-wrapper a:hover {
+    color: #93c5fd !important;
+}
+
+/* ==========================================
+   Social Links
+   ========================================== */
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.social-links .elementor-icon,
+.social-icon {
+    width: 44px !important;
+    height: 44px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+}
+
+.social-links .elementor-icon i,
+.social-icon i {
+    color: #ffffff !important;
+    font-size: 16px !important;
+}
+
+.social-links .elementor-icon:hover,
+.social-icon:hover {
+    background: #1662ed !important;
+    transform: translateY(-3px) !important;
+}
+
+/* ==========================================
+   Contact Form Wrapper (Right Side - White)
+   ========================================== */
+.contact-form-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.contact-form {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 48px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.contact-form h3,
+.contact-form .elementor-heading-title {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+    margin-bottom: 32px;
+}
+
+/* ==========================================
+   Form Fields
+   ========================================== */
+.contact-form-widget .elementor-field-group {
+    margin-bottom: 24px;
+}
+
+.contact-form-widget .elementor-field-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #374151 !important;
+    margin-bottom: 8px !important;
+}
+
+.contact-form-widget .elementor-field,
+.contact-form-widget .elementor-field-textual,
+.contact-form-widget input,
+.contact-form-widget textarea,
+.contact-form-widget select {
+    width: 100%;
+    padding: 14px 16px !important;
+    border: 2px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    background: #f9fafb !important;
+    color: #1f2937 !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.contact-form-widget .elementor-field:focus,
+.contact-form-widget input:focus,
+.contact-form-widget textarea:focus,
+.contact-form-widget select:focus {
+    outline: none !important;
+    border-color: #1662ed !important;
+    background: #ffffff !important;
+    box-shadow: 0 0 0 4px rgba(22, 98, 237, 0.1) !important;
+}
+
+.contact-form-widget textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form-widget select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px !important;
+    cursor: pointer;
+}
+
+/* ==========================================
+   Submit Button
+   ========================================== */
+.contact-form-widget .elementor-button,
+.contact-form button[type="submit"] {
+    width: 100%;
+    background: #1662ed !important;
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    padding: 16px 32px !important;
+    border: none !important;
+    border-radius: 12px !important;
+    cursor: pointer;
+    transition: all 0.3s ease !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.contact-form-widget .elementor-button:hover,
+.contact-form button[type="submit"]:hover {
+    background: #1e3a8a !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 30px rgba(22, 98, 237, 0.4) !important;
+}
+
+.contact-form-widget .elementor-button:active,
+.contact-form button[type="submit"]:active {
+    transform: translateY(0) !important;
+}
+
+.contact-form-widget .elementor-button i {
+    font-size: 14px;
+}
+
+/* ==========================================
+   Responsive Styles
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .contact {
+        padding: 80px 0;
+    }
+    
+    .contact-bg {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .contact-shape {
+        display: none;
+    }
+    
+    .contact-grid {
+        flex-direction: column !important;
+        gap: 60px;
+    }
+    
+    .contact-info,
+    .contact-form-wrapper {
+        width: 100% !important;
+        padding-right: 0 !important;
+    }
+    
+    .contact-info {
+        padding: 0 40px;
+    }
+    
+    .contact-form-wrapper {
+        padding: 0 40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .contact {
+        padding: 60px 0;
+    }
+    
+    .contact-info,
+    .contact-form-wrapper {
+        padding: 0 24px !important;
+    }
+    
+    .contact-info .section-title {
+        font-size: 32px !important;
+    }
+    
+    .contact-form {
+        padding: 24px !important;
+    }
+    
+    .contact-grid {
+        gap: 40px;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .contact-info .section-title {
+        font-size: 26px !important;
+    }
+    
+    .contact-item {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    
+    .contact-item:hover {
+        transform: translateX(0) translateY(-5px);
+    }
+}
+
+/* ==========================================
+   Animation Effects
+   ========================================== */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.contact-info {
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.contact-form {
+    animation: slideInRight 0.6s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.contact-item {
+    opacity: 1;
+}
+
+.contact-item:nth-child(1) { animation: slideInLeft 0.5s ease 0.1s forwards; }
+.contact-item:nth-child(2) { animation: slideInLeft 0.5s ease 0.2s forwards; }
+.contact-item:nth-child(3) { animation: slideInLeft 0.5s ease 0.3s forwards; }

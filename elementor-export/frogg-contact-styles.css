@@ -1,0 +1,287 @@
+/**
+ * FROGG Contact Section Styles
+ * Use with: frogg-contact-section.json
+ */
+
+/* ==========================================
+   Section Container
+   ========================================== */
+.frogg-contact-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Split Background Effect */
+.frogg-contact-section .contact-info-wrapper {
+    position: relative;
+}
+
+.frogg-contact-section .contact-info-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100px;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(135deg, #111827 0%, #1a1a2e 100%);
+    transform: skewX(-5deg);
+    pointer-events: none;
+}
+
+/* ==========================================
+   Section Header - Dark Side
+   ========================================== */
+.frogg-contact-section .section-tag {
+    display: inline-block;
+}
+
+.frogg-contact-section .section-title .gradient-text {
+    background: linear-gradient(135deg, #1662ed 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==========================================
+   Contact Details
+   ========================================== */
+.frogg-contact-section .contact-details {
+    position: relative;
+    z-index: 1;
+}
+
+.frogg-contact-section .contact-item {
+    transition: transform 0.3s ease;
+}
+
+.frogg-contact-section .contact-item:hover {
+    transform: translateX(10px);
+}
+
+.frogg-contact-section .contact-icon {
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.frogg-contact-section .contact-item:hover .contact-icon {
+    background-color: rgba(22, 98, 237, 0.3) !important;
+    transform: scale(1.1);
+}
+
+.frogg-contact-section .contact-link {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.frogg-contact-section .contact-link:hover {
+    color: #93c5fd !important;
+}
+
+.frogg-contact-section .email-text a {
+    color: #60a5fa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.frogg-contact-section .email-text a:hover {
+    color: #93c5fd;
+}
+
+/* ==========================================
+   Social Links
+   ========================================== */
+.frogg-contact-section .social-links {
+    position: relative;
+    z-index: 1;
+}
+
+.frogg-contact-section .social-icon {
+    transition: all 0.3s ease !important;
+}
+
+.frogg-contact-section .social-icon:hover {
+    background-color: #1662ed !important;
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   Contact Form
+   ========================================== */
+.frogg-contact-section .contact-form-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.frogg-contact-section .contact-form {
+    position: relative;
+}
+
+.frogg-contact-section .form-input {
+    transition: all 0.3s ease;
+    cursor: text;
+}
+
+.frogg-contact-section .form-input:hover {
+    border-color: #d1d5db !important;
+    background-color: #ffffff !important;
+}
+
+.frogg-contact-section .form-input:focus-within,
+.frogg-contact-section .form-input.focused {
+    border-color: #1662ed !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 0 0 4px rgba(22, 98, 237, 0.1);
+}
+
+.frogg-contact-section .form-select {
+    cursor: pointer;
+}
+
+.frogg-contact-section .form-textarea {
+    align-items: flex-start;
+}
+
+/* Submit Button */
+.frogg-contact-section .btn-primary {
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.frogg-contact-section .btn-primary:hover {
+    background-color: #1e3a8a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(22, 98, 237, 0.4);
+}
+
+.frogg-contact-section .btn-primary:active {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   Responsive Styles
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .frogg-contact-section {
+        flex-direction: column !important;
+    }
+    
+    .frogg-contact-section .contact-info-wrapper,
+    .frogg-contact-section .contact-form-wrapper {
+        width: 100% !important;
+    }
+    
+    .frogg-contact-section .contact-info-wrapper {
+        padding: 80px 40px !important;
+    }
+    
+    .frogg-contact-section .contact-info-wrapper::after {
+        display: none;
+    }
+    
+    .frogg-contact-section .contact-info {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+    
+    .frogg-contact-section .contact-form-wrapper {
+        padding: 80px 40px !important;
+    }
+    
+    .frogg-contact-section .contact-form {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .frogg-contact-section .contact-info-wrapper,
+    .frogg-contact-section .contact-form-wrapper {
+        padding: 60px 24px !important;
+    }
+    
+    .frogg-contact-section .section-title {
+        font-size: 32px !important;
+    }
+    
+    .frogg-contact-section .contact-form {
+        padding: 24px !important;
+    }
+    
+    .frogg-contact-section .form-row {
+        flex-direction: column !important;
+    }
+    
+    .frogg-contact-section .form-group {
+        width: 100% !important;
+    }
+    
+    .frogg-contact-section .social-links {
+        justify-content: center !important;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .frogg-contact-section .section-title {
+        font-size: 26px !important;
+    }
+    
+    .frogg-contact-section .contact-item {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    
+    .frogg-contact-section .contact-item:hover {
+        transform: translateX(0) translateY(-5px);
+    }
+}
+
+/* ==========================================
+   Animation Effects
+   ========================================== */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.frogg-contact-section .contact-info {
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.frogg-contact-section .contact-form {
+    animation: slideInRight 0.6s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.frogg-contact-section .contact-item {
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+.frogg-contact-section .contact-item:nth-child(1) { animation-delay: 0.1s; }
+.frogg-contact-section .contact-item:nth-child(2) { animation-delay: 0.2s; }
+.frogg-contact-section .contact-item:nth-child(3) { animation-delay: 0.3s; }
+
+/* ==========================================
+   Note: For actual forms, use Elementor Pro 
+   Form widget instead of placeholder containers
+   ========================================== */

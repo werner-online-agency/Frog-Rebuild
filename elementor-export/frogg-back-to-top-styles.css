@@ -1,0 +1,92 @@
+/**
+ * FROGG Back To Top Button Styles
+ * Use with: frogg-back-to-top.json
+ * 
+ * NOTE: For best results, add the back-to-top button via Elementor's
+ * Theme Builder > Site Settings or use the Custom Code feature with
+ * the JavaScript below.
+ */
+
+/* ============================================
+   BACK TO TOP BUTTON
+   ============================================ */
+.back-to-top {
+    position: fixed !important;
+    bottom: 32px !important;
+    right: 32px !important;
+    width: 50px !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    max-width: 50px !important;
+    background: linear-gradient(135deg, #1662ed 0%, #1e3a8a 100%) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease !important;
+    z-index: 100 !important;
+    cursor: pointer;
+    border: none !important;
+}
+
+.back-to-top.visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 0 40px rgba(22, 98, 237, 0.4) !important;
+}
+
+.back-to-top:active {
+    transform: translateY(-2px) !important;
+}
+
+/* Icon inside button */
+.back-to-top i,
+.back-to-top .elementor-icon i,
+.back-to-top svg,
+.back-to-top-icon i {
+    color: #ffffff !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+}
+
+.back-to-top .elementor-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 24px !important;
+        right: 24px !important;
+        width: 44px !important;
+        height: 44px !important;
+        min-height: 44px !important;
+        max-width: 44px !important;
+    }
+    
+    .back-to-top i,
+    .back-to-top-icon i {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        bottom: 16px !important;
+        right: 16px !important;
+    }
+}

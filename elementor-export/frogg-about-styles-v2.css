@@ -1,0 +1,146 @@
+/* FROGG About Section V2 - Elementor Custom Styles
+   ================================================
+   Add this CSS to Elementor > Custom CSS or Theme Customizer
+*/
+
+/* Rotating Badge Animation */
+@keyframes rotateBadge {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotating-badge-container .rotating-text-wrapper {
+    animation: rotateBadge 15s linear infinite;
+}
+
+/* Backdrop blur effect for decorative square */
+.backdrop-blur {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Main image overlay gradient enhancement */
+.about-img-main .elementor-container {
+    transition: all 0.3s ease;
+}
+
+.tab-btn:not(.active):hover {
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.tab-btn:not(.active):hover .tab-btn-icon,
+.tab-btn:not(.active):hover .tab-btn-icon i,
+.tab-btn:not(.active):hover .elementor-icon i,
+.tab-btn:not(.active):hover .tab-btn-text .elementor-heading-title {
+    color: rgba(0, 0, 0, 0.1) !important;
+}
+
+
+
+
+.about-img-main:hover .elementor-container {
+    transform: scale(1.02);
+}
+
+/* Secondary image hover effect */
+.about-img-secondary {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img-secondary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3);
+}
+
+/* Badge icon pulse effect */
+.badge-icon-circle {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 8px 30px rgba(22, 98, 237, 0.35);
+    }
+    50% {
+        box-shadow: 0 8px 40px rgba(22, 98, 237, 0.5);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .rotating-badge-container {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    
+    .rotating-badge-container .badge-icon-circle {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .rotating-badge-container {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .rotating-badge-container .badge-icon-circle {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    .rotating-text-wrapper svg text {
+        font-size: 9px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .rotating-badge-container {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    
+    .rotating-badge-container .badge-icon-circle {
+        width: 45px !important;
+        height: 45px !important;
+    }
+    
+    .rotating-text-wrapper svg text {
+        font-size: 8px !important;
+        letter-spacing: 1px !important;
+    }
+}
+
+/* Feature items hover effect */
+.about-features-v2 .feature-item {
+    transition: transform 0.3s ease;
+}
+
+.about-features-v2 .feature-item:hover {
+    transform: translateX(5px);
+}
+
+/* CTA Button enhanced hover */
+.about-cta-button-v2 .elementor-button {
+    transition: all 0.3s ease;
+}
+
+.about-cta-button-v2 .elementor-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(22, 98, 237, 0.45);
+}
+
+/* Toggle box styling enhancements */
+.about-toggle-box-v2 .elementor-toggle-title {
+    transition: all 0.3s ease;
+}
+
+.about-toggle-box-v2 .elementor-toggle-title:hover {
+    opacity: 0.9;
+    box-shadow: 0 5px 20px rgba(22, 98, 237, 0.4);
+}

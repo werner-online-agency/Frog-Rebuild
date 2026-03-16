@@ -1,0 +1,688 @@
+/* ============================================
+   FROGG RECRUITMENT - ELEMENTOR PRO SITE SETTINGS CSS
+   Add to: Elementor > Site Settings > Custom CSS
+   or WordPress Customizer > Additional CSS
+   ============================================ */
+
+/* ============================================
+   GLOBAL CSS VARIABLES
+   ============================================ */
+:root {
+    /* Primary Colors */
+    --e-global-color-primary: #1662ed;
+    --e-global-color-secondary: #2649b0;
+    --e-global-color-accent: #60a5fa;
+    --e-global-color-text: #1f2937;
+    
+    /* FROGG Brand Colors (with prefix) */
+    --frogg-primary-50: #eff6ff;
+    --frogg-primary-100: #dbeafe;
+    --frogg-primary-200: #bfdbfe;
+    --frogg-primary-300: #93c5fd;
+    --frogg-primary-400: #60a5fa;
+    --frogg-primary-500: #1662ed;
+    --frogg-primary-600: #2649b0;
+    --frogg-primary-700: #1e3a8a;
+    --frogg-primary-800: #1e3a6e;
+    --frogg-primary-900: #172554;
+    
+    /* Primary Colors (without prefix - for section CSS compatibility) */
+    --primary-50: #eff6ff;
+    --primary-100: #dbeafe;
+    --primary-200: #bfdbfe;
+    --primary-300: #93c5fd;
+    --primary-400: #60a5fa;
+    --primary-500: #1662ed;
+    --primary-600: #2649b0;
+    --primary-700: #1e3a8a;
+    --primary-800: #1e3a6e;
+    --primary-900: #172554;
+    
+    /* Accent Colors */
+    --accent-50: #eff6ff;
+    --accent-100: #dbeafe;
+    --accent-400: #60a5fa;
+    --accent-500: #3b82f6;
+    --accent-600: #2563eb;
+    
+    /* Neutral Colors (with prefix) */
+    --frogg-gray-50: #f9fafb;
+    --frogg-gray-100: #f3f4f6;
+    --frogg-gray-200: #e5e7eb;
+    --frogg-gray-300: #d1d5db;
+    --frogg-gray-400: #9ca3af;
+    --frogg-gray-500: #6b7280;
+    --frogg-gray-600: #4b5563;
+    --frogg-gray-700: #374151;
+    --frogg-gray-800: #1f2937;
+    --frogg-gray-900: #111827;
+    --frogg-gray-950: #030712;
+    
+    /* Neutral Colors (without prefix - for section CSS compatibility) */
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --gray-950: #030712;
+    
+    /* Semantic Colors */
+    --frogg-success: #22c55e;
+    --frogg-warning: #f59e0b;
+    --frogg-error: #ef4444;
+    --frogg-info: #3b82f6;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --info: #3b82f6;
+    
+    /* Gradients */
+    --frogg-gradient-primary: linear-gradient(135deg, #1662ed 0%, #1e3a8a 100%);
+    --frogg-gradient-accent: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    --frogg-gradient-dark: linear-gradient(135deg, #1f2937 0%, #030712 100%);
+    --gradient-primary: linear-gradient(135deg, #1662ed 0%, #1e3a8a 100%);
+    --gradient-accent: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    --gradient-dark: linear-gradient(135deg, #1f2937 0%, #030712 100%);
+    --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    
+    /* Typography */
+    --frogg-font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --frogg-font-display: 'Playfair Display', Georgia, serif;
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Playfair Display', Georgia, serif;
+    
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    --space-4xl: 6rem;
+    --space-5xl: 8rem;
+    
+    /* Transitions */
+    --frogg-transition-fast: 150ms ease;
+    --frogg-transition-base: 300ms ease;
+    --frogg-transition-slow: 500ms ease;
+    --transition-fast: 150ms ease;
+    --transition-base: 300ms ease;
+    --transition-slow: 500ms ease;
+    --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Border Radius */
+    --frogg-radius-sm: 0.375rem;
+    --frogg-radius-md: 0.5rem;
+    --frogg-radius-lg: 0.75rem;
+    --frogg-radius-xl: 1rem;
+    --frogg-radius-2xl: 1.5rem;
+    --frogg-radius-full: 9999px;
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 9999px;
+    
+    /* Shadows */
+    --frogg-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --frogg-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --frogg-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --frogg-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --frogg-shadow-glow: 0 0 40px rgba(22, 98, 237, 0.3);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-glow: 0 0 40px rgba(22, 98, 237, 0.3);
+    --shadow-glow-lg: 0 0 60px rgba(22, 98, 237, 0.4);
+    
+    /* Z-index */
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-modal: 300;
+    --z-tooltip: 400;
+    --z-preloader: 500;
+}
+
+/* ============================================
+   GLOBAL TYPOGRAPHY
+   ============================================ */
+body,
+.elementor-widget-text-editor,
+.elementor-widget-theme-post-content {
+    font-family: var(--frogg-font-primary);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--frogg-gray-700);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.elementor-heading-title {
+    font-family: var(--frogg-font-primary);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--frogg-gray-900);
+    margin-bottom: 0.5em;
+}
+
+h1, .elementor-size-xxl { font-size: clamp(2.5rem, 5vw, 3.5rem); }
+h2, .elementor-size-xl { font-size: clamp(2rem, 4vw, 2.75rem); }
+h3, .elementor-size-large { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4, .elementor-size-medium { font-size: 1.5rem; }
+h5, .elementor-size-small { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+/* Paragraphs */
+p {
+    margin-bottom: 1em;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* Links */
+a {
+    color: var(--frogg-primary-500);
+    text-decoration: none;
+    transition: color var(--frogg-transition-fast);
+}
+
+a:hover {
+    color: var(--frogg-primary-700);
+}
+
+/* ============================================
+   GLOBAL BUTTON STYLES
+   ============================================ */
+.elementor-button {
+    font-family: var(--frogg-font-primary) !important;
+    font-weight: 600 !important;
+    font-size: 0.9375rem !important;
+    padding: 0.875rem 1.75rem !important;
+    border-radius: var(--frogg-radius-lg) !important;
+    transition: all var(--frogg-transition-base) !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+
+/* Primary Button */
+.elementor-button-primary,
+.e-button-primary,
+.elementor-button.elementor-button-link {
+    background: var(--frogg-gradient-primary) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(22, 98, 237, 0.3) !important;
+}
+
+.elementor-button-primary:hover,
+.e-button-primary:hover,
+.elementor-button.elementor-button-link:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(22, 98, 237, 0.4) !important;
+}
+
+/* Secondary/Outline Button */
+.elementor-button-secondary,
+.e-button-secondary {
+    background: transparent !important;
+    color: var(--frogg-primary-500) !important;
+    border: 2px solid var(--frogg-primary-500) !important;
+}
+
+.elementor-button-secondary:hover,
+.e-button-secondary:hover {
+    background: var(--frogg-primary-50) !important;
+    border-color: var(--frogg-primary-600) !important;
+    color: var(--frogg-primary-600) !important;
+}
+
+/* Button Sizes */
+.elementor-size-sm .elementor-button {
+    padding: 0.625rem 1.25rem !important;
+    font-size: 0.875rem !important;
+}
+
+.elementor-size-md .elementor-button {
+    padding: 0.875rem 1.75rem !important;
+    font-size: 0.9375rem !important;
+}
+
+.elementor-size-lg .elementor-button {
+    padding: 1rem 2rem !important;
+    font-size: 1rem !important;
+}
+
+.elementor-size-xl .elementor-button {
+    padding: 1.125rem 2.5rem !important;
+    font-size: 1.0625rem !important;
+}
+
+/* ============================================
+   GLOBAL CONTAINER SETTINGS
+   ============================================ */
+.elementor-container {
+    max-width: 1280px;
+}
+
+.e-con {
+    --container-max-width: 1280px;
+}
+
+/* Full Width Sections */
+.e-con.e-con-full {
+    --container-max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Boxed Container */
+.e-con.e-con-boxed {
+    --container-max-width: 1280px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Section Spacing */
+.elementor-section,
+.e-con {
+    --section-padding: 5rem;
+}
+
+/* ============================================
+   GLOBAL FORM STYLES
+   ============================================ */
+.elementor-form .elementor-field-group {
+    margin-bottom: 1.25rem;
+}
+
+.elementor-form .elementor-field {
+    font-family: var(--frogg-font-primary);
+    font-size: 1rem;
+    padding: 0.875rem 1rem;
+    border: 1px solid var(--frogg-gray-300);
+    border-radius: var(--frogg-radius-lg);
+    background: var(--frogg-gray-50);
+    color: var(--frogg-gray-800);
+    transition: all var(--frogg-transition-base);
+}
+
+.elementor-form .elementor-field:focus {
+    outline: none;
+    border-color: var(--frogg-primary-500);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(22, 98, 237, 0.1);
+}
+
+.elementor-form .elementor-field::placeholder {
+    color: var(--frogg-gray-400);
+}
+
+.elementor-form .elementor-field-label {
+    font-family: var(--frogg-font-primary);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--frogg-gray-700);
+    margin-bottom: 0.5rem;
+}
+
+.elementor-form .elementor-field-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.elementor-form .elementor-field-type-select select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+/* Form Submit Button */
+.elementor-form .elementor-button[type="submit"] {
+    background: var(--frogg-gradient-primary) !important;
+    color: #ffffff !important;
+    width: 100%;
+}
+
+/* ============================================
+   GLOBAL IMAGE STYLES
+   ============================================ */
+.elementor-image img {
+    border-radius: var(--frogg-radius-xl);
+}
+
+.elementor-image.rounded-full img {
+    border-radius: var(--frogg-radius-full);
+}
+
+/* Image hover effects */
+.elementor-image.hover-zoom img {
+    transition: transform var(--frogg-transition-base);
+}
+
+.elementor-image.hover-zoom:hover img {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   GLOBAL ICON STYLES
+   ============================================ */
+.elementor-icon {
+    transition: all var(--frogg-transition-base);
+}
+
+.elementor-icon i {
+    color: var(--frogg-primary-500);
+}
+
+.elementor-icon:hover {
+    transform: translateY(-3px);
+}
+
+/* Icon Box */
+.elementor-icon-box-icon {
+    margin-bottom: 1rem;
+}
+
+.elementor-icon-box-title {
+    font-family: var(--frogg-font-primary);
+    font-weight: 600;
+    color: var(--frogg-gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.elementor-icon-box-description {
+    color: var(--frogg-gray-600);
+    line-height: 1.7;
+}
+
+/* ============================================
+   GLOBAL DIVIDER STYLES
+   ============================================ */
+.elementor-divider-separator {
+    border-color: var(--frogg-gray-200);
+}
+
+/* ============================================
+   GLOBAL SPACING UTILITIES
+   ============================================ */
+.elementor-widget {
+    --widgets-spacing: 1.5rem;
+}
+
+/* Section gaps */
+.gap-sm { gap: 1rem !important; }
+.gap-md { gap: 1.5rem !important; }
+.gap-lg { gap: 2rem !important; }
+.gap-xl { gap: 3rem !important; }
+.gap-2xl { gap: 4rem !important; }
+
+/* Padding utilities */
+.p-section { padding: 5rem 0 !important; }
+.p-section-sm { padding: 3rem 0 !important; }
+.p-section-lg { padding: 7rem 0 !important; }
+
+/* ============================================
+   GLOBAL CARD STYLES
+   These are utility classes - apply .frogg-card 
+   class to containers via CSS Classes field
+   ============================================ */
+.frogg-card {
+    background: #ffffff;
+    border-radius: var(--frogg-radius-xl);
+    padding: 2rem;
+    box-shadow: var(--frogg-shadow-md);
+    transition: all var(--frogg-transition-base);
+}
+
+.frogg-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--frogg-shadow-xl);
+}
+
+.frogg-card-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ============================================
+   GLOBAL NAV MENU STYLES
+   ============================================ */
+.elementor-nav-menu a {
+    font-family: var(--frogg-font-primary);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--frogg-gray-600);
+    transition: color var(--frogg-transition-fast);
+}
+
+.elementor-nav-menu a:hover,
+.elementor-nav-menu a.current {
+    color: var(--frogg-primary-600);
+}
+
+/* Dropdown Menu */
+.elementor-nav-menu--dropdown {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: var(--frogg-radius-xl);
+    box-shadow: var(--frogg-shadow-xl);
+    padding: 0.75rem 0;
+    margin-top: 0.5rem;
+}
+
+.elementor-nav-menu--dropdown a {
+    color: var(--frogg-gray-600) !important;
+    padding: 0.625rem 1.5rem !important;
+    font-size: 0.875rem !important;
+}
+
+.elementor-nav-menu--dropdown a:hover {
+    color: var(--frogg-primary-500) !important;
+    background: rgba(22, 98, 237, 0.05);
+}
+
+/* ============================================
+   GLOBAL TESTIMONIAL STYLES
+   ============================================ */
+.elementor-testimonial {
+    text-align: center;
+}
+
+.elementor-testimonial-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--frogg-gray-700);
+    font-style: italic;
+}
+
+.elementor-testimonial-name {
+    font-family: var(--frogg-font-primary);
+    font-weight: 600;
+    color: var(--frogg-gray-900);
+}
+
+.elementor-testimonial-job {
+    color: var(--frogg-gray-500);
+    font-size: 0.875rem;
+}
+
+/* ============================================
+   GLOBAL ANIMATION CLASSES
+   ============================================ */
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.slide-up {
+    animation: slideUp 0.6s ease forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ============================================
+   GLOBAL SCROLL BEHAVIOR
+   ============================================ */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   GLOBAL SELECTION STYLES
+   ============================================ */
+::selection {
+    background: var(--frogg-primary-100);
+    color: var(--frogg-primary-800);
+}
+
+::-moz-selection {
+    background: var(--frogg-primary-100);
+    color: var(--frogg-primary-800);
+}
+
+/* ============================================
+   GLOBAL SCROLLBAR STYLES
+   ============================================ */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--frogg-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--frogg-gray-400);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--frogg-gray-500);
+}
+
+/* ============================================
+   FOCUS STATES (ACCESSIBILITY)
+   ============================================ */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+.elementor-button:focus {
+    outline: 2px solid var(--frogg-primary-500);
+    outline-offset: 2px;
+}
+
+/* Skip focus outline for mouse users */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--frogg-primary-500);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================ */
+@media (max-width: 1024px) {
+    body,
+    .elementor-widget-text-editor {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    body,
+    .elementor-widget-text-editor {
+        font-size: 14px;
+    }
+    
+    .elementor-container,
+    .e-con.e-con-boxed {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .elementor-section,
+    .e-con {
+        --section-padding: 3rem;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    .elementor-element {
+        break-inside: avoid;
+    }
+    
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: var(--frogg-gray-500);
+    }
+}

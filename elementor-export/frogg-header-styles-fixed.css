@@ -1,0 +1,561 @@
+:root {
+    --wdtPrimaryColor: #1268fb;
+    --wdtPrimaryColorRgb: 18,104,251;
+    --wdtSecondaryColor: #010e37;
+    --wdtSecondaryColorRgb: 1,14,55;
+    --wdtTertiaryColor: #d9f1ff;
+    --wdtQuaternaryColor: #2C3E97;
+    --wdtBodyBGColor: #010e37;
+    --wdtBodyTxtColor: #4d4d4d;
+    --wdtHeadAltColor: #fff;
+    --wdtAccentTxtColor: #ffffff;
+    --wdtRadius_1X: 8px;
+    --wdtRadius_2X: 14px;
+    --wdtBaseTransition: all 0.3s ease-in-out;
+    --wdtTransitionFast: all 0.2s ease;
+    --wdtGray600: #6b7280;
+    --wdtGray800: #1f2937;
+    --wdtPrimaryDark: #1e3a8a;
+}
+
+
+.elementor-widget-nav-menu .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item:before, .elementor-widget-nav-menu .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item:after
+ {
+    background-color: #60a5fa00!important;
+}
+
+/* ============================================
+   FROGG HEADER STYLES
+   ============================================ */
+.frogg-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99999;
+    transition: var(--wdtBaseTransition) !important;
+    /* DEFAULT: Transparent background (over hero) */
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.frogg-header,
+.frogg-header .elementor-container,
+.frogg-header .elementor-widget-wrap {
+    overflow: visible !important;
+}
+
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a, .frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li > a, .frogg-header.scrolled .elementor-nav-menu--main .elementor-item
+
+ {
+    color: #1f2937 !important;
+}
+
+/* SCROLLED STATE: White background with shadow (NO SIZE CHANGE) */
+.frogg-header.scrolled {
+    background: rgba(255, 255, 255, 0.98) !important;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ============================================
+   LOGO STYLES
+   ============================================ */
+/* DEFAULT: Normal logo size */
+.frogg-logo-img img,
+.wdt-logo img {
+    height: 50px !important;
+    width: auto !important;
+    object-fit: contain;
+    transition: all var(--wdtBaseTransition);
+}
+
+/* TRANSPARENT STATE: White/inverted logo */
+.frogg-header:not(.scrolled) .frogg-logo-img img,
+.frogg-header:not(.scrolled) .wdt-logo img,
+.frogg-header:not(.scrolled) .elementor-widget-image img,
+.frogg-header:not(.scrolled) .elementor-image img {
+    filter: brightness(0) invert(1) !important;
+    height: 50px !important;
+}
+
+/* SCROLLED STATE: Normal logo color (no size change) */
+.frogg-header.scrolled .frogg-logo-img img,
+.frogg-header.scrolled .wdt-logo img,
+.frogg-header.scrolled .elementor-widget-image img,
+.frogg-header.scrolled .elementor-image img {
+    filter: none !important;
+}
+
+/* ============================================
+   NAVIGATION MENU STYLES (wdt-nav-menu)
+   ============================================ */
+.wdt-nav-menu .elementor-nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wdt-nav-menu,
+.wdt-nav-menu .elementor-nav-menu,
+.wdt-nav-menu .elementor-nav-menu > li {
+    position: relative;
+}
+
+.wdt-nav-menu .elementor-nav-menu a {
+    display: inline-block;
+    padding: 8px 22px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--wdtHeadAltColor);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 11px;
+    z-index: 1;
+}
+
+/* Gradient background effect on nav hover */
+.wdt-nav-menu .elementor-nav-menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+    border-radius: 11px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wdt-nav-menu .elementor-nav-menu a:hover::before,
+.wdt-nav-menu .elementor-nav-menu a.current::before,
+.wdt-nav-menu .elementor-nav-menu a.active::before {
+    opacity: 1;
+}
+
+.wdt-nav-menu .elementor-nav-menu a:hover,
+.wdt-nav-menu .elementor-nav-menu a.current,
+.wdt-nav-menu .elementor-nav-menu a.active {
+    color: #FFF;
+}
+
+/* SCROLLED STATE: Dark links (for white/scrolled background) */
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a,
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li > a,
+.frogg-header.scrolled .elementor-nav-menu--main .elementor-item {
+    color: #1f2937 !important;
+}
+
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a:hover,
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a.current,
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a.active,
+.frogg-header.scrolled .elementor-item:hover,
+.frogg-header.scrolled .elementor-item.elementor-item-active {
+    color: #ffffff !important;
+}
+
+/* Active menu item with gradient bubble */
+.wdt-nav-menu .elementor-nav-menu > li.current-menu-item > a::before,
+.wdt-nav-menu .elementor-nav-menu > li.current-menu-ancestor > a::before,
+.wdt-nav-menu .elementor-nav-menu > li.current-menu-parent > a::before,
+.wdt-nav-menu .elementor-item.elementor-item-active::before,
+.wdt-nav-menu .elementor-nav-menu a.current::before {
+    opacity: 1 !important;
+}
+
+.wdt-nav-menu .elementor-nav-menu > li.current-menu-item > a,
+.wdt-nav-menu .elementor-nav-menu > li.current-menu-ancestor > a,
+.wdt-nav-menu .elementor-nav-menu > li.current-menu-parent > a,
+.wdt-nav-menu .elementor-item.elementor-item-active,
+.wdt-nav-menu .elementor-nav-menu a.current {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%) !important;
+    border-radius: 11px !important;
+}
+
+/* Dropdown indicator (+) - shows all the time */
+.wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > a::after {
+    content: '+';
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* SCROLLED STATE: Dark + icon for white background */
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > a::after {
+    color: #4b5563 !important;
+}
+
+/* Hover state: Keep + icon white when gradient background appears */
+.wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > a:hover::after,
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > a:hover::after {
+    color: #ffffff !important;
+}
+
+.wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children:hover > a::after {
+    transform: rotate(45deg);
+}
+
+/* Hide default Elementor dropdown indicators */
+.wdt-nav-menu .elementor-nav-menu .sub-arrow,
+.wdt-nav-menu .elementor-nav-menu--indicator {
+    display: none !important;
+}
+
+/* Dropdown/Submenu Styles */
+.wdt-nav-menu .elementor-nav-menu--dropdown {
+    background: var(--wdtBodyBGColor);
+    border: 1px solid rgba(18, 104, 251, 1);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    margin-top: 8px;
+    z-index: 100000 !important;
+}
+
+/* SCROLLED STATE: White dropdown menu */
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu--dropdown {
+    background: #ffffff !important;
+    border-color: rgba(18, 104, 251, 0.18) !important;
+}
+
+.wdt-nav-menu .elementor-nav-menu--dropdown a {
+    display: block;
+    padding: 9px 22px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--wdtHeadAltColor);
+    border-radius: 11px;
+    position: relative;
+    z-index: 1;
+}
+
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu--dropdown a {
+    color: #1f2937 !important;
+}
+
+.wdt-nav-menu .elementor-nav-menu--dropdown a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+    border-radius: 11px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wdt-nav-menu .elementor-nav-menu--dropdown a:hover::before {
+    opacity: 1;
+}
+
+.wdt-nav-menu .elementor-nav-menu--dropdown a:hover {
+    color: var(--wdtAccentTxtColor);
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+/* Primary Button (Get Started) - frogg-btn-primary */
+.frogg-btn-primary .elementor-button {
+    background: var(--wdtPrimaryColor) !important;
+    color: var(--wdtAccentTxtColor) !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(22, 98, 237, 0.3);
+    transition: var(--wdtBaseTransition);
+}
+
+.frogg-btn-primary .elementor-button:hover {
+    background: var(--wdtPrimaryDark) !important;
+    box-shadow: 0 6px 20px rgba(22, 98, 237, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Outline Button (Sign In / Up) - frogg-btn-outline */
+.frogg-btn-outline .elementor-button {
+    background: transparent !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    color: var(--wdtAccentTxtColor) !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 10px;
+    transition: var(--wdtBaseTransition);
+}
+
+.frogg-btn-outline .elementor-button:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* SCROLLED STATE: Blue border for white background */
+.frogg-header.scrolled .frogg-btn-outline .elementor-button {
+    border-color: var(--wdtPrimaryColor) !important;
+    color: var(--wdtPrimaryColor) !important;
+}
+
+.frogg-header.scrolled .frogg-btn-outline .elementor-button:hover {
+    background: rgba(22, 98, 237, 0.1) !important;
+    border-color: var(--wdtPrimaryDark) !important;
+}
+
+/* ============================================
+   MOBILE TOGGLE STYLES (wdt-mobile-toggle)
+   ============================================ */
+.wdt-mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* wdt-toggle-line */
+.wdt-toggle-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--wdtHeadAltColor);
+    transition: var(--wdtBaseTransition);
+}
+
+/* SCROLLED STATE: Dark toggle lines for white background */
+.frogg-header.scrolled .wdt-toggle-line {
+    background: var(--wdtGray800);
+}
+
+.wdt-mobile-toggle.active .wdt-toggle-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.wdt-mobile-toggle.active .wdt-toggle-line:nth-child(2) {
+    opacity: 0;
+}
+
+.wdt-mobile-toggle.active .wdt-toggle-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* ============================================
+   MOBILE MENU PANEL (frogg-mobile-menu)
+   ============================================ */
+.frogg-mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--wdtSecondaryColor);
+    z-index: 199;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 24px 40px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+
+.frogg-mobile-menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.frogg-mobile-menu .elementor-nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.frogg-mobile-menu .elementor-nav-menu a {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--wdtAccentTxtColor);
+    transition: var(--wdtTransitionFast);
+}
+
+.frogg-mobile-menu .elementor-nav-menu a:hover,
+.frogg-mobile-menu .elementor-nav-menu a.current {
+    color: var(--wdtPrimaryColor);
+}
+
+/* ============================================
+   WDT TOPBAR STYLES
+   ============================================ */
+.wdt-topbar {
+    transition: var(--wdtBaseTransition);
+}
+
+.wdt-topbar-contact {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.wdt-topbar-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--wdtAccentTxtColor);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.wdt-topbar-contact-item i {
+    color: var(--wdtPrimaryColor);
+}
+
+.wdt-topbar-contact-item:hover {
+    color: var(--wdtPrimaryColor);
+}
+
+.wdt-lang-selector {
+    color: var(--wdtAccentTxtColor);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--wdtBaseTransition);
+}
+
+.wdt-lang-selector:hover {
+    color: var(--wdtPrimaryColor);
+}
+
+/* ============================================
+   MAIN HEADER STYLES (wdt-header)
+   ============================================ */
+.wdt-header {
+    background: var(--wdtBodyBGColor);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    transition: var(--wdtBaseTransition);
+}
+
+.wdt-header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablet Breakpoint */
+@media screen and (max-width: 1024px) {
+    .wdt-nav-menu {
+        display: none !important;
+    }
+    
+    .frogg-btn-outline {
+        display: none !important;
+    }
+    
+    .frogg-btn-primary {
+        display: none !important;
+    }
+    
+    .wdt-mobile-toggle {
+        display: flex !important;
+    }
+    
+    .wdt-topbar-contact {
+        gap: 16px;
+    }
+    
+    .wdt-topbar-contact-item {
+        font-size: 13px;
+    }
+    
+    .frogg-logo-img img,
+    .wdt-logo img {
+        height: 40px !important;
+    }
+}
+
+/* Mobile Breakpoint */
+@media screen and (max-width: 767px) {
+    .frogg-header .elementor-container,
+    .wdt-header .elementor-container {
+        padding: 0 12px !important;
+    }
+    
+    .frogg-logo-img img,
+    .wdt-logo img {
+        height: 36px !important;
+    }
+    
+    .frogg-mobile-menu .elementor-nav-menu a {
+        font-size: 20px;
+    }
+    
+    .wdt-topbar-contact {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.frogg-header {
+    animation: fadeInDown 0.6s ease forwards;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.no-scroll {
+    overflow: hidden;
+}

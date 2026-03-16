@@ -1,0 +1,195 @@
+/**
+ * FROGG Employers Section Styles
+ * "For Employers" section with sticky content and benefit cards
+ * Import this CSS in Elementor > Custom CSS or theme
+ */
+
+/* ==========================================================================
+   Section Layout
+   ========================================================================== */
+
+.frogg-employers-section {
+    background: #ffffff;
+    overflow: visible;
+}
+
+.employers-grid {
+    align-items: flex-start;
+}
+
+/* ==========================================================================
+   Sticky Content Column (Left Side)
+   ========================================================================== */
+
+.employers-content {
+    position: sticky !important;
+    top: 100px;
+    align-self: flex-start;
+}
+
+/* Section Tag */
+.frogg-employers-section .section-tag {
+    display: inline-block;
+}
+
+/* Title with highlight span */
+.frogg-employers-section .section-title .highlight {
+    color: #1662ed;
+    position: relative;
+}
+
+/* Text paragraphs */
+.employers-text p {
+    color: #4b5563;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Image styling */
+.employers-image {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.employers-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.employers-image:hover img {
+    transform: scale(1.03);
+}
+
+/* ==========================================================================
+   Visual Cards (Right Side)
+   ========================================================================== */
+
+.employers-visual {
+    /* Scrolling column with cards */
+}
+
+.visual-card {
+    transition: all 0.3s ease;
+}
+
+.visual-card:hover {
+    background: #ffffff !important;
+    border-color: rgba(22, 98, 237, 0.2) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Icon container */
+.visual-icon {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.visual-card:hover .visual-icon {
+    transform: scale(1.05);
+}
+
+/* Card content */
+.visual-card-content h3 {
+    margin: 0;
+}
+
+.visual-card-content p {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .frogg-employers-section {
+        padding: 80px 24px !important;
+    }
+    
+    .employers-grid {
+        flex-direction: column !important;
+    }
+    
+    .employers-content {
+        width: 100% !important;
+        position: relative !important;
+        top: auto !important;
+    }
+    
+    .employers-visual {
+        width: 100% !important;
+    }
+    
+    .frogg-employers-section .section-title {
+        font-size: 36px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .frogg-employers-section {
+        padding: 60px 16px !important;
+    }
+    
+    .employers-grid {
+        gap: 30px !important;
+    }
+    
+    .employers-content,
+    .employers-visual {
+        min-width: unset !important;
+    }
+    
+    .visual-card {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    
+    .visual-icon {
+        margin: 0 auto;
+    }
+    
+    .visual-card-content {
+        text-align: center;
+    }
+    
+    .frogg-employers-section .section-title {
+        font-size: 28px !important;
+    }
+    
+    .employers-text p {
+        font-size: 15px !important;
+    }
+}
+
+/* ==========================================================================
+   Animation Enhancements (Optional)
+   ========================================================================== */
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply staggered animation to cards */
+.visual-card:nth-child(1) { animation-delay: 0s; }
+.visual-card:nth-child(2) { animation-delay: 0.1s; }
+.visual-card:nth-child(3) { animation-delay: 0.2s; }
+.visual-card:nth-child(4) { animation-delay: 0.3s; }
+.visual-card:nth-child(5) { animation-delay: 0.4s; }
+.visual-card:nth-child(6) { animation-delay: 0.5s; }
+
+/* Use with Elementor's viewport animations */
+.visual-card.animate {
+    animation: slideInRight 0.5s ease forwards;
+}

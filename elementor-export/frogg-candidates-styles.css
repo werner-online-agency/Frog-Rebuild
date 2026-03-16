@@ -1,0 +1,223 @@
+/**
+ * FROGG Candidates Section Styles
+ * "For Job Seekers" section with dark gradient background and action cards
+ * Import this CSS in Elementor > Custom CSS or theme
+ */
+
+/* ==========================================================================
+   Section Background & Overlays
+   ========================================================================== */
+
+.frogg-candidates-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Radial gradient overlays for visual depth */
+.candidates-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(ellipse at 30% 50%, rgba(22, 98, 237, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(38, 73, 176, 0.1) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   Section Header (Light Theme)
+   ========================================================================== */
+
+.frogg-candidates-section .section-header {
+    position: relative;
+    z-index: 1;
+}
+
+.frogg-candidates-section .section-tag {
+    display: inline-block;
+}
+
+.frogg-candidates-section .gradient-text {
+    background: linear-gradient(135deg, #1662ed 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline;
+}
+
+/* ==========================================================================
+   Candidates Cards Grid
+   ========================================================================== */
+
+.candidates-grid {
+    width: 100%;
+}
+
+.candidate-card {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100%;
+}
+
+/* Make card content grow to push link to bottom */
+.candidate-card > .e-con-inner,
+.candidate-card > .elementor-widget-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    flex: 1 !important;
+}
+
+/* Card description should take remaining space */
+.candidate-card .card-description,
+.candidate-card .elementor-widget-text-editor {
+    flex: 1 !important;
+}
+
+/* Card link at bottom */
+.card-link {
+    margin-top: auto !important;
+    transition: gap 0.3s ease;
+    cursor: pointer;
+}
+
+.candidate-card:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    transform: translateY(-5px);
+    border-color: rgba(22, 98, 237, 0.3) !important;
+}
+
+/* Card Icon */
+.candidate-card .card-icon {
+    transition: transform 0.3s ease;
+}
+
+.candidate-card:hover .card-icon {
+    transform: scale(1.05);
+}
+
+.card-link:hover {
+    gap: 12px !important;
+}
+
+/* ==========================================================================
+   CTA Section
+   ========================================================================== */
+
+.candidates-cta {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+}
+
+.candidates-cta .btn-glass {
+    transition: all 0.3s ease;
+}
+
+.candidates-cta .btn-glass:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+
+/* Tablet: 2 columns */
+@media (max-width: 992px) {
+    .frogg-candidates-section {
+        padding: 80px 0 !important;
+    }
+    
+    .candidates-grid {
+        gap: 20px !important;
+    }
+    
+    .candidate-card {
+        width: 45% !important;
+        min-width: 200px !important;
+    }
+    
+    .frogg-candidates-section .section-title,
+    .frogg-candidates-section .gradient-text {
+        font-size: 36px !important;
+    }
+    
+    .candidates-cta {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    
+    .candidates-cta .cta-content {
+        align-items: center !important;
+    }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 576px) {
+    .frogg-candidates-section {
+        padding: 60px 0 !important;
+    }
+    
+    .candidates-grid {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .candidate-card {
+        width: 100% !important;
+        min-width: unset !important;
+    }
+    
+    .candidates-inner {
+        gap: 40px !important;
+    }
+    
+    .frogg-candidates-section .section-title,
+    .frogg-candidates-section .gradient-text {
+        font-size: 28px !important;
+    }
+    
+    .frogg-candidates-section .section-subtitle p {
+        font-size: 16px !important;
+    }
+    
+    .candidates-cta {
+        padding: 24px !important;
+    }
+    
+    .candidates-cta .btn-glass {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ==========================================================================
+   Animation Enhancements (Optional)
+   ========================================================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply staggered animation to cards */
+.candidate-card:nth-child(1) { animation-delay: 0s; }
+.candidate-card:nth-child(2) { animation-delay: 0.1s; }
+.candidate-card:nth-child(3) { animation-delay: 0.2s; }
+.candidate-card:nth-child(4) { animation-delay: 0.3s; }
+
+/* Use with Elementor's viewport animations */
+.candidate-card.animate {
+    animation: fadeInUp 0.5s ease forwards;
+}
