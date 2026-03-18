@@ -1,0 +1,896 @@
+{
+  "title": "FROGG Contact Section",
+  "type": "section",
+  "version": "0.4",
+  "page_settings": {},
+  "content": [
+    {
+      "id": "contact-section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "html_tag": "section",
+        "flex_direction": "row",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true },
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "css_classes": "frogg-contact-section"
+      },
+      "elements": [
+        {
+          "id": "contact-dark-bg",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "width": { "unit": "%", "size": 50 },
+            "flex_direction": "column",
+            "padding": { "unit": "px", "top": "120", "right": "80", "bottom": "120", "left": "80", "isLinked": false },
+            "background_background": "gradient",
+            "background_color": "#111827",
+            "background_color_b": "#1a1a2e",
+            "background_gradient_angle": { "unit": "deg", "size": 135 },
+            "css_classes": "contact-info-wrapper"
+          },
+          "elements": [
+            {
+              "id": "contact-info",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "max_width": { "unit": "px", "size": 500 },
+                "flex_direction": "column",
+                "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "auto", "isLinked": false },
+                "css_classes": "contact-info"
+              },
+              "elements": [
+                {
+                  "id": "contact-tag",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Get In Touch",
+                    "header_size": "span",
+                    "title_color": "#60a5fa",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 14 },
+                    "typography_font_weight": "600",
+                    "typography_text_transform": "uppercase",
+                    "typography_letter_spacing": { "unit": "px", "size": 2 },
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0.1)",
+                    "padding": { "unit": "px", "top": "8", "right": "16", "bottom": "8", "left": "16", "isLinked": false },
+                    "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                    "css_classes": "section-tag"
+                  }
+                },
+                {
+                  "id": "contact-title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Let's Start a <span class=\"gradient-text\">Conversation</span>",
+                    "header_size": "h2",
+                    "title_color": "#ffffff",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 42 },
+                    "typography_font_weight": "700",
+                    "typography_line_height": { "unit": "em", "size": 1.2 },
+                    "margin": { "unit": "px", "top": "16", "right": "0", "bottom": "16", "left": "0", "isLinked": false },
+                    "css_classes": "section-title"
+                  }
+                },
+                {
+                  "id": "contact-text",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Whether you're looking to hire top talent or take the next step in your career, we're here to help. Reach out to our team today.</p>",
+                    "text_color": "rgba(255, 255, 255, 0.7)",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 17 },
+                    "typography_line_height": { "unit": "em", "size": 1.8 },
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "32", "left": "0", "isLinked": false },
+                    "css_classes": "contact-text"
+                  }
+                },
+                {
+                  "id": "contact-details",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_gap": { "unit": "px", "size": 24, "column": "24", "row": "24" },
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "32", "left": "0", "isLinked": false },
+                    "css_classes": "contact-details"
+                  },
+                  "elements": [
+                    {
+                      "id": "contact-item-1",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_gap": { "unit": "px", "size": 16, "column": "16", "row": "16" },
+                        "css_classes": "contact-item"
+                      },
+                      "elements": [
+                        {
+                          "id": "contact-icon-1",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "width": { "unit": "px", "size": 50 },
+                            "height": { "unit": "px", "size": 50 },
+                            "flex_justify_content": "center",
+                            "flex_align_items": "center",
+                            "background_background": "classic",
+                            "background_color": "rgba(255, 255, 255, 0.1)",
+                            "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                            "css_classes": "contact-icon"
+                          },
+                          "elements": [
+                            {
+                              "id": "icon-1",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "settings": {
+                                "selected_icon": { "library": "fa-solid", "value": "fas fa-map-marker-alt" },
+                                "primary_color": "#60a5fa",
+                                "size": { "unit": "px", "size": 20 }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "contact-content-1",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": { "unit": "px", "size": 4, "column": "4", "row": "4" },
+                            "css_classes": "contact-content"
+                          },
+                          "elements": [
+                            {
+                              "id": "office-1-title",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "settings": {
+                                "title": "Cape Town Office",
+                                "header_size": "h4",
+                                "title_color": "#ffffff",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 16 },
+                                "typography_font_weight": "600"
+                              }
+                            },
+                            {
+                              "id": "office-1-location",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "settings": {
+                                "title": "Cape Town, South Africa",
+                                "header_size": "span",
+                                "title_color": "rgba(255, 255, 255, 0.6)",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 14 }
+                              }
+                            },
+                            {
+                              "id": "office-1-phone",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "settings": {
+                                "text": "+27 21 556 5598",
+                                "link": { "url": "tel:+27215565598", "is_external": false },
+                                "button_type": "default",
+                                "background_color": "transparent",
+                                "button_text_color": "#60a5fa",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 14 },
+                                "button_padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true },
+                                "css_classes": "contact-link"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "contact-item-2",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_gap": { "unit": "px", "size": 16, "column": "16", "row": "16" },
+                        "css_classes": "contact-item"
+                      },
+                      "elements": [
+                        {
+                          "id": "contact-icon-2",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "width": { "unit": "px", "size": 50 },
+                            "height": { "unit": "px", "size": 50 },
+                            "flex_justify_content": "center",
+                            "flex_align_items": "center",
+                            "background_background": "classic",
+                            "background_color": "rgba(255, 255, 255, 0.1)",
+                            "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                            "css_classes": "contact-icon"
+                          },
+                          "elements": [
+                            {
+                              "id": "icon-2",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "settings": {
+                                "selected_icon": { "library": "fa-solid", "value": "fas fa-map-marker-alt" },
+                                "primary_color": "#60a5fa",
+                                "size": { "unit": "px", "size": 20 }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "contact-content-2",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": { "unit": "px", "size": 4, "column": "4", "row": "4" },
+                            "css_classes": "contact-content"
+                          },
+                          "elements": [
+                            {
+                              "id": "office-2-title",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "settings": {
+                                "title": "Johannesburg Office",
+                                "header_size": "h4",
+                                "title_color": "#ffffff",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 16 },
+                                "typography_font_weight": "600"
+                              }
+                            },
+                            {
+                              "id": "office-2-location",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "settings": {
+                                "title": "Johannesburg, South Africa",
+                                "header_size": "span",
+                                "title_color": "rgba(255, 255, 255, 0.6)",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 14 }
+                              }
+                            },
+                            {
+                              "id": "office-2-phone",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "settings": {
+                                "text": "+27 10 824 6772",
+                                "link": { "url": "tel:+27108246772", "is_external": false },
+                                "button_type": "default",
+                                "background_color": "transparent",
+                                "button_text_color": "#60a5fa",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 14 },
+                                "button_padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true },
+                                "css_classes": "contact-link"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "contact-item-3",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_gap": { "unit": "px", "size": 16, "column": "16", "row": "16" },
+                        "css_classes": "contact-item"
+                      },
+                      "elements": [
+                        {
+                          "id": "contact-icon-3",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "width": { "unit": "px", "size": 50 },
+                            "height": { "unit": "px", "size": 50 },
+                            "flex_justify_content": "center",
+                            "flex_align_items": "center",
+                            "background_background": "classic",
+                            "background_color": "rgba(255, 255, 255, 0.1)",
+                            "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                            "css_classes": "contact-icon"
+                          },
+                          "elements": [
+                            {
+                              "id": "icon-3",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "settings": {
+                                "selected_icon": { "library": "fa-solid", "value": "fas fa-envelope" },
+                                "primary_color": "#60a5fa",
+                                "size": { "unit": "px", "size": 20 }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "contact-content-3",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": { "unit": "px", "size": 4, "column": "4", "row": "4" },
+                            "css_classes": "contact-content"
+                          },
+                          "elements": [
+                            {
+                              "id": "email-title",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "settings": {
+                                "title": "Email Us",
+                                "header_size": "h4",
+                                "title_color": "#ffffff",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 16 },
+                                "typography_font_weight": "600"
+                              }
+                            },
+                            {
+                              "id": "email-sales",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "settings": {
+                                "editor": "<p>Looking for staff: <a href=\"mailto:sales@froggsa.co.za\">sales@froggsa.co.za</a></p>",
+                                "text_color": "rgba(255, 255, 255, 0.6)",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 14 },
+                                "css_classes": "email-text"
+                              }
+                            },
+                            {
+                              "id": "email-cv",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "settings": {
+                                "editor": "<p>Job seekers: <a href=\"mailto:cv@froggsa.co.za\">cv@froggsa.co.za</a></p>",
+                                "text_color": "rgba(255, 255, 255, 0.6)",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 14 },
+                                "css_classes": "email-text"
+                              }
+                            },
+                            {
+                              "id": "email-info",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "settings": {
+                                "editor": "<p>General info: <a href=\"mailto:info@froggsa.co.za\">info@froggsa.co.za</a></p>",
+                                "text_color": "rgba(255, 255, 255, 0.6)",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 14 },
+                                "css_classes": "email-text"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "social-links",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_gap": { "unit": "px", "size": 12, "column": "12", "row": "12" },
+                    "css_classes": "social-links"
+                  },
+                  "elements": [
+                    {
+                      "id": "social-facebook",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "library": "fa-brands", "value": "fab fa-facebook-f" },
+                        "link": { "url": "https://www.facebook.com/FROGGRecruitmentSA/", "is_external": true },
+                        "primary_color": "#ffffff",
+                        "size": { "unit": "px", "size": 16 },
+                        "icon_padding": { "unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true },
+                        "background_color": "rgba(255, 255, 255, 0.1)",
+                        "border_radius": { "unit": "%", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                        "css_classes": "social-icon"
+                      }
+                    },
+                    {
+                      "id": "social-twitter",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "library": "fa-brands", "value": "fab fa-x-twitter" },
+                        "link": { "url": "https://x.com/FroggRecruitSA", "is_external": true },
+                        "primary_color": "#ffffff",
+                        "size": { "unit": "px", "size": 16 },
+                        "icon_padding": { "unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true },
+                        "background_color": "rgba(255, 255, 255, 0.1)",
+                        "border_radius": { "unit": "%", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                        "css_classes": "social-icon"
+                      }
+                    },
+                    {
+                      "id": "social-linkedin",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "library": "fa-brands", "value": "fab fa-linkedin-in" },
+                        "link": { "url": "https://www.linkedin.com/company/frogg-recruitment", "is_external": true },
+                        "primary_color": "#ffffff",
+                        "size": { "unit": "px", "size": 16 },
+                        "icon_padding": { "unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true },
+                        "background_color": "rgba(255, 255, 255, 0.1)",
+                        "border_radius": { "unit": "%", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                        "css_classes": "social-icon"
+                      }
+                    },
+                    {
+                      "id": "social-instagram",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "library": "fa-brands", "value": "fab fa-instagram" },
+                        "link": { "url": "https://www.instagram.com/froggrecruitment/", "is_external": true },
+                        "primary_color": "#ffffff",
+                        "size": { "unit": "px", "size": 16 },
+                        "icon_padding": { "unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true },
+                        "background_color": "rgba(255, 255, 255, 0.1)",
+                        "border_radius": { "unit": "%", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                        "css_classes": "social-icon"
+                      }
+                    },
+                    {
+                      "id": "social-pinterest",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "library": "fa-brands", "value": "fab fa-pinterest-p" },
+                        "link": { "url": "https://za.pinterest.com/froggrecruitmen/", "is_external": true },
+                        "primary_color": "#ffffff",
+                        "size": { "unit": "px", "size": 16 },
+                        "icon_padding": { "unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true },
+                        "background_color": "rgba(255, 255, 255, 0.1)",
+                        "border_radius": { "unit": "%", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                        "css_classes": "social-icon"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contact-form-wrapper",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "width": { "unit": "%", "size": 50 },
+            "flex_direction": "column",
+            "flex_justify_content": "center",
+            "padding": { "unit": "px", "top": "120", "right": "80", "bottom": "120", "left": "80", "isLinked": false },
+            "background_background": "classic",
+            "background_color": "#ffffff",
+            "css_classes": "contact-form-wrapper"
+          },
+          "elements": [
+            {
+              "id": "contact-form-container",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "max_width": { "unit": "px", "size": 500 },
+                "flex_direction": "column",
+                "padding": { "unit": "px", "top": "40", "right": "40", "bottom": "40", "left": "40", "isLinked": true },
+                "background_background": "classic",
+                "background_color": "#ffffff",
+                "border_radius": { "unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": { "horizontal": 0, "vertical": 25, "blur": 50, "spread": -12, "color": "rgba(0, 0, 0, 0.15)" },
+                "css_classes": "contact-form"
+              },
+              "elements": [
+                {
+                  "id": "form-title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Send Us a Message",
+                    "header_size": "h3",
+                    "title_color": "#111827",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 24 },
+                    "typography_font_weight": "700",
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "24", "left": "0", "isLinked": false }
+                  }
+                },
+                {
+                  "id": "form-row-1",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_gap": { "unit": "px", "size": 16, "column": "16", "row": "16" },
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "16", "left": "0", "isLinked": false },
+                    "css_classes": "form-row"
+                  },
+                  "elements": [
+                    {
+                      "id": "field-name",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "width": { "unit": "%", "size": 50 },
+                        "flex_direction": "column",
+                        "flex_gap": { "unit": "px", "size": 8, "column": "8", "row": "8" },
+                        "css_classes": "form-group"
+                      },
+                      "elements": [
+                        {
+                          "id": "label-name",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Full Name",
+                            "header_size": "span",
+                            "title_color": "#374151",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "500"
+                          }
+                        },
+                        {
+                          "id": "input-name-placeholder",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "padding": { "unit": "px", "top": "14", "right": "16", "bottom": "14", "left": "16", "isLinked": false },
+                            "background_background": "classic",
+                            "background_color": "#f9fafb",
+                            "border_border": "solid",
+                            "border_width": { "unit": "px", "top": "2", "right": "2", "bottom": "2", "left": "2", "isLinked": true },
+                            "border_color": "#e5e7eb",
+                            "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                            "css_classes": "form-input"
+                          },
+                          "elements": [
+                            {
+                              "id": "placeholder-name",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "settings": {
+                                "title": "Your name",
+                                "header_size": "span",
+                                "title_color": "#9ca3af",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 15 }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "field-email",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "width": { "unit": "%", "size": 50 },
+                        "flex_direction": "column",
+                        "flex_gap": { "unit": "px", "size": 8, "column": "8", "row": "8" },
+                        "css_classes": "form-group"
+                      },
+                      "elements": [
+                        {
+                          "id": "label-email",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Email Address",
+                            "header_size": "span",
+                            "title_color": "#374151",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "500"
+                          }
+                        },
+                        {
+                          "id": "input-email-placeholder",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "padding": { "unit": "px", "top": "14", "right": "16", "bottom": "14", "left": "16", "isLinked": false },
+                            "background_background": "classic",
+                            "background_color": "#f9fafb",
+                            "border_border": "solid",
+                            "border_width": { "unit": "px", "top": "2", "right": "2", "bottom": "2", "left": "2", "isLinked": true },
+                            "border_color": "#e5e7eb",
+                            "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                            "css_classes": "form-input"
+                          },
+                          "elements": [
+                            {
+                              "id": "placeholder-email",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "settings": {
+                                "title": "your@email.com",
+                                "header_size": "span",
+                                "title_color": "#9ca3af",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 15 }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "form-row-2",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_gap": { "unit": "px", "size": 16, "column": "16", "row": "16" },
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "16", "left": "0", "isLinked": false },
+                    "css_classes": "form-row"
+                  },
+                  "elements": [
+                    {
+                      "id": "field-phone",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "width": { "unit": "%", "size": 50 },
+                        "flex_direction": "column",
+                        "flex_gap": { "unit": "px", "size": 8, "column": "8", "row": "8" },
+                        "css_classes": "form-group"
+                      },
+                      "elements": [
+                        {
+                          "id": "label-phone",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Phone Number",
+                            "header_size": "span",
+                            "title_color": "#374151",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "500"
+                          }
+                        },
+                        {
+                          "id": "input-phone-placeholder",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "padding": { "unit": "px", "top": "14", "right": "16", "bottom": "14", "left": "16", "isLinked": false },
+                            "background_background": "classic",
+                            "background_color": "#f9fafb",
+                            "border_border": "solid",
+                            "border_width": { "unit": "px", "top": "2", "right": "2", "bottom": "2", "left": "2", "isLinked": true },
+                            "border_color": "#e5e7eb",
+                            "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                            "css_classes": "form-input"
+                          },
+                          "elements": [
+                            {
+                              "id": "placeholder-phone",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "settings": {
+                                "title": "+27 XX XXX XXXX",
+                                "header_size": "span",
+                                "title_color": "#9ca3af",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 15 }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "field-subject",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "width": { "unit": "%", "size": 50 },
+                        "flex_direction": "column",
+                        "flex_gap": { "unit": "px", "size": 8, "column": "8", "row": "8" },
+                        "css_classes": "form-group"
+                      },
+                      "elements": [
+                        {
+                          "id": "label-subject",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Subject",
+                            "header_size": "span",
+                            "title_color": "#374151",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "500"
+                          }
+                        },
+                        {
+                          "id": "input-subject-placeholder",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "flex_direction": "row",
+                            "flex_justify_content": "space-between",
+                            "flex_align_items": "center",
+                            "padding": { "unit": "px", "top": "14", "right": "16", "bottom": "14", "left": "16", "isLinked": false },
+                            "background_background": "classic",
+                            "background_color": "#f9fafb",
+                            "border_border": "solid",
+                            "border_width": { "unit": "px", "top": "2", "right": "2", "bottom": "2", "left": "2", "isLinked": true },
+                            "border_color": "#e5e7eb",
+                            "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                            "css_classes": "form-input form-select"
+                          },
+                          "elements": [
+                            {
+                              "id": "placeholder-subject",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "settings": {
+                                "title": "Select an option",
+                                "header_size": "span",
+                                "title_color": "#9ca3af",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 15 }
+                              }
+                            },
+                            {
+                              "id": "select-arrow",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "settings": {
+                                "selected_icon": { "library": "fa-solid", "value": "fas fa-chevron-down" },
+                                "primary_color": "#9ca3af",
+                                "size": { "unit": "px", "size": 12 }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "field-message",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_gap": { "unit": "px", "size": 8, "column": "8", "row": "8" },
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "24", "left": "0", "isLinked": false },
+                    "css_classes": "form-group"
+                  },
+                  "elements": [
+                    {
+                      "id": "label-message",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Message",
+                        "header_size": "span",
+                        "title_color": "#374151",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 14 },
+                        "typography_font_weight": "500"
+                      }
+                    },
+                    {
+                      "id": "input-message-placeholder",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "min_height": { "unit": "px", "size": 120 },
+                        "padding": { "unit": "px", "top": "14", "right": "16", "bottom": "14", "left": "16", "isLinked": false },
+                        "background_background": "classic",
+                        "background_color": "#f9fafb",
+                        "border_border": "solid",
+                        "border_width": { "unit": "px", "top": "2", "right": "2", "bottom": "2", "left": "2", "isLinked": true },
+                        "border_color": "#e5e7eb",
+                        "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                        "css_classes": "form-input form-textarea"
+                      },
+                      "elements": [
+                        {
+                          "id": "placeholder-message",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Tell us how we can help...",
+                            "header_size": "span",
+                            "title_color": "#9ca3af",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 15 }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "submit-btn",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Send Message",
+                    "link": { "url": "#", "is_external": false },
+                    "icon": { "library": "fa-solid", "value": "fas fa-paper-plane" },
+                    "icon_align": "left",
+                    "button_type": "default",
+                    "align": "stretch",
+                    "background_color": "#1662ed",
+                    "button_text_color": "#ffffff",
+                    "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 16 },
+                    "typography_font_weight": "600",
+                    "button_padding": { "unit": "px", "top": "16", "right": "32", "bottom": "16", "left": "32", "isLinked": false },
+                    "css_classes": "btn-primary btn-lg full-width"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

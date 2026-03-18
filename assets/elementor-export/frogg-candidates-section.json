@@ -1,0 +1,738 @@
+{
+  "title": "FROGG Candidates Section",
+  "type": "section",
+  "version": "0.4",
+  "page_settings": {},
+  "content": [
+    {
+      "id": "candidates-section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "html_tag": "section",
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "padding": { "unit": "px", "top": "120", "right": "0", "bottom": "120", "left": "0", "isLinked": false },
+        "background_background": "gradient",
+        "background_color": "#111827",
+        "background_color_b": "#1a1a2e",
+        "background_gradient_angle": { "unit": "deg", "size": 135 },
+        "position": "relative",
+        "overflow": "hidden",
+        "css_classes": "frogg-candidates-section"
+      },
+      "elements": [
+        {
+          "id": "candidates-bg-overlay",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "position": "absolute",
+            "z_index": 0,
+            "width": { "unit": "%", "size": 100 },
+            "height": { "unit": "%", "size": 100 },
+            "css_classes": "candidates-bg"
+          },
+          "elements": []
+        },
+        {
+          "id": "candidates-inner",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": { "unit": "px", "size": 1200 },
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "flex_gap": { "unit": "px", "size": 50, "column": "50", "row": "50" },
+            "padding": { "unit": "px", "top": "0", "right": "24", "bottom": "0", "left": "24", "isLinked": false },
+            "z_index": 1,
+            "css_classes": "candidates-container"
+          },
+          "elements": [
+            {
+              "id": "candidates-header",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "flex_gap": { "unit": "px", "size": 16, "column": "16", "row": "16" },
+                "max_width": { "unit": "px", "size": 700 },
+                "css_classes": "section-header center light"
+              },
+              "elements": [
+                {
+                  "id": "candidates-tag",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "For Job Seekers",
+                    "header_size": "span",
+                    "align": "center",
+                    "title_color": "#60a5fa",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 14 },
+                    "typography_font_weight": "600",
+                    "typography_text_transform": "uppercase",
+                    "typography_letter_spacing": { "unit": "px", "size": 2 },
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0.1)",
+                    "padding": { "unit": "px", "top": "8", "right": "16", "bottom": "8", "left": "16", "isLinked": false },
+                    "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                    "css_classes": "section-tag"
+                  }
+                },
+                {
+                  "id": "candidates-title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Planning Your Next",
+                    "header_size": "h2",
+                    "align": "center",
+                    "title_color": "#ffffff",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 48 },
+                    "typography_font_weight": "700",
+                    "typography_line_height": { "unit": "em", "size": 1.2 },
+                    "css_classes": "section-title"
+                  }
+                },
+                {
+                  "id": "candidates-title-gradient",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Career Move?",
+                    "header_size": "h2",
+                    "align": "center",
+                    "title_color": "#1662ed",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 48 },
+                    "typography_font_weight": "700",
+                    "typography_line_height": { "unit": "em", "size": 1.2 },
+                    "css_classes": "section-title gradient-text"
+                  }
+                },
+                {
+                  "id": "candidates-subtitle",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>We invest in building long-lasting partnerships to place candidates in the right positions</p>",
+                    "align": "center",
+                    "text_color": "rgba(255, 255, 255, 0.7)",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 18 },
+                    "typography_line_height": { "unit": "em", "size": 1.7 },
+                    "css_classes": "section-subtitle"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "candidates-grid",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "flex_justify_content": "center",
+                "flex_gap": { "unit": "px", "size": 24, "column": "24", "row": "24" },
+                "css_classes": "candidates-grid"
+              },
+              "elements": [
+                {
+                  "id": "card-1",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "%", "size": 23 },
+                    "min_width": { "unit": "px", "size": 250 },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "flex_gap": { "unit": "px", "size": 16, "column": "16", "row": "16" },
+                    "padding": { "unit": "px", "top": "32", "right": "24", "bottom": "32", "left": "24", "isLinked": false },
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0.05)",
+                    "border_border": "solid",
+                    "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                    "border_color": "rgba(255, 255, 255, 0.1)",
+                    "border_radius": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true },
+                    "css_classes": "candidate-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "icon-1",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "width": { "unit": "px", "size": 70 },
+                        "height": { "unit": "px", "size": 70 },
+                        "flex_justify_content": "center",
+                        "flex_align_items": "center",
+                        "background_background": "gradient",
+                        "background_color": "#1662ed",
+                        "background_color_b": "#1e3a8a",
+                        "background_gradient_angle": { "unit": "deg", "size": 135 },
+                        "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                        "css_classes": "card-icon"
+                      },
+                      "elements": [
+                        {
+                          "id": "icon-1-i",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": { "library": "fa-solid", "value": "fas fa-file-alt" },
+                            "primary_color": "#ffffff",
+                            "size": { "unit": "px", "size": 28 }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "title-1",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Free CV Template",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 18 },
+                        "typography_font_weight": "700"
+                      }
+                    },
+                    {
+                      "id": "desc-1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Download our professional CV template to make a great first impression</p>",
+                        "align": "center",
+                        "text_color": "rgba(255, 255, 255, 0.6)",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 14 },
+                        "typography_line_height": { "unit": "em", "size": 1.6 }
+                      }
+                    },
+                    {
+                      "id": "link-1",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_justify_content": "center",
+                        "flex_align_items": "center",
+                        "flex_gap": { "unit": "px", "size": 8, "column": "8", "row": "8" },
+                        "link": { "url": "#", "is_external": false },
+                        "css_classes": "card-link"
+                      },
+                      "elements": [
+                        {
+                          "id": "link-1-text",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Download Now",
+                            "header_size": "span",
+                            "title_color": "#60a5fa",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "600"
+                          }
+                        },
+                        {
+                          "id": "link-1-icon",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": { "library": "fa-solid", "value": "fas fa-download" },
+                            "primary_color": "#60a5fa",
+                            "size": { "unit": "px", "size": 14 }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "card-2",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "%", "size": 23 },
+                    "min_width": { "unit": "px", "size": 250 },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "flex_gap": { "unit": "px", "size": 16, "column": "16", "row": "16" },
+                    "padding": { "unit": "px", "top": "32", "right": "24", "bottom": "32", "left": "24", "isLinked": false },
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0.05)",
+                    "border_border": "solid",
+                    "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                    "border_color": "rgba(255, 255, 255, 0.1)",
+                    "border_radius": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true },
+                    "css_classes": "candidate-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "icon-2",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "width": { "unit": "px", "size": 70 },
+                        "height": { "unit": "px", "size": 70 },
+                        "flex_justify_content": "center",
+                        "flex_align_items": "center",
+                        "background_background": "gradient",
+                        "background_color": "#1662ed",
+                        "background_color_b": "#1e3a8a",
+                        "background_gradient_angle": { "unit": "deg", "size": 135 },
+                        "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                        "css_classes": "card-icon"
+                      },
+                      "elements": [
+                        {
+                          "id": "icon-2-i",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": { "library": "fa-solid", "value": "fas fa-briefcase" },
+                            "primary_color": "#ffffff",
+                            "size": { "unit": "px", "size": 28 }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "title-2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Browse Vacancies",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 18 },
+                        "typography_font_weight": "700"
+                      }
+                    },
+                    {
+                      "id": "desc-2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Explore current job opportunities across various industries</p>",
+                        "align": "center",
+                        "text_color": "rgba(255, 255, 255, 0.6)",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 14 },
+                        "typography_line_height": { "unit": "em", "size": 1.6 }
+                      }
+                    },
+                    {
+                      "id": "link-2",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_justify_content": "center",
+                        "flex_align_items": "center",
+                        "flex_gap": { "unit": "px", "size": 8, "column": "8", "row": "8" },
+                        "link": { "url": "#", "is_external": false },
+                        "css_classes": "card-link"
+                      },
+                      "elements": [
+                        {
+                          "id": "link-2-text",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "View Jobs",
+                            "header_size": "span",
+                            "title_color": "#60a5fa",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "600"
+                          }
+                        },
+                        {
+                          "id": "link-2-icon",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": { "library": "fa-solid", "value": "fas fa-arrow-right" },
+                            "primary_color": "#60a5fa",
+                            "size": { "unit": "px", "size": 14 }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "card-3",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "%", "size": 23 },
+                    "min_width": { "unit": "px", "size": 250 },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "flex_gap": { "unit": "px", "size": 16, "column": "16", "row": "16" },
+                    "padding": { "unit": "px", "top": "32", "right": "24", "bottom": "32", "left": "24", "isLinked": false },
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0.05)",
+                    "border_border": "solid",
+                    "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                    "border_color": "rgba(255, 255, 255, 0.1)",
+                    "border_radius": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true },
+                    "css_classes": "candidate-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "icon-3",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "width": { "unit": "px", "size": 70 },
+                        "height": { "unit": "px", "size": 70 },
+                        "flex_justify_content": "center",
+                        "flex_align_items": "center",
+                        "background_background": "gradient",
+                        "background_color": "#1662ed",
+                        "background_color_b": "#1e3a8a",
+                        "background_gradient_angle": { "unit": "deg", "size": 135 },
+                        "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                        "css_classes": "card-icon"
+                      },
+                      "elements": [
+                        {
+                          "id": "icon-3-i",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": { "library": "fa-solid", "value": "fas fa-user-check" },
+                            "primary_color": "#ffffff",
+                            "size": { "unit": "px", "size": 28 }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "title-3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Register With Us",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 18 },
+                        "typography_font_weight": "700"
+                      }
+                    },
+                    {
+                      "id": "desc-3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Join our talent pool and get matched with suitable opportunities</p>",
+                        "align": "center",
+                        "text_color": "rgba(255, 255, 255, 0.6)",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 14 },
+                        "typography_line_height": { "unit": "em", "size": 1.6 }
+                      }
+                    },
+                    {
+                      "id": "link-3",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_justify_content": "center",
+                        "flex_align_items": "center",
+                        "flex_gap": { "unit": "px", "size": 8, "column": "8", "row": "8" },
+                        "link": { "url": "#", "is_external": false },
+                        "css_classes": "card-link"
+                      },
+                      "elements": [
+                        {
+                          "id": "link-3-text",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Register",
+                            "header_size": "span",
+                            "title_color": "#60a5fa",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "600"
+                          }
+                        },
+                        {
+                          "id": "link-3-icon",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": { "library": "fa-solid", "value": "fas fa-arrow-right" },
+                            "primary_color": "#60a5fa",
+                            "size": { "unit": "px", "size": 14 }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "card-4",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "%", "size": 23 },
+                    "min_width": { "unit": "px", "size": 250 },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "flex_gap": { "unit": "px", "size": 16, "column": "16", "row": "16" },
+                    "padding": { "unit": "px", "top": "32", "right": "24", "bottom": "32", "left": "24", "isLinked": false },
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0.05)",
+                    "border_border": "solid",
+                    "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                    "border_color": "rgba(255, 255, 255, 0.1)",
+                    "border_radius": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true },
+                    "css_classes": "candidate-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "icon-4",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "width": { "unit": "px", "size": 70 },
+                        "height": { "unit": "px", "size": 70 },
+                        "flex_justify_content": "center",
+                        "flex_align_items": "center",
+                        "background_background": "gradient",
+                        "background_color": "#1662ed",
+                        "background_color_b": "#1e3a8a",
+                        "background_gradient_angle": { "unit": "deg", "size": 135 },
+                        "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                        "css_classes": "card-icon"
+                      },
+                      "elements": [
+                        {
+                          "id": "icon-4-i",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": { "library": "fa-solid", "value": "fas fa-book-open" },
+                            "primary_color": "#ffffff",
+                            "size": { "unit": "px", "size": 28 }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "title-4",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Career Resources",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 18 },
+                        "typography_font_weight": "700"
+                      }
+                    },
+                    {
+                      "id": "desc-4",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Access articles, tips, and advice for your career journey</p>",
+                        "align": "center",
+                        "text_color": "rgba(255, 255, 255, 0.6)",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 14 },
+                        "typography_line_height": { "unit": "em", "size": 1.6 }
+                      }
+                    },
+                    {
+                      "id": "link-4",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_justify_content": "center",
+                        "flex_align_items": "center",
+                        "flex_gap": { "unit": "px", "size": 8, "column": "8", "row": "8" },
+                        "link": { "url": "#", "is_external": false },
+                        "css_classes": "card-link"
+                      },
+                      "elements": [
+                        {
+                          "id": "link-4-text",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Explore",
+                            "header_size": "span",
+                            "title_color": "#60a5fa",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 14 },
+                            "typography_font_weight": "600"
+                          }
+                        },
+                        {
+                          "id": "link-4-icon",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": { "library": "fa-solid", "value": "fas fa-arrow-right" },
+                            "primary_color": "#60a5fa",
+                            "size": { "unit": "px", "size": 14 }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "candidates-cta",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "flex_justify_content": "space-between",
+                "flex_align_items": "center",
+                "flex_gap": { "unit": "px", "size": 24, "column": "24", "row": "24" },
+                "padding": { "unit": "px", "top": "32", "right": "40", "bottom": "32", "left": "40", "isLinked": false },
+                "background_background": "classic",
+                "background_color": "rgba(255, 255, 255, 0.05)",
+                "border_border": "solid",
+                "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                "border_color": "rgba(255, 255, 255, 0.1)",
+                "border_radius": { "unit": "px", "top": "20", "right": "20", "bottom": "20", "left": "20", "isLinked": true },
+                "css_classes": "candidates-cta"
+              },
+              "elements": [
+                {
+                  "id": "cta-content",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_gap": { "unit": "px", "size": 4, "column": "4", "row": "4" },
+                    "css_classes": "cta-content"
+                  },
+                  "elements": [
+                    {
+                      "id": "cta-title",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Ready to take the next step?",
+                        "header_size": "h3",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 20 },
+                        "typography_font_weight": "700"
+                      }
+                    },
+                    {
+                      "id": "cta-subtitle",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Email your resume to our team</p>",
+                        "text_color": "rgba(255, 255, 255, 0.6)",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 15 }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "cta-button",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "px", "size": "auto" },
+                    "flex_direction": "row",
+                    "flex_align_items": "center",
+                    "flex_gap": { "unit": "px", "size": 10, "column": "10", "row": "10" },
+                    "padding": { "unit": "px", "top": "16", "right": "32", "bottom": "16", "left": "32", "isLinked": false },
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0.1)",
+                    "border_border": "solid",
+                    "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                    "border_color": "rgba(255, 255, 255, 0.2)",
+                    "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                    "link": { "url": "mailto:cv@froggsa.co.za", "is_external": false },
+                    "css_classes": "btn btn-glass btn-lg"
+                  },
+                  "elements": [
+                    {
+                      "id": "cta-icon",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "library": "fa-solid", "value": "fas fa-envelope" },
+                        "primary_color": "#ffffff",
+                        "size": { "unit": "px", "size": 18 }
+                      }
+                    },
+                    {
+                      "id": "cta-email",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "cv@froggsa.co.za",
+                        "header_size": "span",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 16 },
+                        "typography_font_weight": "600"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

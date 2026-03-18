@@ -1,0 +1,676 @@
+{
+  "title": "FROGG Contact Section",
+  "type": "section",
+  "version": "0.4",
+  "page_settings": {},
+  "content": [
+    {
+      "id": "contact-section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "html_tag": "section",
+        "flex_direction": "row",
+        "min_height": { "unit": "px", "size": 700 },
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true },
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "css_classes": "contact"
+      },
+      "elements": [
+        {
+          "id": "contact-bg-dark",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "width": { "unit": "%", "size": 50 },
+            "position": "absolute",
+            "position_top": { "unit": "px", "size": 0 },
+            "position_left": { "unit": "px", "size": 0 },
+            "height": { "unit": "%", "size": 100 },
+            "z_index": 0,
+            "background_background": "gradient",
+            "background_color": "#1f2937",
+            "background_color_b": "#030712",
+            "background_gradient_angle": { "unit": "deg", "size": 135 },
+            "css_classes": "contact-bg"
+          },
+          "elements": [
+            {
+              "id": "contact-shape-skew",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "width": { "unit": "px", "size": 200 },
+                "position": "absolute",
+                "position_top": { "unit": "px", "size": 0 },
+                "position_right": { "unit": "px", "size": -100 },
+                "height": { "unit": "%", "size": 100 },
+                "background_background": "gradient",
+                "background_color": "#1f2937",
+                "background_color_b": "#030712",
+                "background_gradient_angle": { "unit": "deg", "size": 135 },
+                "transform_rotate_popover": "transform_rotate_z",
+                "_transform_rotateZ_effect": { "unit": "deg", "size": 0 },
+                "transform_skewX_effect": { "unit": "px", "size": -5 },
+                "css_classes": "contact-shape"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "contact-content-wrapper",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "flex_direction": "row",
+            "flex_gap": { "unit": "px", "size": 96, "column": "96", "row": "96" },
+            "padding": { "unit": "px", "top": "120", "right": "40", "bottom": "120", "left": "40", "isLinked": false },
+            "z_index": 1,
+            "css_classes": "contact-grid"
+          },
+          "elements": [
+            {
+              "id": "contact-info",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "width": { "unit": "%", "size": 50 },
+                "flex_direction": "column",
+                "padding": { "unit": "px", "top": "0", "right": "48", "bottom": "0", "left": "0", "isLinked": false },
+                "css_classes": "contact-info"
+              },
+              "elements": [
+                {
+                  "id": "contact-tag",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Get In Touch",
+                    "header_size": "span",
+                    "title_color": "#60a5fa",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 14 },
+                    "typography_font_weight": "600",
+                    "typography_text_transform": "uppercase",
+                    "typography_letter_spacing": { "unit": "px", "size": 2 },
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0.1)",
+                    "_padding": { "unit": "px", "top": "8", "right": "16", "bottom": "8", "left": "16", "isLinked": false },
+                    "_border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                    "css_classes": "section-tag"
+                  }
+                },
+                {
+                  "id": "contact-title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Let's Start a <span class=\"gradient-text\">Conversation</span>",
+                    "header_size": "h2",
+                    "title_color": "#ffffff",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 42 },
+                    "typography_font_weight": "700",
+                    "typography_line_height": { "unit": "em", "size": 1.2 },
+                    "_margin": { "unit": "px", "top": "16", "right": "0", "bottom": "16", "left": "0", "isLinked": false },
+                    "css_classes": "section-title"
+                  }
+                },
+                {
+                  "id": "contact-text",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Whether you're looking to hire top talent or take the next step in your career, we're here to help. Reach out to our team today.</p>",
+                    "text_color": "rgba(255, 255, 255, 0.7)",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 17 },
+                    "typography_line_height": { "unit": "em", "size": 1.8 },
+                    "_margin": { "unit": "px", "top": "0", "right": "0", "bottom": "48", "left": "0", "isLinked": false },
+                    "css_classes": "contact-text"
+                  }
+                },
+                {
+                  "id": "contact-details",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_gap": { "unit": "px", "size": 32, "column": "32", "row": "32" },
+                    "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "48", "left": "0", "isLinked": false },
+                    "css_classes": "contact-details"
+                  },
+                  "elements": [
+                    {
+                      "id": "contact-item-cape-town",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_gap": { "unit": "px", "size": 24, "column": "24", "row": "24" },
+                        "css_classes": "contact-item"
+                      },
+                      "elements": [
+                        {
+                          "id": "cape-town-icon",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "width": { "unit": "px", "size": 50 },
+                            "min_height": { "unit": "px", "size": 50 },
+                            "flex_direction": "column",
+                            "flex_justify_content": "center",
+                            "flex_align_items": "center",
+                            "background_background": "classic",
+                            "background_color": "rgba(255, 255, 255, 0.1)",
+                            "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                            "css_classes": "contact-icon"
+                          },
+                          "elements": [
+                            {
+                              "id": "cape-town-icon-widget",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "settings": {
+                                "selected_icon": { "library": "fa-solid", "value": "fas fa-map-marker-alt" },
+                                "primary_color": "#60a5fa",
+                                "size": { "unit": "px", "size": 20 }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "cape-town-content",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": { "unit": "px", "size": 4, "column": "4", "row": "4" },
+                            "css_classes": "contact-content"
+                          },
+                          "elements": [
+                            {
+                              "id": "cape-town-title",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "settings": {
+                                "title": "Cape Town Office",
+                                "header_size": "h4",
+                                "title_color": "#ffffff",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 16 },
+                                "typography_font_weight": "600"
+                              }
+                            },
+                            {
+                              "id": "cape-town-address",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "settings": {
+                                "editor": "<p>Cape Town, South Africa</p>",
+                                "text_color": "rgba(255, 255, 255, 0.6)",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 14 }
+                              }
+                            },
+                            {
+                              "id": "cape-town-phone",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "settings": {
+                                "editor": "<a href=\"tel:+27215565598\" class=\"contact-link\">+27 21 556 5598</a>",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 14 },
+                                "css_classes": "contact-link-wrapper"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "contact-item-jhb",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_gap": { "unit": "px", "size": 24, "column": "24", "row": "24" },
+                        "css_classes": "contact-item"
+                      },
+                      "elements": [
+                        {
+                          "id": "jhb-icon",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "width": { "unit": "px", "size": 50 },
+                            "min_height": { "unit": "px", "size": 50 },
+                            "flex_direction": "column",
+                            "flex_justify_content": "center",
+                            "flex_align_items": "center",
+                            "background_background": "classic",
+                            "background_color": "rgba(255, 255, 255, 0.1)",
+                            "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                            "css_classes": "contact-icon"
+                          },
+                          "elements": [
+                            {
+                              "id": "jhb-icon-widget",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "settings": {
+                                "selected_icon": { "library": "fa-solid", "value": "fas fa-map-marker-alt" },
+                                "primary_color": "#60a5fa",
+                                "size": { "unit": "px", "size": 20 }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "jhb-content",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": { "unit": "px", "size": 4, "column": "4", "row": "4" },
+                            "css_classes": "contact-content"
+                          },
+                          "elements": [
+                            {
+                              "id": "jhb-title",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "settings": {
+                                "title": "Johannesburg Office",
+                                "header_size": "h4",
+                                "title_color": "#ffffff",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 16 },
+                                "typography_font_weight": "600"
+                              }
+                            },
+                            {
+                              "id": "jhb-address",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "settings": {
+                                "editor": "<p>Johannesburg, South Africa</p>",
+                                "text_color": "rgba(255, 255, 255, 0.6)",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 14 }
+                              }
+                            },
+                            {
+                              "id": "jhb-phone",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "settings": {
+                                "editor": "<a href=\"tel:+27108246772\" class=\"contact-link\">+27 10 824 6772</a>",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 14 },
+                                "css_classes": "contact-link-wrapper"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "contact-item-email",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_gap": { "unit": "px", "size": 24, "column": "24", "row": "24" },
+                        "css_classes": "contact-item"
+                      },
+                      "elements": [
+                        {
+                          "id": "email-icon",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "width": { "unit": "px", "size": 50 },
+                            "min_height": { "unit": "px", "size": 50 },
+                            "flex_direction": "column",
+                            "flex_justify_content": "center",
+                            "flex_align_items": "center",
+                            "background_background": "classic",
+                            "background_color": "rgba(255, 255, 255, 0.1)",
+                            "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                            "css_classes": "contact-icon"
+                          },
+                          "elements": [
+                            {
+                              "id": "email-icon-widget",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "settings": {
+                                "selected_icon": { "library": "fa-solid", "value": "fas fa-envelope" },
+                                "primary_color": "#60a5fa",
+                                "size": { "unit": "px", "size": 20 }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "email-content",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": { "unit": "px", "size": 4, "column": "4", "row": "4" },
+                            "css_classes": "contact-content"
+                          },
+                          "elements": [
+                            {
+                              "id": "email-title",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "settings": {
+                                "title": "Email Us",
+                                "header_size": "h4",
+                                "title_color": "#ffffff",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 16 },
+                                "typography_font_weight": "600"
+                              }
+                            },
+                            {
+                              "id": "email-sales",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "settings": {
+                                "editor": "<p>Looking for staff: <a href=\"mailto:sales@froggsa.co.za\" class=\"contact-link\">sales@froggsa.co.za</a></p>",
+                                "text_color": "rgba(255, 255, 255, 0.6)",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 14 }
+                              }
+                            },
+                            {
+                              "id": "email-cv",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "settings": {
+                                "editor": "<p>Job seekers: <a href=\"mailto:cv@froggsa.co.za\" class=\"contact-link\">cv@froggsa.co.za</a></p>",
+                                "text_color": "rgba(255, 255, 255, 0.6)",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 14 }
+                              }
+                            },
+                            {
+                              "id": "email-info",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "settings": {
+                                "editor": "<p>General info: <a href=\"mailto:info@froggsa.co.za\" class=\"contact-link\">info@froggsa.co.za</a></p>",
+                                "text_color": "rgba(255, 255, 255, 0.6)",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Inter",
+                                "typography_font_size": { "unit": "px", "size": 14 }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "social-links",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_gap": { "unit": "px", "size": 16, "column": "16", "row": "16" },
+                    "css_classes": "social-links"
+                  },
+                  "elements": [
+                    {
+                      "id": "social-facebook",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "library": "fa-brands", "value": "fab fa-facebook-f" },
+                        "view": "framed",
+                        "shape": "circle",
+                        "primary_color": "#ffffff",
+                        "secondary_color": "rgba(255, 255, 255, 0.1)",
+                        "size": { "unit": "px", "size": 16 },
+                        "icon_padding": { "unit": "px", "size": 14 },
+                        "hover_primary_color": "#ffffff",
+                        "hover_secondary_color": "#1662ed",
+                        "link": { "url": "https://www.facebook.com/FROGGRecruitmentSA/", "is_external": true },
+                        "css_classes": "social-icon"
+                      }
+                    },
+                    {
+                      "id": "social-twitter",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "library": "fa-brands", "value": "fab fa-x-twitter" },
+                        "view": "framed",
+                        "shape": "circle",
+                        "primary_color": "#ffffff",
+                        "secondary_color": "rgba(255, 255, 255, 0.1)",
+                        "size": { "unit": "px", "size": 16 },
+                        "icon_padding": { "unit": "px", "size": 14 },
+                        "hover_primary_color": "#ffffff",
+                        "hover_secondary_color": "#1662ed",
+                        "link": { "url": "https://x.com/FroggRecruitSA", "is_external": true },
+                        "css_classes": "social-icon"
+                      }
+                    },
+                    {
+                      "id": "social-linkedin",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "library": "fa-brands", "value": "fab fa-linkedin-in" },
+                        "view": "framed",
+                        "shape": "circle",
+                        "primary_color": "#ffffff",
+                        "secondary_color": "rgba(255, 255, 255, 0.1)",
+                        "size": { "unit": "px", "size": 16 },
+                        "icon_padding": { "unit": "px", "size": 14 },
+                        "hover_primary_color": "#ffffff",
+                        "hover_secondary_color": "#1662ed",
+                        "link": { "url": "https://www.linkedin.com/company/frogg-recruitment", "is_external": true },
+                        "css_classes": "social-icon"
+                      }
+                    },
+                    {
+                      "id": "social-instagram",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "library": "fa-brands", "value": "fab fa-instagram" },
+                        "view": "framed",
+                        "shape": "circle",
+                        "primary_color": "#ffffff",
+                        "secondary_color": "rgba(255, 255, 255, 0.1)",
+                        "size": { "unit": "px", "size": 16 },
+                        "icon_padding": { "unit": "px", "size": 14 },
+                        "hover_primary_color": "#ffffff",
+                        "hover_secondary_color": "#1662ed",
+                        "link": { "url": "https://www.instagram.com/froggrecruitment/", "is_external": true },
+                        "css_classes": "social-icon"
+                      }
+                    },
+                    {
+                      "id": "social-pinterest",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "library": "fa-brands", "value": "fab fa-pinterest-p" },
+                        "view": "framed",
+                        "shape": "circle",
+                        "primary_color": "#ffffff",
+                        "secondary_color": "rgba(255, 255, 255, 0.1)",
+                        "size": { "unit": "px", "size": 16 },
+                        "icon_padding": { "unit": "px", "size": 14 },
+                        "hover_primary_color": "#ffffff",
+                        "hover_secondary_color": "#1662ed",
+                        "link": { "url": "https://za.pinterest.com/froggrecruitmen/", "is_external": true },
+                        "css_classes": "social-icon"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "contact-form-wrapper",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "width": { "unit": "%", "size": 50 },
+                "flex_direction": "column",
+                "css_classes": "contact-form-wrapper"
+              },
+              "elements": [
+                {
+                  "id": "contact-form-card",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "padding": { "unit": "px", "top": "48", "right": "48", "bottom": "48", "left": "48", "isLinked": true },
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "border_radius": { "unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": { "horizontal": 0, "vertical": 25, "blur": 50, "spread": -12, "color": "rgba(0, 0, 0, 0.25)" },
+                    "css_classes": "contact-form"
+                  },
+                  "elements": [
+                    {
+                      "id": "form-title",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Send Us a Message",
+                        "header_size": "h3",
+                        "title_color": "#111827",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 24 },
+                        "typography_font_weight": "700",
+                        "_margin": { "unit": "px", "top": "0", "right": "0", "bottom": "32", "left": "0", "isLinked": false }
+                      }
+                    },
+                    {
+                      "id": "elementor-form",
+                      "elType": "widget",
+                      "widgetType": "form",
+                      "settings": {
+                        "form_name": "FROGG Contact Form",
+                        "form_fields": [
+                          {
+                            "_id": "name",
+                            "field_type": "text",
+                            "field_label": "Full Name",
+                            "placeholder": "",
+                            "required": "true",
+                            "width": "50",
+                            "css_classes": "form-group"
+                          },
+                          {
+                            "_id": "email",
+                            "field_type": "email",
+                            "field_label": "Email Address",
+                            "placeholder": "",
+                            "required": "true",
+                            "width": "50",
+                            "css_classes": "form-group"
+                          },
+                          {
+                            "_id": "phone",
+                            "field_type": "tel",
+                            "field_label": "Phone Number",
+                            "placeholder": "",
+                            "required": "",
+                            "width": "50",
+                            "css_classes": "form-group"
+                          },
+                          {
+                            "_id": "subject",
+                            "field_type": "select",
+                            "field_label": "Subject",
+                            "field_options": "Select an option\nI'm looking to hire|employer\nI'm looking for a job|jobseeker\nGeneral inquiry|general",
+                            "required": "true",
+                            "width": "50",
+                            "css_classes": "form-group"
+                          },
+                          {
+                            "_id": "message",
+                            "field_type": "textarea",
+                            "field_label": "Message",
+                            "placeholder": "",
+                            "required": "true",
+                            "width": "100",
+                            "rows": "5",
+                            "css_classes": "form-group"
+                          }
+                        ],
+                        "button_text": "Send Message",
+                        "button_size": "lg",
+                        "button_width": "100",
+                        "button_icon": { "library": "fa-solid", "value": "fas fa-paper-plane" },
+                        "button_icon_position": "before",
+                        "button_type": "submit",
+                        "button_css_id": "contact-submit",
+                        "button_background_color": "#1662ed",
+                        "button_text_color": "#ffffff",
+                        "button_border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                        "button_hover_background_color": "#1e3a8a",
+                        "button_padding": { "unit": "px", "top": "16", "right": "32", "bottom": "16", "left": "32", "isLinked": false },
+                        "button_typography_typography": "custom",
+                        "button_typography_font_family": "Inter",
+                        "button_typography_font_size": { "unit": "px", "size": 16 },
+                        "button_typography_font_weight": "600",
+                        "column_gap": { "unit": "px", "size": 24 },
+                        "row_gap": { "unit": "px", "size": 24 },
+                        "field_text_color": "#1f2937",
+                        "field_background_color": "#f9fafb",
+                        "field_border_color": "#e5e7eb",
+                        "field_border_width": { "unit": "px", "size": 2 },
+                        "field_border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                        "field_padding": { "unit": "px", "top": "14", "right": "16", "bottom": "14", "left": "16", "isLinked": false },
+                        "field_focus_border_color": "#1662ed",
+                        "label_color": "#374151",
+                        "label_typography_typography": "custom",
+                        "label_typography_font_family": "Inter",
+                        "label_typography_font_size": { "unit": "px", "size": 14 },
+                        "label_typography_font_weight": "500",
+                        "label_spacing": { "unit": "px", "size": 8 },
+                        "email_to": "info@froggsa.co.za",
+                        "email_subject": "New Contact Form Submission - FROGG Recruitment",
+                        "css_classes": "contact-form-widget"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

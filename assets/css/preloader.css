@@ -1,0 +1,221 @@
+/* ============================================
+   FROGG RECRUITMENT - PRELOADER
+   Recruitment-themed page loader
+   ============================================ */
+
+/* Prevent scroll while loading */
+body.preloader-active {
+    overflow: hidden !important;
+}
+
+/* Full-screen overlay */
+#frogg-preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#frogg-preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Container */
+.preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ---- Recruitment icon animation ---- */
+.preloader-icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+/* Person silhouette */
+.preloader-person {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 36px;
+}
+
+.preloader-person .person-head {
+    width: 14px;
+    height: 14px;
+    background: #60a5fa;
+    border-radius: 50%;
+    margin: 0 auto 4px;
+    animation: preloaderPulse 1.8s ease-in-out infinite;
+}
+
+.preloader-person .person-body {
+    width: 24px;
+    height: 14px;
+    background: #60a5fa;
+    border-radius: 12px 12px 4px 4px;
+    margin: 0 auto;
+    animation: preloaderPulse 1.8s ease-in-out infinite 0.1s;
+}
+
+/* Magnifying glass that orbits */
+.preloader-magnifier {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    animation: preloaderOrbit 2.4s linear infinite;
+}
+
+.preloader-magnifier-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.preloader-magnifier-icon .mag-circle {
+    width: 28px;
+    height: 28px;
+    border: 3px solid #3b82f6;
+    border-radius: 50%;
+    position: relative;
+}
+
+.preloader-magnifier-icon .mag-handle {
+    width: 3px;
+    height: 12px;
+    background: #3b82f6;
+    position: absolute;
+    bottom: -11px;
+    right: -2px;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 2px;
+}
+
+/* ---- Candidates dots (people being searched) ---- */
+.preloader-dots {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(96, 165, 250, 0.3);
+    animation: preloaderDotPop 1.6s ease-in-out infinite;
+}
+
+.preloader-dot:nth-child(1) { animation-delay: 0s; }
+.preloader-dot:nth-child(2) { animation-delay: 0.2s; }
+.preloader-dot:nth-child(3) { animation-delay: 0.4s; }
+.preloader-dot:nth-child(4) { animation-delay: 0.6s; }
+.preloader-dot:nth-child(5) { animation-delay: 0.8s; }
+
+/* ---- Brand text ---- */
+.preloader-brand {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.preloader-brand span {
+    color: #3b82f6;
+}
+
+/* ---- Progress bar ---- */
+.preloader-bar-wrap {
+    width: 200px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.preloader-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    border-radius: 4px;
+    animation: preloaderBarFill 2s ease-in-out forwards;
+}
+
+/* ---- Status text ---- */
+.preloader-status {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.08em;
+    min-height: 1.2em;
+}
+
+/* ============================================
+   KEYFRAMES
+   ============================================ */
+
+@keyframes preloaderOrbit {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@keyframes preloaderPulse {
+    0%, 100% { opacity: 0.6; transform-origin: center; }
+    50%      { opacity: 1; }
+}
+
+/* Keep person-head centered */
+.preloader-person .person-head {
+    animation: preloaderPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes preloaderDotPop {
+    0%, 100% {
+        background: rgba(96, 165, 250, 0.2);
+        transform: scale(1);
+    }
+    50% {
+        background: rgba(96, 165, 250, 0.9);
+        transform: scale(1.4);
+    }
+}
+
+@keyframes preloaderBarFill {
+    0%   { width: 0%; }
+    30%  { width: 45%; }
+    60%  { width: 70%; }
+    90%  { width: 88%; }
+    100% { width: 95%; }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+    .preloader-brand {
+        font-size: 1.1rem;
+    }
+    .preloader-bar-wrap {
+        width: 160px;
+    }
+    .preloader-icon {
+        width: 80px;
+        height: 80px;
+    }
+}

@@ -1,0 +1,378 @@
+{
+  "title": "FROGG Job Search Filter",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "a1b2c3d4",
+      "elType": "container",
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": { "unit": "px", "size": 1200 },
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "padding": { "unit": "px", "top": "48", "right": "24", "bottom": "32", "left": "24", "isLinked": false },
+        "padding_mobile": { "unit": "px", "top": "32", "right": "16", "bottom": "24", "left": "16", "isLinked": false },
+        "background_background": "classic",
+        "background_color": "transparent"
+      },
+      "elements": [
+        {
+          "id": "e5f6g7h8",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_direction_mobile": "column",
+            "flex_wrap": "wrap",
+            "flex_gap": { "unit": "px", "size": 0, "column": 0, "row": 0 },
+            "flex_align_items": "stretch",
+            "background_background": "classic",
+            "background_color": "rgba(255, 255, 255, 0.1)",
+            "border_border": "solid",
+            "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+            "border_color": "rgba(255, 255, 255, 0.15)",
+            "border_radius": { "unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true },
+            "padding": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8", "isLinked": true },
+            "box_shadow_box_shadow_type": "yes",
+            "box_shadow_box_shadow": { "horizontal": 0, "vertical": 25, "blur": 50, "spread": -12, "color": "rgba(0, 0, 0, 0.3)" }
+          },
+          "elements": [
+            {
+              "id": "i9j0k1l2",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "width": { "unit": "%", "size": 30 },
+                "width_tablet": { "unit": "%", "size": 50 },
+                "width_mobile": { "unit": "%", "size": 100 },
+                "flex_direction": "row",
+                "flex_gap": { "unit": "px", "size": 12 },
+                "flex_align_items": "center",
+                "padding": { "unit": "px", "top": "16", "right": "20", "bottom": "16", "left": "20", "isLinked": false },
+                "border_border": "solid",
+                "border_width": { "unit": "px", "top": "0", "right": "1", "bottom": "0", "left": "0", "isLinked": false },
+                "border_width_mobile": { "unit": "px", "top": "0", "right": "0", "bottom": "1", "left": "0", "isLinked": false },
+                "border_color": "rgba(255, 255, 255, 0.1)"
+              },
+              "elements": [
+                {
+                  "id": "m3n4o5p6",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "px", "size": 44 },
+                    "min_height": { "unit": "px", "size": 44 },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "flex_justify_content": "center",
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0.1)",
+                    "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true }
+                  },
+                  "elements": [
+                    {
+                      "id": "q7r8s9t0",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "value": "fas fa-search", "library": "fa-solid" },
+                        "primary_color": "#60a5fa",
+                        "size": { "unit": "px", "size": 18 }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "u1v2w3x4",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<input type=\"text\" placeholder=\"Job title or keywords\" style=\"width:100%;background:transparent;border:none;color:#fff;font-size:16px;font-family:Inter,sans-serif;outline:none;padding:8px 0\"><style>input::placeholder{color:rgba(255,255,255,0.5)}</style>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "y5z6a7b8",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "width": { "unit": "%", "size": 25 },
+                "width_tablet": { "unit": "%", "size": 50 },
+                "width_mobile": { "unit": "%", "size": 100 },
+                "flex_direction": "row",
+                "flex_gap": { "unit": "px", "size": 12 },
+                "flex_align_items": "center",
+                "padding": { "unit": "px", "top": "16", "right": "20", "bottom": "16", "left": "20", "isLinked": false },
+                "border_border": "solid",
+                "border_width": { "unit": "px", "top": "0", "right": "1", "bottom": "0", "left": "0", "isLinked": false },
+                "border_width_tablet": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": false },
+                "border_width_mobile": { "unit": "px", "top": "0", "right": "0", "bottom": "1", "left": "0", "isLinked": false },
+                "border_color": "rgba(255, 255, 255, 0.1)"
+              },
+              "elements": [
+                {
+                  "id": "c9d0e1f2",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "px", "size": 44 },
+                    "min_height": { "unit": "px", "size": 44 },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "flex_justify_content": "center",
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0.1)",
+                    "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true }
+                  },
+                  "elements": [
+                    {
+                      "id": "g3h4i5j6",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "value": "fas fa-map-marker-alt", "library": "fa-solid" },
+                        "primary_color": "#60a5fa",
+                        "size": { "unit": "px", "size": 18 }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "k7l8m9n0",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<select style=\"width:100%;background:transparent;border:none;color:#fff;font-size:16px;font-family:Inter,sans-serif;outline:none;cursor:pointer;padding:8px 20px 8px 0;-webkit-appearance:none;appearance:none\"><option value=\"\" style=\"background:#1f2937\">All Locations</option><option value=\"cape-town\" style=\"background:#1f2937\">Cape Town</option><option value=\"johannesburg\" style=\"background:#1f2937\">Johannesburg</option><option value=\"durban\" style=\"background:#1f2937\">Durban</option><option value=\"pretoria\" style=\"background:#1f2937\">Pretoria</option><option value=\"remote\" style=\"background:#1f2937\">Remote</option></select>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "o1p2q3r4",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "width": { "unit": "%", "size": 25 },
+                "width_tablet": { "unit": "%", "size": 50 },
+                "width_mobile": { "unit": "%", "size": 100 },
+                "flex_direction": "row",
+                "flex_gap": { "unit": "px", "size": 12 },
+                "flex_align_items": "center",
+                "padding": { "unit": "px", "top": "16", "right": "20", "bottom": "16", "left": "20", "isLinked": false },
+                "border_border": "solid",
+                "border_width": { "unit": "px", "top": "1", "right": "0", "bottom": "0", "left": "0", "isLinked": false },
+                "border_width_mobile": { "unit": "px", "top": "0", "right": "0", "bottom": "1", "left": "0", "isLinked": false },
+                "border_color": "rgba(255, 255, 255, 0.1)"
+              },
+              "elements": [
+                {
+                  "id": "s5t6u7v8",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "px", "size": 44 },
+                    "min_height": { "unit": "px", "size": 44 },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "flex_justify_content": "center",
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0.1)",
+                    "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true }
+                  },
+                  "elements": [
+                    {
+                      "id": "w9x0y1z2",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "value": "fas fa-briefcase", "library": "fa-solid" },
+                        "primary_color": "#60a5fa",
+                        "size": { "unit": "px", "size": 18 }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "a3b4c5d6",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<select style=\"width:100%;background:transparent;border:none;color:#fff;font-size:16px;font-family:Inter,sans-serif;outline:none;cursor:pointer;padding:8px 20px 8px 0;-webkit-appearance:none;appearance:none\"><option value=\"\" style=\"background:#1f2937\">All Industries</option><option value=\"it\" style=\"background:#1f2937\">Information Technology</option><option value=\"finance\" style=\"background:#1f2937\">Finance and Accounting</option><option value=\"engineering\" style=\"background:#1f2937\">Engineering</option><option value=\"sales\" style=\"background:#1f2937\">Sales and Marketing</option><option value=\"hr\" style=\"background:#1f2937\">Human Resources</option><option value=\"admin\" style=\"background:#1f2937\">Administration</option></select>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "e7f8g9h0",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "width": { "unit": "%", "size": 20 },
+                "width_tablet": { "unit": "%", "size": 50 },
+                "width_mobile": { "unit": "%", "size": 100 },
+                "flex_direction": "column",
+                "flex_align_items": "stretch",
+                "padding": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8", "isLinked": true },
+                "padding_mobile": { "unit": "px", "top": "12", "right": "8", "bottom": "8", "left": "8", "isLinked": false }
+              },
+              "elements": [
+                {
+                  "id": "i1j2k3l4",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Search Jobs",
+                    "link": { "url": "#vacancies", "is_external": false },
+                    "selected_icon": { "value": "fas fa-search", "library": "fa-solid" },
+                    "icon_align": "left",
+                    "align": "stretch",
+                    "background_color": "#1662ed",
+                    "button_background_hover_color": "#1e3a8a",
+                    "button_text_color": "#ffffff",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 16 },
+                    "typography_font_weight": "600",
+                    "border_radius": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true },
+                    "button_box_shadow_box_shadow_type": "yes",
+                    "button_box_shadow_box_shadow": { "horizontal": 0, "vertical": 8, "blur": 30, "spread": 0, "color": "rgba(22, 98, 237, 0.4)" },
+                    "text_padding": { "unit": "px", "top": "16", "right": "32", "bottom": "16", "left": "32", "isLinked": false }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "m5n6o7p8",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_wrap": "wrap",
+            "flex_gap": { "unit": "px", "size": 8, "column": 8, "row": 8 },
+            "flex_align_items": "center",
+            "flex_justify_content": "center",
+            "margin": { "unit": "px", "top": "24", "right": "0", "bottom": "0", "left": "0", "isLinked": false },
+            "margin_mobile": { "unit": "px", "top": "16", "right": "0", "bottom": "0", "left": "0", "isLinked": false }
+          },
+          "elements": [
+            {
+              "id": "q9r0s1t2",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Popular:",
+                "header_size": "span",
+                "title_color": "rgba(255, 255, 255, 0.5)",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_size": { "unit": "px", "size": 14 },
+                "typography_font_weight": "500"
+              }
+            },
+            {
+              "id": "u3v4w5x6",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Software Developer",
+                "link": { "url": "#", "is_external": false },
+                "size": "xs",
+                "background_color": "rgba(255, 255, 255, 0.08)",
+                "button_background_hover_color": "rgba(22, 98, 237, 0.3)",
+                "button_text_color": "rgba(255, 255, 255, 0.7)",
+                "hover_color": "#ffffff",
+                "border_border": "solid",
+                "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                "border_color": "rgba(255, 255, 255, 0.1)",
+                "button_border_hover_color": "#60a5fa",
+                "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_size": { "unit": "px", "size": 14 },
+                "typography_font_weight": "400",
+                "text_padding": { "unit": "px", "top": "6", "right": "16", "bottom": "6", "left": "16", "isLinked": false }
+              }
+            },
+            {
+              "id": "y7z8a9b0",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Project Manager",
+                "link": { "url": "#", "is_external": false },
+                "size": "xs",
+                "background_color": "rgba(255, 255, 255, 0.08)",
+                "button_background_hover_color": "rgba(22, 98, 237, 0.3)",
+                "button_text_color": "rgba(255, 255, 255, 0.7)",
+                "hover_color": "#ffffff",
+                "border_border": "solid",
+                "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                "border_color": "rgba(255, 255, 255, 0.1)",
+                "button_border_hover_color": "#60a5fa",
+                "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_size": { "unit": "px", "size": 14 },
+                "typography_font_weight": "400",
+                "text_padding": { "unit": "px", "top": "6", "right": "16", "bottom": "6", "left": "16", "isLinked": false }
+              }
+            },
+            {
+              "id": "c1d2e3f4",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Financial Analyst",
+                "link": { "url": "#", "is_external": false },
+                "size": "xs",
+                "background_color": "rgba(255, 255, 255, 0.08)",
+                "button_background_hover_color": "rgba(22, 98, 237, 0.3)",
+                "button_text_color": "rgba(255, 255, 255, 0.7)",
+                "hover_color": "#ffffff",
+                "border_border": "solid",
+                "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                "border_color": "rgba(255, 255, 255, 0.1)",
+                "button_border_hover_color": "#60a5fa",
+                "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_size": { "unit": "px", "size": 14 },
+                "typography_font_weight": "400",
+                "text_padding": { "unit": "px", "top": "6", "right": "16", "bottom": "6", "left": "16", "isLinked": false }
+              }
+            },
+            {
+              "id": "g5h6i7j8",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "HR Manager",
+                "link": { "url": "#", "is_external": false },
+                "size": "xs",
+                "background_color": "rgba(255, 255, 255, 0.08)",
+                "button_background_hover_color": "rgba(22, 98, 237, 0.3)",
+                "button_text_color": "rgba(255, 255, 255, 0.7)",
+                "hover_color": "#ffffff",
+                "border_border": "solid",
+                "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                "border_color": "rgba(255, 255, 255, 0.1)",
+                "button_border_hover_color": "#60a5fa",
+                "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_size": { "unit": "px", "size": 14 },
+                "typography_font_weight": "400",
+                "text_padding": { "unit": "px", "top": "6", "right": "16", "bottom": "6", "left": "16", "isLinked": false }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

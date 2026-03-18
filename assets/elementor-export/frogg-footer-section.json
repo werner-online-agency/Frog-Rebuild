@@ -1,0 +1,477 @@
+{
+  "title": "FROGG Footer Section",
+  "type": "section",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "0",
+          "bottom": "30",
+          "left": "0"
+        },
+        "background_background": "classic",
+        "background_color": "#111827",
+        "css_classes": "frogg-footer"
+      },
+      "elements": [
+        {
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "gap": {
+              "unit": "px",
+              "size": 60
+            }
+          },
+          "elements": [
+            {
+              "elType": "container",
+              "settings": {
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "gap": {
+                  "unit": "px",
+                  "size": 60
+                },
+                "css_classes": "footer-grid"
+              },
+              "elements": [
+                {
+                  "elType": "container",
+                  "settings": {
+                    "flex_direction": "column",
+                    "width": {
+                      "unit": "%",
+                      "size": 35
+                    },
+                    "gap": {
+                      "unit": "px",
+                      "size": 24
+                    },
+                    "css_classes": "footer-brand"
+                  },
+                  "elements": [
+                    {
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "images/New-logo-300x104.png"
+                        },
+                        "image_size": "medium",
+                        "width": {
+                          "unit": "px",
+                          "size": 180
+                        },
+                        "css_classes": "footer-logo"
+                      }
+                    },
+                    {
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"color: #9ca3af; line-height: 1.8; font-size: 0.9375rem;\">A leading South African recruitment agency providing professional recruitment services since 2010. Connecting talent with opportunity.</p>",
+                        "css_classes": "footer-description"
+                      }
+                    },
+                    {
+                      "elType": "container",
+                      "settings": {
+                        "flex_direction": "row",
+                        "gap": {
+                          "unit": "px",
+                          "size": 12
+                        },
+                        "css_classes": "footer-social"
+                      },
+                      "elements": [
+                        {
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": {
+                              "value": "fab fa-facebook-f",
+                              "library": "fa-brands"
+                            },
+                            "link": {
+                              "url": "https://www.facebook.com/FROGGRecruitmentSA/",
+                              "is_external": true
+                            },
+                            "css_classes": "footer-social-icon"
+                          }
+                        },
+                        {
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": {
+                              "value": "fab fa-x-twitter",
+                              "library": "fa-brands"
+                            },
+                            "link": {
+                              "url": "https://x.com/FroggRecruitSA",
+                              "is_external": true
+                            },
+                            "css_classes": "footer-social-icon"
+                          }
+                        },
+                        {
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": {
+                              "value": "fab fa-linkedin-in",
+                              "library": "fa-brands"
+                            },
+                            "link": {
+                              "url": "https://www.linkedin.com/company/frogg-recruitment",
+                              "is_external": true
+                            },
+                            "css_classes": "footer-social-icon"
+                          }
+                        },
+                        {
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": {
+                              "value": "fab fa-instagram",
+                              "library": "fa-brands"
+                            },
+                            "link": {
+                              "url": "https://www.instagram.com/froggrecruitment/",
+                              "is_external": true
+                            },
+                            "css_classes": "footer-social-icon"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "elType": "container",
+                  "settings": {
+                    "flex_direction": "column",
+                    "width": {
+                      "unit": "%",
+                      "size": 18
+                    },
+                    "gap": {
+                      "unit": "px",
+                      "size": 20
+                    },
+                    "css_classes": "footer-links-column"
+                  },
+                  "elements": [
+                    {
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "For Employers",
+                        "header_size": "h4",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_size": {
+                          "unit": "rem",
+                          "size": 1
+                        },
+                        "typography_font_weight": "600",
+                        "css_classes": "footer-links-title"
+                      }
+                    },
+                    {
+                      "elType": "container",
+                      "settings": {
+                        "flex_direction": "column",
+                        "gap": {
+                          "unit": "px",
+                          "size": 12
+                        },
+                        "css_classes": "footer-links-list"
+                      },
+                      "elements": [
+                        {
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<a href=\"#\" class=\"footer-link\">Submit Your Job</a>",
+                            "css_classes": "footer-link-item"
+                          }
+                        },
+                        {
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<a href=\"#\" class=\"footer-link\">Recruitment Services</a>",
+                            "css_classes": "footer-link-item"
+                          }
+                        },
+                        {
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<a href=\"#\" class=\"footer-link\">How It Works</a>",
+                            "css_classes": "footer-link-item"
+                          }
+                        },
+                        {
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<a href=\"#\" class=\"footer-link\">About Us</a>",
+                            "css_classes": "footer-link-item"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "elType": "container",
+                  "settings": {
+                    "flex_direction": "column",
+                    "width": {
+                      "unit": "%",
+                      "size": 18
+                    },
+                    "gap": {
+                      "unit": "px",
+                      "size": 20
+                    },
+                    "css_classes": "footer-links-column"
+                  },
+                  "elements": [
+                    {
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "For Candidates",
+                        "header_size": "h4",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_size": {
+                          "unit": "rem",
+                          "size": 1
+                        },
+                        "typography_font_weight": "600",
+                        "css_classes": "footer-links-title"
+                      }
+                    },
+                    {
+                      "elType": "container",
+                      "settings": {
+                        "flex_direction": "column",
+                        "gap": {
+                          "unit": "px",
+                          "size": 12
+                        },
+                        "css_classes": "footer-links-list"
+                      },
+                      "elements": [
+                        {
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<a href=\"#\" class=\"footer-link\">Browse Vacancies</a>",
+                            "css_classes": "footer-link-item"
+                          }
+                        },
+                        {
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<a href=\"#\" class=\"footer-link\">Register With Us</a>",
+                            "css_classes": "footer-link-item"
+                          }
+                        },
+                        {
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<a href=\"#\" class=\"footer-link\">Free CV Template</a>",
+                            "css_classes": "footer-link-item"
+                          }
+                        },
+                        {
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<a href=\"#\" class=\"footer-link\">FAQ</a>",
+                            "css_classes": "footer-link-item"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "elType": "container",
+                  "settings": {
+                    "flex_direction": "column",
+                    "width": {
+                      "unit": "%",
+                      "size": 18
+                    },
+                    "gap": {
+                      "unit": "px",
+                      "size": 20
+                    },
+                    "css_classes": "footer-links-column"
+                  },
+                  "elements": [
+                    {
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Quick Links",
+                        "header_size": "h4",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_size": {
+                          "unit": "rem",
+                          "size": 1
+                        },
+                        "typography_font_weight": "600",
+                        "css_classes": "footer-links-title"
+                      }
+                    },
+                    {
+                      "elType": "container",
+                      "settings": {
+                        "flex_direction": "column",
+                        "gap": {
+                          "unit": "px",
+                          "size": 12
+                        },
+                        "css_classes": "footer-links-list"
+                      },
+                      "elements": [
+                        {
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<a href=\"#\" class=\"footer-link\">Resources Center</a>",
+                            "css_classes": "footer-link-item"
+                          }
+                        },
+                        {
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<a href=\"#\" class=\"footer-link\">Privacy Policy</a>",
+                            "css_classes": "footer-link-item"
+                          }
+                        },
+                        {
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<a href=\"#\" class=\"footer-link\">Terms & Conditions</a>",
+                            "css_classes": "footer-link-item"
+                          }
+                        },
+                        {
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<a href=\"#\" class=\"footer-link\">Be Aware of Scams</a>",
+                            "css_classes": "footer-link-item"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "elType": "container",
+              "settings": {
+                "flex_direction": "row",
+                "justify_content": "space-between",
+                "align_items": "center",
+                "flex_wrap": "wrap",
+                "gap": {
+                  "unit": "px",
+                  "size": 20
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "30",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                },
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                },
+                "border_color": "rgba(255, 255, 255, 0.1)",
+                "css_classes": "footer-bottom"
+              },
+              "elements": [
+                {
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p style=\"color: #6b7280; font-size: 0.875rem; margin: 0;\">&copy; 2026 FROGG Recruitment - All Rights Reserved.</p>",
+                    "css_classes": "footer-copyright"
+                  }
+                },
+                {
+                  "elType": "container",
+                  "settings": {
+                    "flex_direction": "row",
+                    "gap": {
+                      "unit": "px",
+                      "size": 32
+                    },
+                    "css_classes": "footer-legal"
+                  },
+                  "elements": [
+                    {
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<a href=\"#\" class=\"footer-legal-link\">Privacy Policy</a>",
+                        "css_classes": "footer-legal-item"
+                      }
+                    },
+                    {
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<a href=\"#\" class=\"footer-legal-link\">Terms of Service</a>",
+                        "css_classes": "footer-legal-item"
+                      }
+                    },
+                    {
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<a href=\"#\" class=\"footer-legal-link\">POPI Act</a>",
+                        "css_classes": "footer-legal-item"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

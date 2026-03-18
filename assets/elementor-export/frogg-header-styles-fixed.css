@@ -29,15 +29,15 @@
    ============================================ */
 .frogg-header {
     position: fixed;
-    top: 0;
+    top: 42px;
     left: 0;
     right: 0;
     width: 100%;
     z-index: 99999;
     transition: var(--wdtBaseTransition) !important;
-    /* DEFAULT: Transparent background (over hero) */
-    background: transparent !important;
-    box-shadow: none !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
 }
 
 .frogg-header,
@@ -63,30 +63,50 @@
 /* ============================================
    LOGO STYLES
    ============================================ */
-/* DEFAULT: Normal logo size */
+/* Logo: always normal color for white header */
 .frogg-logo-img img,
-.wdt-logo img {
+.wdt-logo img,
+.frogg-header .frogg-logo-img img,
+.frogg-header .wdt-logo img,
+.frogg-header .elementor-widget-image img,
+.frogg-header .elementor-image img {
+    filter: none !important;
     height: 50px !important;
     width: auto !important;
     object-fit: contain;
     transition: all var(--wdtBaseTransition);
 }
 
-/* TRANSPARENT STATE: White/inverted logo */
-.frogg-header:not(.scrolled) .frogg-logo-img img,
-.frogg-header:not(.scrolled) .wdt-logo img,
-.frogg-header:not(.scrolled) .elementor-widget-image img,
-.frogg-header:not(.scrolled) .elementor-image img {
-    filter: brightness(0) invert(1) !important;
-    height: 50px !important;
+/* ============================================
+   HEADER INNER LAYOUT
+   ============================================ */
+.header-inner {
+    width: min(1280px, calc(100% - 2rem));
+    margin-inline: auto;
+    min-height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-/* SCROLLED STATE: Normal logo color (no size change) */
-.frogg-header.scrolled .frogg-logo-img img,
-.frogg-header.scrolled .wdt-logo img,
-.frogg-header.scrolled .elementor-widget-image img,
-.frogg-header.scrolled .elementor-image img {
-    filter: none !important;
+.brand img {
+    height: 44px;
+    width: auto;
+}
+
+/* ============================================
+   HEADER ACTION BUTTONS LAYOUT
+   ============================================ */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header-actions .elementor-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ============================================
@@ -96,6 +116,9 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .wdt-nav-menu,
@@ -104,21 +127,26 @@
     position: relative;
 }
 
-.wdt-nav-menu .elementor-nav-menu a {
+.wdt-nav-menu .elementor-nav-menu a,
+.wdt-nav-menu .elementor-nav-menu span.elementor-item--nolink {
     display: inline-block;
     padding: 8px 22px;
     font-size: 16px;
     font-weight: 500;
-    color: var(--wdtHeadAltColor);
+    color: #1f2937;
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
     border-radius: 11px;
     z-index: 1;
 }
+.wdt-nav-menu .elementor-nav-menu span.elementor-item--nolink {
+    cursor: default;
+}
 
 /* Gradient background effect on nav hover */
-.wdt-nav-menu .elementor-nav-menu a::before {
+.wdt-nav-menu .elementor-nav-menu a::before,
+.wdt-nav-menu .elementor-nav-menu span.elementor-item--nolink::before {
     content: '';
     position: absolute;
     top: 0;
@@ -137,19 +165,22 @@
 
 .wdt-nav-menu .elementor-nav-menu a:hover::before,
 .wdt-nav-menu .elementor-nav-menu a.current::before,
-.wdt-nav-menu .elementor-nav-menu a.active::before {
+.wdt-nav-menu .elementor-nav-menu a.active::before,
+.wdt-nav-menu .elementor-nav-menu > li:hover > span.elementor-item--nolink::before {
     opacity: 1;
 }
 
 .wdt-nav-menu .elementor-nav-menu a:hover,
 .wdt-nav-menu .elementor-nav-menu a.current,
-.wdt-nav-menu .elementor-nav-menu a.active {
+.wdt-nav-menu .elementor-nav-menu a.active,
+.wdt-nav-menu .elementor-nav-menu > li:hover > span.elementor-item--nolink {
     color: #FFF;
 }
 
 /* SCROLLED STATE: Dark links (for white/scrolled background) */
 .frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a,
 .frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li > a,
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li > span.elementor-item--nolink,
 .frogg-header.scrolled .elementor-nav-menu--main .elementor-item {
     color: #1f2937 !important;
 }
@@ -158,7 +189,8 @@
 .frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a.current,
 .frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a.active,
 .frogg-header.scrolled .elementor-item:hover,
-.frogg-header.scrolled .elementor-item.elementor-item-active {
+.frogg-header.scrolled .elementor-item.elementor-item-active,
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li:hover > span.elementor-item--nolink {
     color: #ffffff !important;
 }
 
@@ -166,6 +198,7 @@
 .wdt-nav-menu .elementor-nav-menu > li.current-menu-item > a::before,
 .wdt-nav-menu .elementor-nav-menu > li.current-menu-ancestor > a::before,
 .wdt-nav-menu .elementor-nav-menu > li.current-menu-parent > a::before,
+.wdt-nav-menu .elementor-nav-menu > li.current-menu-item > span.elementor-item--nolink::before,
 .wdt-nav-menu .elementor-item.elementor-item-active::before,
 .wdt-nav-menu .elementor-nav-menu a.current::before {
     opacity: 1 !important;
@@ -174,6 +207,7 @@
 .wdt-nav-menu .elementor-nav-menu > li.current-menu-item > a,
 .wdt-nav-menu .elementor-nav-menu > li.current-menu-ancestor > a,
 .wdt-nav-menu .elementor-nav-menu > li.current-menu-parent > a,
+.wdt-nav-menu .elementor-nav-menu > li.current-menu-item > span.elementor-item--nolink,
 .wdt-nav-menu .elementor-item.elementor-item-active,
 .wdt-nav-menu .elementor-nav-menu a.current {
     color: #ffffff !important;
@@ -182,37 +216,52 @@
 }
 
 /* Dropdown indicator (+) - shows all the time */
-.wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > a {
+.wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > a,
+.wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > span.elementor-item--nolink {
     display: inline-flex;
     align-items: center;
     gap: 8px;
 }
 
-.wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > a::after {
+.wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > a::after,
+.wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > span.elementor-item--nolink::after {
     content: '+';
     position: relative;
     display: inline-block;
     line-height: 1;
     font-size: 1.2em;
     font-weight: 600;
+    color: #4b5563;
     transition: transform 0.3s ease;
     opacity: 1 !important;
     visibility: visible !important;
 }
 
 /* SCROLLED STATE: Dark + icon for white background */
-.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > a::after {
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > a::after,
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > span.elementor-item--nolink::after {
     color: #4b5563 !important;
 }
 
 /* Hover state: Keep + icon white when gradient background appears */
 .wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > a:hover::after,
-.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > a:hover::after {
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children > a:hover::after,
+.wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children:hover > span.elementor-item--nolink::after,
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children:hover > span.elementor-item--nolink::after {
     color: #ffffff !important;
 }
 
-.wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children:hover > a::after {
+.wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children:hover > a::after,
+.wdt-nav-menu .elementor-nav-menu > li.menu-item-has-children:hover > span.elementor-item--nolink::after {
     transform: rotate(45deg);
+}
+
+/* Active state: + icon white when current-menu-item */
+.wdt-nav-menu .elementor-nav-menu > li.current-menu-item.menu-item-has-children > a::after,
+.wdt-nav-menu .elementor-nav-menu > li.current-menu-item.menu-item-has-children > span.elementor-item--nolink::after,
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li.current-menu-item.menu-item-has-children > a::after,
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li.current-menu-item.menu-item-has-children > span.elementor-item--nolink::after {
+    color: #ffffff !important;
 }
 
 /* Hide default Elementor dropdown indicators */
@@ -223,14 +272,31 @@
 
 /* Dropdown/Submenu Styles */
 .wdt-nav-menu .elementor-nav-menu--dropdown {
-    background: var(--wdtBodyBGColor);
-    border: 1px solid rgba(18, 104, 251, 1);
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    min-width: 260px;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: 0.25s ease;
+    background: #ffffff;
+    border: 1px solid rgba(18, 104, 251, 0.18);
     border-radius: 16px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.1);
     backdrop-filter: blur(10px);
     padding: 10px;
-    margin-top: 8px;
     z-index: 100000 !important;
+}
+
+/* Show dropdown on hover/focus */
+.wdt-nav-menu .menu-item-has-children:hover > .elementor-nav-menu--dropdown,
+.wdt-nav-menu .menu-item-has-children:focus-within > .elementor-nav-menu--dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 /* SCROLLED STATE: White dropdown menu */
@@ -244,7 +310,7 @@
     padding: 9px 22px;
     font-size: 14px;
     font-weight: 500;
-    color: var(--wdtHeadAltColor);
+    color: #1f2937;
     border-radius: 11px;
     position: relative;
     z-index: 1;
@@ -304,8 +370,8 @@
 /* Outline Button (Sign In / Up) - frogg-btn-outline */
 .frogg-btn-outline .elementor-button {
     background: transparent !important;
-    border: 2px solid rgba(255, 255, 255, 0.3) !important;
-    color: var(--wdtAccentTxtColor) !important;
+    border: 2px solid var(--wdtPrimaryColor, #1268fb) !important;
+    color: var(--wdtPrimaryColor, #1268fb) !important;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 14px;
     font-weight: 600;
@@ -315,8 +381,8 @@
 }
 
 .frogg-btn-outline .elementor-button:hover {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-color: rgba(255, 255, 255, 0.5) !important;
+    background: rgba(22, 98, 237, 0.1) !important;
+    border-color: var(--wdtPrimaryDark) !important;
 }
 
 /* SCROLLED STATE: Blue border for white background */
@@ -346,7 +412,7 @@
     display: block;
     width: 24px;
     height: 2px;
-    background: var(--wdtHeadAltColor);
+    background: var(--wdtGray800, #1f2937);
     transition: var(--wdtBaseTransition);
 }
 
@@ -418,23 +484,41 @@
    WDT TOPBAR STYLES
    ============================================ */
 .wdt-topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100000;
+    background: #031543;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
     transition: var(--wdtBaseTransition);
+}
+
+.topbar-inner {
+    width: min(1280px, calc(100% - 2rem));
+    min-height: 42px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
 }
 
 .wdt-topbar-contact {
     display: flex;
     align-items: center;
     gap: 24px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .wdt-topbar-contact-item {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: var(--wdtAccentTxtColor);
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 14px;
+    color: #d7e3ff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13px;
     font-weight: 500;
+    text-decoration: none;
 }
 
 .wdt-topbar-contact-item i {
@@ -482,7 +566,19 @@
 
 /* Tablet Breakpoint */
 @media screen and (max-width: 1024px) {
+    .wdt-topbar {
+        display: none;
+    }
+    
+    .frogg-header {
+        top: 0;
+    }
+    
     .wdt-nav-menu {
+        display: none !important;
+    }
+    
+    .header-actions {
         display: none !important;
     }
     
@@ -514,6 +610,14 @@
 
 /* Mobile Breakpoint */
 @media screen and (max-width: 767px) {
+    .header-inner {
+        min-height: 74px;
+    }
+
+    .brand img {
+        height: 36px;
+    }
+
     .frogg-header .elementor-container,
     .wdt-header .elementor-container {
         padding: 0 12px !important;

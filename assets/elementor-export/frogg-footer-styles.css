@@ -1,26 +1,119 @@
 
-.frogg-footer,
-.frogg-footer * {
-    background: #111827;
+/* ============================================
+   SHARED BREADCRUMB STYLES
+   ============================================ */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+.breadcrumb a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color .2s;
+}
+.breadcrumb a:hover { color: #fff; }
+
+/* ============================================
+   ELEMENTOR BASE OVERRIDES FOR LOCAL/STATIC
+   Without Elementor's remote CSS, containers
+   have no layout. These provide the basics.
+   ============================================ */
+.frogg-footer.e-con {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+}
+
+.frogg-footer .e-con {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.frogg-footer .e-con-boxed {
+    width: 100%;
+}
+
+.frogg-footer .e-con-boxed > .e-con-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.frogg-footer .e-con-full {
+    width: 100%;
+}
+
+/* All widgets must fill their containers */
+.frogg-footer .elementor-widget {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.frogg-footer {
+    background: linear-gradient(135deg, rgba(10, 25, 70, 0.92) 0%, rgba(15, 35, 90, 0.88) 50%, rgba(10, 25, 70, 0.92) 100%),
+                url('../images/footer-bg-02.webp') center/cover no-repeat;
     color: #fff;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    position: relative;
+    padding: 80px 0 30px;
+}
+
+/* Container for non-Elementor pages */
+.frogg-footer > .container {
+    width: min(1280px, calc(100% - 2rem));
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .frogg-footer * {
+    color: #fff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
     background: transparent;
 }
 
 /* Footer Grid Layout */
 .footer-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 60px;
+    width: 100% !important;
+}
+
+/* Elementor override: target e-con-inner when inside Elementor markup */
+.footer-grid > .e-con-inner {
+    display: grid !important;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 60px;
+    max-width: none !important;
+    width: 100%;
+}
+
+/* Grid items: override e-con-boxed shrink behavior */
+.footer-grid > .e-con-inner > .e-con {
+    width: 100% !important;
+    min-width: 0;
+}
+
+/* Remove max-width on ALL nested e-con-inner inside the grid */
+.footer-grid .e-con-inner {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 !important;
 }
 
 /* Footer Brand Column */
 .footer-brand {
-    flex: 0 0 35%;
-    max-width: 35%;
+    max-width: 100%;
 }
 
 .footer-logo img {
@@ -33,7 +126,8 @@
     color: #9ca3af;
     line-height: 1.8;
     font-size: 0.9375rem;
-    margin: 0;
+    margin: 0 0 20px;
+    max-width: 100%;
 }
 
 /* Footer Social Icons */
@@ -42,12 +136,23 @@
     gap: 12px;
 }
 
+.footer-social.e-con {
+    flex-direction: row !important;
+}
+
+.footer-social > .e-con-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    max-width: none;
+}
+
 .footer-social-icon,
 .frogg-footer .elementor-social-icon,
 .frogg-footer .elementor-icon {
-    width: 40px !important;
-    height: 40px !important;
-    min-width: 40px !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
     background: rgba(255, 255, 255, 0.1) !important;
     border-radius: 50% !important;
     display: flex !important;
@@ -55,7 +160,11 @@
     justify-content: center !important;
     transition: all 0.3s ease !important;
     padding: 0 !important;
-    line-height: 40px !important;
+    line-height: 44px !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    text-transform: lowercase !important;
+    text-decoration: none !important;
 }
 
 .footer-social-icon i,
@@ -93,8 +202,7 @@
 
 /* Footer Links Columns */
 .footer-links-column {
-    flex: 0 0 18%;
-    max-width: 18%;
+    max-width: 100%;
 }
 
 .footer-links-title {
@@ -108,6 +216,13 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.footer-links-list > .e-con-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px;
+    max-width: none;
 }
 
 .footer-link-item {
@@ -129,13 +244,47 @@
 
 /* Footer Bottom Bar */
 .footer-bottom {
+    margin-top: 50px;
     padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
+    border-top: 1px solid rgba(100, 140, 255, 0.3);
+    display: flex !important;
+    flex-direction: row !important;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+/* Elementor: make e-con-inner and ALL nested wrappers horizontal */
+.footer-bottom > .e-con-inner {
+    width: 100%;
+    max-width: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* All nested e-con-full inside footer-bottom should be horizontal rows */
+.footer-bottom .e-con-full {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100% !important;
+}
+
+/* The copyright footer-legal should not justify space-between */
+.footer-bottom .footer-legal:first-child {
+    flex: 1;
+}
+
+/* The links footer-legal should stay together on the right */
+.footer-bottom .footer-legal:last-child {
+    flex: 0 0 auto;
 }
 
 .footer-copyright p {
@@ -146,8 +295,13 @@
 
 /* Footer Legal Links */
 .footer-legal {
-    display: flex;
+    display: flex !important;
+    flex-direction: row !important;
     gap: 32px;
+}
+
+.footer-legal.e-con {
+    flex-direction: row !important;
 }
 
 .footer-legal-item {
@@ -170,9 +324,14 @@
    ============================================ */
 
 @media (max-width: 1024px) {
+    .footer-grid,
+    .footer-grid > .e-con-inner {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+
     .footer-brand {
-        flex: 0 0 100%;
-        max-width: 100%;
+        grid-column: 1 / -1;
         text-align: center;
     }
     
@@ -183,21 +342,16 @@
     .footer-social {
         justify-content: center;
     }
-    
-    .footer-links-column {
-        flex: 0 0 30%;
-        max-width: 30%;
-    }
 }
 
 @media (max-width: 768px) {
-    .footer-grid {
+    .footer-grid,
+    .footer-grid > .e-con-inner {
+        grid-template-columns: 1fr;
         gap: 40px;
     }
     
     .footer-links-column {
-        flex: 0 0 100%;
-        max-width: 100%;
         text-align: center;
     }
     
@@ -211,6 +365,12 @@
     
     .footer-bottom {
         flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom > .e-con-inner,
+    .footer-bottom .e-con-full.e-con {
+        flex-direction: column !important;
         text-align: center;
     }
     

@@ -1,0 +1,122 @@
+/**
+ * FROGG Back To Top Button
+ * ========================
+ * 
+ * SETUP INSTRUCTIONS:
+ * 
+ * 1. Go to: Elementor > Custom Code
+ * 2. Click "Add New"
+ * 3. Name it: "FROGG Back To Top Button"
+ * 4. Location: </body> - End
+ * 5. Priority: 10
+ * 6. Paste the code below
+ * 7. Save and publish
+ * 
+ * Alternatively, add to your child theme's footer.php
+ */
+
+<!-- FROGG Back To Top Button - Add to Elementor Custom Code -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<style>
+.back-to-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #1662ed 0%, #1e3a8a 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.25rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    cursor: pointer;
+    border: none;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px rgba(22, 98, 237, 0.4);
+}
+
+.back-to-top:active {
+    transform: translateY(-2px);
+}
+
+.back-to-top i {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 24px;
+        right: 24px;
+        width: 44px;
+        height: 44px;
+    }
+    
+    .back-to-top i {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        bottom: 16px;
+        right: 16px;
+    }
+}
+</style>
+
+<script>
+(function() {
+    'use strict';
+    
+    const backToTop = document.getElementById('backToTop');
+    
+    if (!backToTop) return;
+    
+    // Show/hide button based on scroll position
+    const toggleVisibility = () => {
+        if (window.pageYOffset > 300) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    };
+    
+    // Smooth scroll to top
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+    
+    // Event listeners
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
+    backToTop.addEventListener('click', scrollToTop);
+    
+    // Initial check
+    toggleVisibility();
+})();
+</script>
+<!-- End FROGG Back To Top Button -->

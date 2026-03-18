@@ -1,0 +1,522 @@
+{
+  "title": "FROGG Job Search Filter V2",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "jsf001",
+      "elType": "container",
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": { "unit": "px", "size": 1280 },
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "padding": { "unit": "px", "top": "0", "right": "32", "bottom": "0", "left": "32", "isLinked": false },
+        "padding_mobile": { "unit": "px", "top": "0", "right": "16", "bottom": "0", "left": "16", "isLinked": false },
+        "margin": { "unit": "px", "top": "-100", "right": "0", "bottom": "-60", "left": "0", "isLinked": false },
+        "margin_tablet": { "unit": "px", "top": "-60", "right": "0", "bottom": "-30", "left": "0", "isLinked": false },
+        "margin_mobile": { "unit": "px", "top": "-40", "right": "0", "bottom": "-20", "left": "0", "isLinked": false },
+        "z_index": 50,
+        "background_background": "classic",
+        "background_color": "transparent"
+      },
+      "elements": [
+        {
+          "id": "jsf002",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": { "unit": "px", "top": "48", "right": "40", "bottom": "48", "left": "40", "isLinked": false },
+            "padding_mobile": { "unit": "px", "top": "32", "right": "20", "bottom": "32", "left": "20", "isLinked": false },
+            "background_background": "classic",
+            "background_color": "#ffffff",
+            "border_radius": { "unit": "px", "top": "32", "right": "32", "bottom": "32", "left": "32", "isLinked": true },
+            "border_radius_mobile": { "unit": "px", "top": "20", "right": "20", "bottom": "20", "left": "20", "isLinked": true },
+            "box_shadow_box_shadow_type": "yes",
+            "box_shadow_box_shadow": { "horizontal": 0, "vertical": 30, "blur": 100, "spread": -20, "color": "rgba(0, 0, 0, 0.15)" }
+          },
+          "elements": [
+            {
+              "id": "jsf003",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_direction_mobile": "column",
+                "flex_align_items": "center",
+                "flex_justify_content": "center",
+                "flex_gap": { "unit": "px", "size": 16, "column": 16, "row": 12 },
+                "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "32", "left": "0", "isLinked": false },
+                "margin_mobile": { "unit": "px", "top": "0", "right": "0", "bottom": "24", "left": "0", "isLinked": false }
+              },
+              "elements": [
+                {
+                  "id": "jsf004",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "px", "size": 56 },
+                    "width_mobile": { "unit": "px", "size": 48 },
+                    "min_height": { "unit": "px", "size": 56 },
+                    "min_height_mobile": { "unit": "px", "size": 48 },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "flex_justify_content": "center",
+                    "background_background": "gradient",
+                    "background_color": "#1662ed",
+                    "background_color_b": "#1e3a8a",
+                    "background_gradient_angle": { "unit": "deg", "size": 135 },
+                    "border_radius": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": { "horizontal": 0, "vertical": 8, "blur": 25, "spread": 0, "color": "rgba(22, 98, 237, 0.3)" }
+                  },
+                  "elements": [
+                    {
+                      "id": "jsf005",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": { "value": "fas fa-rocket", "library": "fa-solid" },
+                        "primary_color": "#ffffff",
+                        "size": { "unit": "px", "size": 24 },
+                        "size_mobile": { "unit": "px", "size": 20 }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "jsf006",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_gap": { "unit": "px", "size": 4 },
+                    "flex_align_items_mobile": "center"
+                  },
+                  "elements": [
+                    {
+                      "id": "jsf007",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Find Your Dream Job",
+                        "header_size": "h3",
+                        "align": "left",
+                        "align_mobile": "center",
+                        "title_color": "#111827",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 24 },
+                        "typography_font_size_mobile": { "unit": "px", "size": 20 },
+                        "typography_font_weight": "700",
+                        "typography_line_height": { "unit": "em", "size": 1.2 }
+                      }
+                    },
+                    {
+                      "id": "jsf008",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Search through thousands of opportunities",
+                        "header_size": "p",
+                        "align": "left",
+                        "align_mobile": "center",
+                        "title_color": "#6b7280",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 15 },
+                        "typography_font_size_mobile": { "unit": "px", "size": 14 },
+                        "typography_font_weight": "400"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "jsf009",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_direction_mobile": "column",
+                "flex_wrap": "wrap",
+                "flex_gap": { "unit": "px", "size": 0 },
+                "background_background": "gradient",
+                "background_color": "#1662ed",
+                "background_color_b": "#1e3a8a",
+                "background_gradient_angle": { "unit": "deg", "size": 135 },
+                "border_radius": { "unit": "px", "top": "20", "right": "20", "bottom": "20", "left": "20", "isLinked": true },
+                "padding": { "unit": "px", "top": "6", "right": "6", "bottom": "6", "left": "6", "isLinked": true },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": { "horizontal": 0, "vertical": 20, "blur": 60, "spread": -15, "color": "rgba(22, 98, 237, 0.35)" }
+              },
+              "elements": [
+                {
+                  "id": "jsf010",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "%", "size": 30 },
+                    "width_tablet": { "unit": "%", "size": 50 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "flex_direction": "row",
+                    "flex_gap": { "unit": "px", "size": 16 },
+                    "flex_align_items": "center",
+                    "padding": { "unit": "px", "top": "16", "right": "20", "bottom": "16", "left": "20", "isLinked": false },
+                    "border_border": "solid",
+                    "border_width": { "unit": "px", "top": "0", "right": "1", "bottom": "0", "left": "0", "isLinked": false },
+                    "border_width_mobile": { "unit": "px", "top": "0", "right": "0", "bottom": "1", "left": "0", "isLinked": false },
+                    "border_color": "rgba(255, 255, 255, 0.15)"
+                  },
+                  "elements": [
+                    {
+                      "id": "jsf011",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "width": { "unit": "px", "size": 48 },
+                        "min_height": { "unit": "px", "size": 48 },
+                        "flex_direction": "column",
+                        "flex_align_items": "center",
+                        "flex_justify_content": "center",
+                        "background_background": "classic",
+                        "background_color": "rgba(255, 255, 255, 0.15)",
+                        "border_radius": { "unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true }
+                      },
+                      "elements": [
+                        {
+                          "id": "jsf012",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": { "value": "fas fa-search", "library": "fa-solid" },
+                            "primary_color": "#ffffff",
+                            "size": { "unit": "px", "size": 18 }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "jsf013",
+                      "elType": "widget",
+                      "widgetType": "html",
+                      "settings": {
+                        "html": "<div style=\"display:flex;flex-direction:column;gap:2px;flex:1\">\n<label style=\"font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.7);font-family:Inter,sans-serif\">Keywords</label>\n<input type=\"text\" placeholder=\"Job title, skills, or company\" style=\"width:100%;background:transparent;border:none;color:#fff;font-size:15px;font-weight:500;font-family:Inter,sans-serif;outline:none;padding:0\">\n</div>\n<style>input::placeholder{color:rgba(255,255,255,0.5)}</style>"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "jsf014",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "%", "size": 25 },
+                    "width_tablet": { "unit": "%", "size": 50 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "flex_direction": "row",
+                    "flex_gap": { "unit": "px", "size": 16 },
+                    "flex_align_items": "center",
+                    "padding": { "unit": "px", "top": "16", "right": "20", "bottom": "16", "left": "20", "isLinked": false },
+                    "border_border": "solid",
+                    "border_width": { "unit": "px", "top": "0", "right": "1", "bottom": "0", "left": "0", "isLinked": false },
+                    "border_width_tablet": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": false },
+                    "border_width_mobile": { "unit": "px", "top": "0", "right": "0", "bottom": "1", "left": "0", "isLinked": false },
+                    "border_color": "rgba(255, 255, 255, 0.15)"
+                  },
+                  "elements": [
+                    {
+                      "id": "jsf015",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "width": { "unit": "px", "size": 48 },
+                        "min_height": { "unit": "px", "size": 48 },
+                        "flex_direction": "column",
+                        "flex_align_items": "center",
+                        "flex_justify_content": "center",
+                        "background_background": "classic",
+                        "background_color": "rgba(255, 255, 255, 0.15)",
+                        "border_radius": { "unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true }
+                      },
+                      "elements": [
+                        {
+                          "id": "jsf016",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": { "value": "fas fa-map-marker-alt", "library": "fa-solid" },
+                            "primary_color": "#ffffff",
+                            "size": { "unit": "px", "size": 18 }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "jsf017",
+                      "elType": "widget",
+                      "widgetType": "html",
+                      "settings": {
+                        "html": "<div style=\"display:flex;flex-direction:column;gap:2px;flex:1\">\n<label style=\"font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.7);font-family:Inter,sans-serif\">Location</label>\n<select style=\"width:100%;background:transparent;border:none;color:#fff;font-size:15px;font-weight:500;font-family:Inter,sans-serif;outline:none;cursor:pointer;padding:0;-webkit-appearance:none;appearance:none\">\n<option value=\"\" style=\"background:#1f2937\">All Locations</option>\n<option value=\"cape-town\" style=\"background:#1f2937\">Cape Town</option>\n<option value=\"johannesburg\" style=\"background:#1f2937\">Johannesburg</option>\n<option value=\"durban\" style=\"background:#1f2937\">Durban</option>\n<option value=\"pretoria\" style=\"background:#1f2937\">Pretoria</option>\n<option value=\"remote\" style=\"background:#1f2937\">Remote</option>\n</select>\n</div>"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "jsf018",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "%", "size": 25 },
+                    "width_tablet": { "unit": "%", "size": 50 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "flex_direction": "row",
+                    "flex_gap": { "unit": "px", "size": 16 },
+                    "flex_align_items": "center",
+                    "padding": { "unit": "px", "top": "16", "right": "20", "bottom": "16", "left": "20", "isLinked": false },
+                    "border_border": "solid",
+                    "border_width": { "unit": "px", "top": "1", "right": "0", "bottom": "0", "left": "0", "isLinked": false },
+                    "border_width_mobile": { "unit": "px", "top": "0", "right": "0", "bottom": "1", "left": "0", "isLinked": false },
+                    "border_color": "rgba(255, 255, 255, 0.15)"
+                  },
+                  "elements": [
+                    {
+                      "id": "jsf019",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "width": { "unit": "px", "size": 48 },
+                        "min_height": { "unit": "px", "size": 48 },
+                        "flex_direction": "column",
+                        "flex_align_items": "center",
+                        "flex_justify_content": "center",
+                        "background_background": "classic",
+                        "background_color": "rgba(255, 255, 255, 0.15)",
+                        "border_radius": { "unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true }
+                      },
+                      "elements": [
+                        {
+                          "id": "jsf020",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "settings": {
+                            "selected_icon": { "value": "fas fa-briefcase", "library": "fa-solid" },
+                            "primary_color": "#ffffff",
+                            "size": { "unit": "px", "size": 18 }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "jsf021",
+                      "elType": "widget",
+                      "widgetType": "html",
+                      "settings": {
+                        "html": "<div style=\"display:flex;flex-direction:column;gap:2px;flex:1\">\n<label style=\"font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:rgba(255,255,255,0.7);font-family:Inter,sans-serif\">Industry</label>\n<select style=\"width:100%;background:transparent;border:none;color:#fff;font-size:15px;font-weight:500;font-family:Inter,sans-serif;outline:none;cursor:pointer;padding:0;-webkit-appearance:none;appearance:none\">\n<option value=\"\" style=\"background:#1f2937\">All Industries</option>\n<option value=\"it\" style=\"background:#1f2937\">Information Technology</option>\n<option value=\"finance\" style=\"background:#1f2937\">Finance and Accounting</option>\n<option value=\"engineering\" style=\"background:#1f2937\">Engineering</option>\n<option value=\"sales\" style=\"background:#1f2937\">Sales and Marketing</option>\n<option value=\"hr\" style=\"background:#1f2937\">Human Resources</option>\n<option value=\"admin\" style=\"background:#1f2937\">Administration</option>\n</select>\n</div>"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "jsf022",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "%", "size": 20 },
+                    "width_tablet": { "unit": "%", "size": 50 },
+                    "width_mobile": { "unit": "%", "size": 100 },
+                    "flex_direction": "column",
+                    "flex_align_items": "stretch",
+                    "padding": { "unit": "px", "top": "6", "right": "6", "bottom": "6", "left": "6", "isLinked": true }
+                  },
+                  "elements": [
+                    {
+                      "id": "jsf023",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Search",
+                        "link": { "url": "#vacancies", "is_external": false },
+                        "selected_icon": { "value": "fas fa-search", "library": "fa-solid" },
+                        "icon_align": "left",
+                        "align": "stretch",
+                        "background_color": "#ffffff",
+                        "button_background_hover_color": "#eff6ff",
+                        "button_text_color": "#1662ed",
+                        "button_hover_color": "#1e3a8a",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 16 },
+                        "typography_font_weight": "700",
+                        "border_radius": { "unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true },
+                        "button_box_shadow_box_shadow_type": "yes",
+                        "button_box_shadow_box_shadow": { "horizontal": 0, "vertical": 4, "blur": 20, "spread": 0, "color": "rgba(0, 0, 0, 0.1)" },
+                        "text_padding": { "unit": "px", "top": "18", "right": "32", "bottom": "18", "left": "32", "isLinked": false }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "jsf024",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_direction_mobile": "column",
+                "flex_wrap": "wrap",
+                "flex_align_items": "center",
+                "flex_justify_content": "space-between",
+                "flex_gap": { "unit": "px", "size": 16, "column": 16, "row": 16 },
+                "margin": { "unit": "px", "top": "32", "right": "0", "bottom": "0", "left": "0", "isLinked": false },
+                "margin_mobile": { "unit": "px", "top": "24", "right": "0", "bottom": "0", "left": "0", "isLinked": false },
+                "padding": { "unit": "px", "top": "24", "right": "0", "bottom": "0", "left": "0", "isLinked": false },
+                "border_border": "solid",
+                "border_width": { "unit": "px", "top": "1", "right": "0", "bottom": "0", "left": "0", "isLinked": false },
+                "border_color": "#f3f4f6"
+              },
+              "elements": [
+                {
+                  "id": "jsf025",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_wrap": "wrap",
+                    "flex_gap": { "unit": "px", "size": 8 },
+                    "flex_align_items": "center",
+                    "flex_justify_content_mobile": "center"
+                  },
+                  "elements": [
+                    {
+                      "id": "jsf026",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Trending:",
+                        "header_size": "span",
+                        "title_color": "#9ca3af",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 14 },
+                        "typography_font_weight": "600"
+                      }
+                    },
+                    {
+                      "id": "jsf027",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Software Developer",
+                        "link": { "url": "#", "is_external": false },
+                        "size": "xs",
+                        "background_color": "#f9fafb",
+                        "button_background_hover_color": "#1662ed",
+                        "button_text_color": "#4b5563",
+                        "button_hover_color": "#ffffff",
+                        "border_border": "solid",
+                        "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                        "border_color": "#f3f4f6",
+                        "button_border_hover_color": "#1662ed",
+                        "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 13 },
+                        "typography_font_weight": "500",
+                        "text_padding": { "unit": "px", "top": "6", "right": "14", "bottom": "6", "left": "14", "isLinked": false }
+                      }
+                    },
+                    {
+                      "id": "jsf028",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Project Manager",
+                        "link": { "url": "#", "is_external": false },
+                        "size": "xs",
+                        "background_color": "#f9fafb",
+                        "button_background_hover_color": "#1662ed",
+                        "button_text_color": "#4b5563",
+                        "button_hover_color": "#ffffff",
+                        "border_border": "solid",
+                        "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                        "border_color": "#f3f4f6",
+                        "button_border_hover_color": "#1662ed",
+                        "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 13 },
+                        "typography_font_weight": "500",
+                        "text_padding": { "unit": "px", "top": "6", "right": "14", "bottom": "6", "left": "14", "isLinked": false }
+                      }
+                    },
+                    {
+                      "id": "jsf029",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Financial Analyst",
+                        "link": { "url": "#", "is_external": false },
+                        "size": "xs",
+                        "background_color": "#f9fafb",
+                        "button_background_hover_color": "#1662ed",
+                        "button_text_color": "#4b5563",
+                        "button_hover_color": "#ffffff",
+                        "border_border": "solid",
+                        "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                        "border_color": "#f3f4f6",
+                        "button_border_hover_color": "#1662ed",
+                        "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 13 },
+                        "typography_font_weight": "500",
+                        "text_padding": { "unit": "px", "top": "6", "right": "14", "bottom": "6", "left": "14", "isLinked": false }
+                      }
+                    },
+                    {
+                      "id": "jsf030",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "HR Manager",
+                        "link": { "url": "#", "is_external": false },
+                        "size": "xs",
+                        "background_color": "#f9fafb",
+                        "button_background_hover_color": "#1662ed",
+                        "button_text_color": "#4b5563",
+                        "button_hover_color": "#ffffff",
+                        "border_border": "solid",
+                        "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                        "border_color": "#f3f4f6",
+                        "button_border_hover_color": "#1662ed",
+                        "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": { "unit": "px", "size": 13 },
+                        "typography_font_weight": "500",
+                        "text_padding": { "unit": "px", "top": "6", "right": "14", "bottom": "6", "left": "14", "isLinked": false }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "jsf031",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div style=\"display:flex;align-items:center;gap:16px;color:#6b7280;font-size:14px;font-family:Inter,sans-serif\">\n<span><strong style=\"color:#1662ed;font-weight:700\">2,500+</strong> Active Jobs</span>\n<span style=\"color:#d1d5db\">|</span>\n<span><strong style=\"color:#1662ed;font-weight:700\">500+</strong> Companies Hiring</span>\n</div>"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

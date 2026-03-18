@@ -1,0 +1,50 @@
+{
+  "title": "FROGG Back To Top Button",
+  "type": "section",
+  "version": "0.4",
+  "page_settings": {},
+  "content": [
+    {
+      "id": "back-to-top-wrapper",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "position": "fixed",
+        "position_bottom": { "unit": "px", "size": 32 },
+        "position_right": { "unit": "px", "size": 32 },
+        "width": { "unit": "px", "size": 50 },
+        "min_height": { "unit": "px", "size": 50 },
+        "flex_direction": "column",
+        "flex_justify_content": "center",
+        "flex_align_items": "center",
+        "background_background": "gradient",
+        "background_color": "#1662ed",
+        "background_color_b": "#1e3a8a",
+        "background_gradient_angle": { "unit": "deg", "size": 135 },
+        "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+        "box_shadow_box_shadow_type": "yes",
+        "box_shadow_box_shadow": { "horizontal": 0, "vertical": 10, "blur": 15, "spread": -3, "color": "rgba(0, 0, 0, 0.1)" },
+        "z_index": 100,
+        "css_classes": "back-to-top",
+        "_element_custom_width": "50px",
+        "motion_fx_motion_fx_scrolling": "yes",
+        "sticky": "none"
+      },
+      "elements": [
+        {
+          "id": "back-to-top-icon",
+          "elType": "widget",
+          "widgetType": "icon",
+          "settings": {
+            "selected_icon": { "library": "fa-solid", "value": "fas fa-chevron-up" },
+            "view": "default",
+            "primary_color": "#ffffff",
+            "size": { "unit": "px", "size": 20 },
+            "link": { "url": "#top", "is_external": false },
+            "css_classes": "back-to-top-icon"
+          }
+        }
+      ]
+    }
+  ]
+}

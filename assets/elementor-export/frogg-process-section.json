@@ -1,0 +1,703 @@
+{
+  "title": "FROGG Process Section",
+  "type": "section",
+  "version": "0.4",
+  "page_settings": {},
+  "content": [
+    {
+      "id": "process-section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "html_tag": "section",
+        "flex_direction": "column",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "center",
+        "padding": { "unit": "px", "top": "120", "right": "0", "bottom": "120", "left": "0", "isLinked": false },
+        "background_background": "gradient",
+        "background_color": "#111827",
+        "background_color_b": "#1a1a2e",
+        "background_gradient_angle": { "unit": "deg", "size": 135 },
+        "css_classes": "frogg-process-section",
+        "position": "relative",
+        "overflow": "hidden"
+      },
+      "elements": [
+        {
+          "id": "process-bg-overlay",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "position": "absolute",
+            "z_index": 0,
+            "width": { "unit": "%", "size": 100 },
+            "height": { "unit": "%", "size": 100 },
+            "css_classes": "process-bg-overlay"
+          },
+          "elements": []
+        },
+        {
+          "id": "process-inner-container",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": { "unit": "px", "size": 1200 },
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "flex_gap": { "unit": "px", "size": 60, "column": "60", "row": "60" },
+            "padding": { "unit": "px", "top": "0", "right": "24", "bottom": "0", "left": "24", "isLinked": false },
+            "z_index": 1,
+            "css_classes": "process-container"
+          },
+          "elements": [
+            {
+              "id": "process-header",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "flex_gap": { "unit": "px", "size": 16, "column": "16", "row": "16" },
+                "max_width": { "unit": "px", "size": 700 },
+                "css_classes": "section-header center"
+              },
+              "elements": [
+                {
+                  "id": "process-tag",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Our Process",
+                    "header_size": "span",
+                    "align": "center",
+                    "title_color": "#60a5fa",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 14 },
+                    "typography_font_weight": "600",
+                    "typography_text_transform": "uppercase",
+                    "typography_letter_spacing": { "unit": "px", "size": 2 },
+                    "background_background": "classic",
+                    "background_color": "rgba(22, 98, 237, 0.2)",
+                    "padding": { "unit": "px", "top": "8", "right": "16", "bottom": "8", "left": "16", "isLinked": false },
+                    "border_radius": { "unit": "px", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                    "css_classes": "section-tag"
+                  }
+                },
+                {
+                  "id": "process-title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "How It",
+                    "header_size": "h2",
+                    "align": "center",
+                    "title_color": "#ffffff",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 48 },
+                    "typography_font_weight": "700",
+                    "typography_line_height": { "unit": "em", "size": 1.2 },
+                    "css_classes": "section-title"
+                  }
+                },
+                {
+                  "id": "process-title-gradient",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Works",
+                    "header_size": "h2",
+                    "align": "center",
+                    "title_color": "#1662ed",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 48 },
+                    "typography_font_weight": "700",
+                    "typography_line_height": { "unit": "em", "size": 1.2 },
+                    "css_classes": "section-title gradient-text"
+                  }
+                },
+                {
+                  "id": "process-subtitle",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>A simple 4-step process to find your perfect candidate</p>",
+                    "align": "center",
+                    "text_color": "#9ca3af",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 18 },
+                    "typography_line_height": { "unit": "em", "size": 1.7 },
+                    "css_classes": "section-subtitle"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "process-timeline",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "flex_justify_content": "center",
+                "flex_gap": { "unit": "px", "size": 24, "column": "24", "row": "40" },
+                "position": "relative",
+                "css_classes": "process-timeline"
+              },
+              "elements": [
+                {
+                  "id": "process-line",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "position": "absolute",
+                    "width": { "unit": "%", "size": 75 },
+                    "height": { "unit": "px", "size": 2 },
+                    "_offset_y": { "unit": "px", "size": 50 },
+                    "background_background": "gradient",
+                    "background_color": "#1662ed",
+                    "background_color_b": "#1e40af",
+                    "background_gradient_type": "linear",
+                    "background_gradient_angle": { "unit": "deg", "size": 90 },
+                    "z_index": 0,
+                    "css_classes": "process-line",
+                    "hide_tablet": "yes",
+                    "hide_mobile": "yes"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "step-1",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "%", "size": 23 },
+                    "min_width": { "unit": "px", "size": 250 },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "flex_gap": { "unit": "px", "size": 24, "column": "24", "row": "24" },
+                    "z_index": 1,
+                    "css_classes": "process-step"
+                  },
+                  "elements": [
+                    {
+                      "id": "step-1-marker",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_align_items": "center",
+                        "position": "relative",
+                        "css_classes": "step-marker"
+                      },
+                      "elements": [
+                        {
+                          "id": "step-1-num",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "01",
+                            "header_size": "span",
+                            "align": "center",
+                            "title_color": "rgba(22, 98, 237, 0.15)",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 48 },
+                            "typography_font_weight": "800",
+                            "position": "absolute",
+                            "_offset_y": { "unit": "px", "size": -15 },
+                            "z_index": 0,
+                            "css_classes": "step-num"
+                          }
+                        },
+                        {
+                          "id": "step-1-icon-circle",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "width": { "unit": "px", "size": 80 },
+                            "height": { "unit": "px", "size": 80 },
+                            "flex_justify_content": "center",
+                            "flex_align_items": "center",
+                            "background_background": "gradient",
+                            "background_color": "#1662ed",
+                            "background_color_b": "#1e3a8a",
+                            "background_gradient_angle": { "unit": "deg", "size": 135 },
+                            "border_radius": { "unit": "%", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                            "box_shadow_box_shadow_type": "yes",
+                            "box_shadow_box_shadow": { "horizontal": 0, "vertical": 10, "blur": 30, "spread": 0, "color": "rgba(22, 98, 237, 0.4)" },
+                            "z_index": 1,
+                            "css_classes": "step-icon"
+                          },
+                          "elements": [
+                            {
+                              "id": "step-1-icon",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "settings": {
+                                "selected_icon": { "library": "fa-solid", "value": "fas fa-paper-plane" },
+                                "primary_color": "#ffffff",
+                                "size": { "unit": "px", "size": 28 },
+                                "css_classes": "step-icon-i"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "step-1-card",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_align_items": "center",
+                        "padding": { "unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true },
+                        "background_background": "classic",
+                        "background_color": "rgba(255, 255, 255, 0.05)",
+                        "border_border": "solid",
+                        "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                        "border_color": "rgba(255, 255, 255, 0.1)",
+                        "border_radius": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true },
+                        "css_classes": "step-card"
+                      },
+                      "elements": [
+                        {
+                          "id": "step-1-title",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Submit Your Job",
+                            "header_size": "h3",
+                            "align": "center",
+                            "title_color": "#ffffff",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 20 },
+                            "typography_font_weight": "700",
+                            "css_classes": "step-title"
+                          }
+                        },
+                        {
+                          "id": "step-1-desc",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Share your requirements with our team</p>",
+                            "align": "center",
+                            "text_color": "#9ca3af",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 15 },
+                            "typography_line_height": { "unit": "em", "size": 1.6 },
+                            "css_classes": "step-desc"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "step-2",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "%", "size": 23 },
+                    "min_width": { "unit": "px", "size": 250 },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "flex_gap": { "unit": "px", "size": 24, "column": "24", "row": "24" },
+                    "z_index": 1,
+                    "css_classes": "process-step"
+                  },
+                  "elements": [
+                    {
+                      "id": "step-2-marker",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_align_items": "center",
+                        "position": "relative",
+                        "css_classes": "step-marker"
+                      },
+                      "elements": [
+                        {
+                          "id": "step-2-num",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "02",
+                            "header_size": "span",
+                            "align": "center",
+                            "title_color": "rgba(22, 98, 237, 0.15)",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 48 },
+                            "typography_font_weight": "800",
+                            "position": "absolute",
+                            "_offset_y": { "unit": "px", "size": -15 },
+                            "z_index": 0,
+                            "css_classes": "step-num"
+                          }
+                        },
+                        {
+                          "id": "step-2-icon-circle",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "width": { "unit": "px", "size": 80 },
+                            "height": { "unit": "px", "size": 80 },
+                            "flex_justify_content": "center",
+                            "flex_align_items": "center",
+                            "background_background": "gradient",
+                            "background_color": "#1662ed",
+                            "background_color_b": "#1e3a8a",
+                            "background_gradient_angle": { "unit": "deg", "size": 135 },
+                            "border_radius": { "unit": "%", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                            "box_shadow_box_shadow_type": "yes",
+                            "box_shadow_box_shadow": { "horizontal": 0, "vertical": 10, "blur": 30, "spread": 0, "color": "rgba(22, 98, 237, 0.4)" },
+                            "z_index": 1,
+                            "css_classes": "step-icon"
+                          },
+                          "elements": [
+                            {
+                              "id": "step-2-icon",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "settings": {
+                                "selected_icon": { "library": "fa-solid", "value": "fas fa-users" },
+                                "primary_color": "#ffffff",
+                                "size": { "unit": "px", "size": 28 },
+                                "css_classes": "step-icon-i"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "step-2-card",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_align_items": "center",
+                        "padding": { "unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true },
+                        "background_background": "classic",
+                        "background_color": "rgba(255, 255, 255, 0.05)",
+                        "border_border": "solid",
+                        "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                        "border_color": "rgba(255, 255, 255, 0.1)",
+                        "border_radius": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true },
+                        "css_classes": "step-card"
+                      },
+                      "elements": [
+                        {
+                          "id": "step-2-title",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "We Source Candidates",
+                            "header_size": "h3",
+                            "align": "center",
+                            "title_color": "#ffffff",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 20 },
+                            "typography_font_weight": "700",
+                            "css_classes": "step-title"
+                          }
+                        },
+                        {
+                          "id": "step-2-desc",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Access our extensive talent network</p>",
+                            "align": "center",
+                            "text_color": "#9ca3af",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 15 },
+                            "typography_line_height": { "unit": "em", "size": 1.6 },
+                            "css_classes": "step-desc"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "step-3",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "%", "size": 23 },
+                    "min_width": { "unit": "px", "size": 250 },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "flex_gap": { "unit": "px", "size": 24, "column": "24", "row": "24" },
+                    "z_index": 1,
+                    "css_classes": "process-step"
+                  },
+                  "elements": [
+                    {
+                      "id": "step-3-marker",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_align_items": "center",
+                        "position": "relative",
+                        "css_classes": "step-marker"
+                      },
+                      "elements": [
+                        {
+                          "id": "step-3-num",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "03",
+                            "header_size": "span",
+                            "align": "center",
+                            "title_color": "rgba(22, 98, 237, 0.15)",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 48 },
+                            "typography_font_weight": "800",
+                            "position": "absolute",
+                            "_offset_y": { "unit": "px", "size": -15 },
+                            "z_index": 0,
+                            "css_classes": "step-num"
+                          }
+                        },
+                        {
+                          "id": "step-3-icon-circle",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "width": { "unit": "px", "size": 80 },
+                            "height": { "unit": "px", "size": 80 },
+                            "flex_justify_content": "center",
+                            "flex_align_items": "center",
+                            "background_background": "gradient",
+                            "background_color": "#1662ed",
+                            "background_color_b": "#1e3a8a",
+                            "background_gradient_angle": { "unit": "deg", "size": 135 },
+                            "border_radius": { "unit": "%", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                            "box_shadow_box_shadow_type": "yes",
+                            "box_shadow_box_shadow": { "horizontal": 0, "vertical": 10, "blur": 30, "spread": 0, "color": "rgba(22, 98, 237, 0.4)" },
+                            "z_index": 1,
+                            "css_classes": "step-icon"
+                          },
+                          "elements": [
+                            {
+                              "id": "step-3-icon",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "settings": {
+                                "selected_icon": { "library": "fa-solid", "value": "fas fa-user-check" },
+                                "primary_color": "#ffffff",
+                                "size": { "unit": "px", "size": 28 },
+                                "css_classes": "step-icon-i"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "step-3-card",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_align_items": "center",
+                        "padding": { "unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true },
+                        "background_background": "classic",
+                        "background_color": "rgba(255, 255, 255, 0.05)",
+                        "border_border": "solid",
+                        "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                        "border_color": "rgba(255, 255, 255, 0.1)",
+                        "border_radius": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true },
+                        "css_classes": "step-card"
+                      },
+                      "elements": [
+                        {
+                          "id": "step-3-title",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Interview & Select",
+                            "header_size": "h3",
+                            "align": "center",
+                            "title_color": "#ffffff",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 20 },
+                            "typography_font_weight": "700",
+                            "css_classes": "step-title"
+                          }
+                        },
+                        {
+                          "id": "step-3-desc",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Meet pre-screened, qualified candidates</p>",
+                            "align": "center",
+                            "text_color": "#9ca3af",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 15 },
+                            "typography_line_height": { "unit": "em", "size": 1.6 },
+                            "css_classes": "step-desc"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "step-4",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "width": { "unit": "%", "size": 23 },
+                    "min_width": { "unit": "px", "size": 250 },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "flex_gap": { "unit": "px", "size": 24, "column": "24", "row": "24" },
+                    "z_index": 1,
+                    "css_classes": "process-step"
+                  },
+                  "elements": [
+                    {
+                      "id": "step-4-marker",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_align_items": "center",
+                        "position": "relative",
+                        "css_classes": "step-marker"
+                      },
+                      "elements": [
+                        {
+                          "id": "step-4-num",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "04",
+                            "header_size": "span",
+                            "align": "center",
+                            "title_color": "rgba(22, 98, 237, 0.15)",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 48 },
+                            "typography_font_weight": "800",
+                            "position": "absolute",
+                            "_offset_y": { "unit": "px", "size": -15 },
+                            "z_index": 0,
+                            "css_classes": "step-num"
+                          }
+                        },
+                        {
+                          "id": "step-4-icon-circle",
+                          "elType": "container",
+                          "settings": {
+                            "content_width": "full",
+                            "width": { "unit": "px", "size": 80 },
+                            "height": { "unit": "px", "size": 80 },
+                            "flex_justify_content": "center",
+                            "flex_align_items": "center",
+                            "background_background": "gradient",
+                            "background_color": "#1662ed",
+                            "background_color_b": "#1e3a8a",
+                            "background_gradient_angle": { "unit": "deg", "size": 135 },
+                            "border_radius": { "unit": "%", "top": "50", "right": "50", "bottom": "50", "left": "50", "isLinked": true },
+                            "box_shadow_box_shadow_type": "yes",
+                            "box_shadow_box_shadow": { "horizontal": 0, "vertical": 10, "blur": 30, "spread": 0, "color": "rgba(22, 98, 237, 0.4)" },
+                            "z_index": 1,
+                            "css_classes": "step-icon"
+                          },
+                          "elements": [
+                            {
+                              "id": "step-4-icon",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "settings": {
+                                "selected_icon": { "library": "fa-solid", "value": "fas fa-handshake" },
+                                "primary_color": "#ffffff",
+                                "size": { "unit": "px", "size": 28 },
+                                "css_classes": "step-icon-i"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "step-4-card",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_align_items": "center",
+                        "padding": { "unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true },
+                        "background_background": "classic",
+                        "background_color": "rgba(255, 255, 255, 0.05)",
+                        "border_border": "solid",
+                        "border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                        "border_color": "rgba(255, 255, 255, 0.1)",
+                        "border_radius": { "unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true },
+                        "css_classes": "step-card"
+                      },
+                      "elements": [
+                        {
+                          "id": "step-4-title",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Successful Placement",
+                            "header_size": "h3",
+                            "align": "center",
+                            "title_color": "#ffffff",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 20 },
+                            "typography_font_weight": "700",
+                            "css_classes": "step-title"
+                          }
+                        },
+                        {
+                          "id": "step-4-desc",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Onboard your new team member</p>",
+                            "align": "center",
+                            "text_color": "#9ca3af",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Inter",
+                            "typography_font_size": { "unit": "px", "size": 15 },
+                            "typography_line_height": { "unit": "em", "size": 1.6 },
+                            "css_classes": "step-desc"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

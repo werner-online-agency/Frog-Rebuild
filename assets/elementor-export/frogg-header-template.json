@@ -1,0 +1,450 @@
+{
+  "content": [
+    {
+      "id": "topbar001",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "flex_justify_content": "center",
+        "flex_align_items": "center",
+        "background_background": "classic",
+        "background_color": "#010e37",
+        "padding": { "unit": "px", "top": "10", "right": "0", "bottom": "10", "left": "0", "isLinked": false },
+        "padding_mobile": { "unit": "px", "top": "8", "right": "16", "bottom": "8", "left": "16", "isLinked": false },
+        "css_classes": "wdt-topbar",
+        "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true },
+        "position": "fixed",
+        "z_index": 100,
+        "overflow": "hidden",
+        "hide_tablet": "hidden-tablet",
+        "hide_mobile": "hidden-mobile"
+      },
+      "elements": [
+        {
+          "id": "topbar002",
+          "elType": "container",
+          "settings": {
+            "boxed_width": { "unit": "px", "size": 1400 },
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "center",
+            "flex_gap": { "unit": "px", "size": 16, "column": "16", "row": "16", "isLinked": true },
+            "padding": { "unit": "px", "top": "0", "right": "32", "bottom": "0", "left": "32", "isLinked": false }
+          },
+          "elements": [
+            {
+              "id": "topbar003",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "flex_gap": { "unit": "px", "size": 32, "column": "32", "row": "32", "isLinked": true },
+                "css_classes": "wdt-topbar-contact"
+              },
+              "elements": [
+                {
+                  "id": "topbar004",
+                  "elType": "widget",
+                  "widgetType": "icon-list",
+                  "settings": {
+                    "icon_list": [
+                      {
+                        "text": "+27 21 556 5598 - Cape Town",
+                        "selected_icon": { "value": "fas fa-phone-alt", "library": "fa-solid" },
+                        "link": { "url": "tel:+27215565598", "is_external": false },
+                        "_id": "ct1"
+                      }
+                    ],
+                    "view": "inline",
+                    "icon_color": "#1268fb",
+                    "icon_size": { "unit": "px", "size": 12 },
+                    "text_color": "#ffffff",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 13 },
+                    "typography_font_weight": "500",
+                    "space_between": { "unit": "px", "size": 8 },
+                    "text_color_hover": "#1268fb"
+                  }
+                },
+                {
+                  "id": "topbar005",
+                  "elType": "widget",
+                  "widgetType": "icon-list",
+                  "settings": {
+                    "icon_list": [
+                      {
+                        "text": "+27 10 824 6772 - Johannesburg",
+                        "selected_icon": { "value": "fas fa-phone-alt", "library": "fa-solid" },
+                        "link": { "url": "tel:+27108246772", "is_external": false },
+                        "_id": "ct2"
+                      }
+                    ],
+                    "view": "inline",
+                    "icon_color": "#1268fb",
+                    "icon_size": { "unit": "px", "size": 12 },
+                    "text_color": "#ffffff",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 13 },
+                    "typography_font_weight": "500",
+                    "space_between": { "unit": "px", "size": 8 },
+                    "text_color_hover": "#1268fb"
+                  }
+                },
+                {
+                  "id": "topbar006",
+                  "elType": "widget",
+                  "widgetType": "icon-list",
+                  "settings": {
+                    "icon_list": [
+                      {
+                        "text": "cv@froggsa.co.za",
+                        "selected_icon": { "value": "fas fa-envelope", "library": "fa-solid" },
+                        "link": { "url": "mailto:cv@froggsa.co.za", "is_external": false },
+                        "_id": "ct3"
+                      }
+                    ],
+                    "view": "inline",
+                    "icon_color": "#1268fb",
+                    "icon_size": { "unit": "px", "size": 12 },
+                    "text_color": "#ffffff",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 13 },
+                    "typography_font_weight": "500",
+                    "space_between": { "unit": "px", "size": 8 },
+                    "text_color_hover": "#1268fb"
+                  }
+                }
+              ],
+              "isInner": true
+            }
+          ],
+          "isInner": true
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "header001",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "flex_justify_content": "center",
+        "flex_align_items": "center",
+        "background_background": "classic",
+        "background_color": "transparent",
+        "padding": { "unit": "px", "top": "8", "right": "24", "bottom": "8", "left": "24", "isLinked": false },
+        "padding_mobile": { "unit": "px", "top": "6", "right": "12", "bottom": "6", "left": "12", "isLinked": false },
+        "css_classes": "wdt-header frogg-header",
+        "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true },
+        "position": "fixed",
+        "_offset_y": { "unit": "px", "size": 38 },
+        "z_index": 99,
+        "width": { "unit": "%", "size": 100 }
+      },
+      "elements": [
+        {
+          "id": "header002",
+          "elType": "container",
+          "settings": {
+            "boxed_width": { "unit": "px", "size": 1400 },
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "center",
+            "flex_gap": { "unit": "px", "size": 24, "column": "24", "row": "24", "isLinked": true },
+            "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+          },
+          "elements": [
+            {
+              "id": "header003",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "width": { "unit": "px", "size": 140 },
+                "width_mobile": { "unit": "px", "size": 100 },
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "css_classes": "wdt-logo"
+              },
+              "elements": [
+                {
+                  "id": "header004",
+                  "elType": "widget",
+                  "widgetType": "theme-site-logo",
+                  "settings": {
+                    "image": { "id": "", "url": "" },
+                    "align": "left",
+                    "width": { "unit": "%", "size": 100 },
+                    "max_width": { "unit": "px", "size": 140 },
+                    "max_width_mobile": { "unit": "px", "size": 100 },
+                    "object_fit": "contain",
+                    "link_to": "custom",
+                    "link": { "url": "#home", "is_external": false },
+                    "__dynamic__": { "image": "[elementor-tag id=\"\" name=\"site-logo\" settings=\"%7B%7D\"]" },
+                    "_css_classes": "frogg-logo-img"
+                  }
+                }
+              ],
+              "isInner": true
+            },
+            {
+              "id": "header005",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "flex_justify_content": "center",
+                "flex_grow": { "unit": "px", "size": 1 },
+                "hide_mobile": "hidden-phone",
+                "hide_tablet": "hidden-tablet",
+                "css_classes": "wdt-nav-menu"
+              },
+              "elements": [
+                {
+                  "id": "header006",
+                  "elType": "widget",
+                  "widgetType": "nav-menu",
+                  "settings": {
+                    "menu": "navbar",
+                    "align_items": "center",
+                    "submenu_indicator": "none",
+                    "pointer": "none",
+                    "toggle": "none",
+                    "dropdown": "mobile",
+                    "text_color": "#ffffff",
+                    "color_hover": "#ffffff",
+                    "color_active": "#ffffff",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 14 },
+                    "typography_font_weight": "500",
+                    "space_between": { "unit": "px", "size": 4 },
+                    "padding_horizontal_menu_item": { "unit": "px", "size": 16 },
+                    "padding_vertical_menu_item": { "unit": "px", "size": 8 },
+                    "dropdown_background_color": "#010e37",
+                    "dropdown_border_border": "solid",
+                    "dropdown_border_width": { "unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true },
+                    "dropdown_border_color": "#1268fb",
+                    "dropdown_border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+                    "menu_id": 9
+                  }
+                }
+              ],
+              "isInner": true
+            },
+            {
+              "id": "header007",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "flex_justify_content": "flex-end",
+                "flex_gap": { "unit": "px", "size": 12, "column": "12", "row": "12", "isLinked": true },
+                "hide_mobile": "hidden-phone",
+                "hide_tablet": "hidden-tablet"
+              },
+              "elements": [
+                {
+                  "id": "header008",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Get Started",
+                    "link": { "url": "#contact", "is_external": false },
+                    "button_type": "default",
+                    "background_color": "#1662ed",
+                    "button_background_hover_color": "#1e3a8a",
+                    "button_text_color": "#ffffff",
+                    "hover_color": "#ffffff",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 13 },
+                    "typography_font_weight": "600",
+                    "border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8", "isLinked": true },
+                    "text_padding": { "unit": "px", "top": "10", "right": "20", "bottom": "10", "left": "20", "isLinked": false },
+                    "button_box_shadow_box_shadow_type": "yes",
+                    "button_box_shadow_box_shadow": { "horizontal": 0, "vertical": 4, "blur": 12, "spread": 0, "color": "rgba(22, 98, 237, 0.3)" },
+                    "css_classes": "frogg-btn-primary"
+                  }
+                },
+                {
+                  "id": "header009",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Sign In",
+                    "link": { "url": "#vacancies", "is_external": false },
+                    "button_type": "default",
+                    "background_color": "transparent",
+                    "button_background_hover_color": "rgba(255, 255, 255, 0.1)",
+                    "button_text_color": "#ffffff",
+                    "hover_color": "#ffffff",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": { "unit": "px", "size": 13 },
+                    "typography_font_weight": "600",
+                    "border_border": "solid",
+                    "border_width": { "unit": "px", "top": "2", "right": "2", "bottom": "2", "left": "2", "isLinked": true },
+                    "border_color": "rgba(255, 255, 255, 0.3)",
+                    "border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8", "isLinked": true },
+                    "text_padding": { "unit": "px", "top": "10", "right": "20", "bottom": "10", "left": "20", "isLinked": false },
+                    "hover_border_color": "rgba(255, 255, 255, 0.5)",
+                    "css_classes": "frogg-btn-outline"
+                  }
+                }
+              ],
+              "isInner": true
+            },
+            {
+              "id": "header010",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "width": { "unit": "px", "size": 44 },
+                "height": { "unit": "px", "size": 44 },
+                "flex_direction": "column",
+                "flex_justify_content": "center",
+                "flex_align_items": "center",
+                "flex_gap": { "unit": "px", "size": 5, "column": "5", "row": "5", "isLinked": true },
+                "css_classes": "wdt-mobile-toggle",
+                "cursor": "pointer",
+                "hide_desktop": "hidden-desktop"
+              },
+              "elements": [
+                {
+                  "id": "header011",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": { "html": "<span class=\"wdt-toggle-line\"></span>" }
+                },
+                {
+                  "id": "header012",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": { "html": "<span class=\"wdt-toggle-line\"></span>" }
+                },
+                {
+                  "id": "header013",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": { "html": "<span class=\"wdt-toggle-line\"></span>" }
+                }
+              ],
+              "isInner": true
+            }
+          ],
+          "isInner": true
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "mobile001",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "position": "fixed",
+        "z_index": 199,
+        "width": { "unit": "%", "size": 100 },
+        "height": { "unit": "vh", "size": 100 },
+        "flex_direction": "column",
+        "flex_justify_content": "center",
+        "flex_align_items": "center",
+        "background_background": "classic",
+        "background_color": "#0f172a",
+        "padding": { "unit": "px", "top": "80", "right": "24", "bottom": "40", "left": "24", "isLinked": false },
+        "css_classes": "frogg-mobile-menu",
+        "hide_desktop": "hidden-desktop",
+        "overflow": "hidden"
+      },
+      "elements": [
+        {
+          "id": "mobile002",
+          "elType": "widget",
+          "widgetType": "nav-menu",
+          "settings": {
+            "menu": "navbar",
+            "layout": "vertical",
+            "align_items": "center",
+            "submenu_indicator": "none",
+            "pointer": "none",
+            "toggle": "none",
+            "text_color": "#ffffff",
+            "color_hover": "#60a5fa",
+            "color_active": "#60a5fa",
+            "typography_typography": "custom",
+            "typography_font_family": "Inter",
+            "typography_font_size": { "unit": "px", "size": 22 },
+            "typography_font_weight": "600",
+            "space_between": { "unit": "px", "size": 20 },
+            "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "32", "left": "0", "isLinked": false },
+            "menu_id": 9
+          }
+        },
+        {
+          "id": "mobile003",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "flex_gap": { "unit": "px", "size": 12, "column": "12", "row": "12", "isLinked": true }
+          },
+          "elements": [
+            {
+              "id": "mobile004",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "View Vacancies",
+                "link": { "url": "#vacancies", "is_external": false },
+                "background_color": "transparent",
+                "button_text_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_size": { "unit": "px", "size": 15 },
+                "typography_font_weight": "600",
+                "border_border": "solid",
+                "border_width": { "unit": "px", "top": "2", "right": "2", "bottom": "2", "left": "2", "isLinked": true },
+                "border_color": "rgba(255, 255, 255, 0.3)",
+                "border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8", "isLinked": true },
+                "text_padding": { "unit": "px", "top": "12", "right": "40", "bottom": "12", "left": "40", "isLinked": false }
+              }
+            },
+            {
+              "id": "mobile005",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Get Started",
+                "link": { "url": "#contact", "is_external": false },
+                "background_color": "#1662ed",
+                "button_text_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_size": { "unit": "px", "size": 15 },
+                "typography_font_weight": "600",
+                "border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8", "isLinked": true },
+                "text_padding": { "unit": "px", "top": "12", "right": "40", "bottom": "12", "left": "40", "isLinked": false }
+              }
+            }
+          ],
+          "isInner": true
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": {
+    "hide_title": true,
+    "custom_css": ":root {\n    --wdtPrimaryColor: #1268fb;\n    --wdtSecondaryColor: #010e37;\n    --wdtAccentTxtColor: #ffffff;\n    --wdtGray600: #6b7280;\n    --wdtGray800: #1f2937;\n    --wdtPrimaryDark: #1e3a8a;\n    --wdtBaseTransition: all 0.3s ease-in-out;\n}\n\n/* FROGG HEADER - Default transparent */\n.frogg-header {\n    transition: var(--wdtBaseTransition) !important;\n    background: transparent !important;\n    box-shadow: none !important;\n}\n\n/* SCROLLED STATE - Compact white */\n.frogg-header.scrolled {\n    background: rgba(255, 255, 255, 0.98) !important;\n    backdrop-filter: blur(20px);\n    -webkit-backdrop-filter: blur(20px);\n    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;\n    padding-top: 4px !important;\n    padding-bottom: 4px !important;\n}\n\n/* LOGO */\n.frogg-logo-img img,\n.wdt-logo img {\n    height: 44px !important;\n    width: auto !important;\n    transition: all var(--wdtBaseTransition);\n}\n\n.frogg-header:not(.scrolled) .frogg-logo-img img,\n.frogg-header:not(.scrolled) .wdt-logo img {\n    filter: brightness(0) invert(1);\n}\n\n.frogg-header.scrolled .frogg-logo-img img,\n.frogg-header.scrolled .wdt-logo img {\n    height: 36px !important;\n    filter: none;\n}\n\n/* NAV MENU */\n.wdt-nav-menu .elementor-nav-menu a {\n    padding: 6px 14px;\n    font-size: 14px;\n    font-weight: 500;\n    color: #ffffff;\n    border-radius: 8px;\n    position: relative;\n    z-index: 1;\n    transition: all 0.3s ease;\n}\n\n.wdt-nav-menu .elementor-nav-menu a::before {\n    content: '';\n    position: absolute;\n    inset: 0;\n    background: linear-gradient(135deg, #020381 0%, #2874fc 100%);\n    border-radius: 8px;\n    z-index: -1;\n    opacity: 0;\n    transition: opacity 0.3s ease;\n}\n\n.wdt-nav-menu .elementor-nav-menu a:hover::before,\n.wdt-nav-menu .elementor-nav-menu a.current::before {\n    opacity: 1;\n}\n\n/* SCROLLED NAV */\n.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a {\n    color: var(--wdtGray600);\n    padding: 5px 12px;\n    font-size: 13px;\n}\n\n.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a:hover,\n.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a.current {\n    color: #ffffff;\n}\n\n/* BUTTONS */\n.frogg-btn-primary .elementor-button {\n    background: var(--wdtPrimaryColor) !important;\n    box-shadow: 0 4px 12px rgba(22, 98, 237, 0.3);\n    transition: var(--wdtBaseTransition);\n}\n\n.frogg-btn-primary .elementor-button:hover {\n    background: var(--wdtPrimaryDark) !important;\n    transform: translateY(-2px);\n}\n\n.frogg-btn-outline .elementor-button {\n    background: transparent !important;\n    border: 2px solid rgba(255, 255, 255, 0.3) !important;\n    color: #ffffff !important;\n    transition: var(--wdtBaseTransition);\n}\n\n.frogg-btn-outline .elementor-button:hover {\n    background: rgba(255, 255, 255, 0.1) !important;\n    border-color: rgba(255, 255, 255, 0.5) !important;\n}\n\n/* SCROLLED BUTTONS */\n.frogg-header.scrolled .frogg-btn-outline .elementor-button {\n    border-color: var(--wdtPrimaryColor) !important;\n    color: var(--wdtPrimaryColor) !important;\n}\n\n.frogg-header.scrolled .frogg-btn-outline .elementor-button:hover {\n    background: rgba(22, 98, 237, 0.1) !important;\n}\n\n.frogg-header.scrolled .frogg-btn-primary .elementor-button,\n.frogg-header.scrolled .frogg-btn-outline .elementor-button {\n    padding: 8px 16px;\n    font-size: 12px;\n}\n\n/* MOBILE TOGGLE */\n.wdt-mobile-toggle {\n    display: none;\n}\n\n.wdt-toggle-line {\n    display: block;\n    width: 22px;\n    height: 2px;\n    background: #ffffff;\n    transition: var(--wdtBaseTransition);\n}\n\n.frogg-header.scrolled .wdt-toggle-line {\n    background: var(--wdtGray800);\n}\n\n.wdt-mobile-toggle.active .wdt-toggle-line:nth-child(1) {\n    transform: rotate(45deg) translate(5px, 5px);\n}\n\n.wdt-mobile-toggle.active .wdt-toggle-line:nth-child(2) {\n    opacity: 0;\n}\n\n.wdt-mobile-toggle.active .wdt-toggle-line:nth-child(3) {\n    transform: rotate(-45deg) translate(7px, -6px);\n}\n\n/* MOBILE MENU */\n.frogg-mobile-menu {\n    display: none;\n    opacity: 0;\n    transform: translateX(100%);\n    transition: all 0.3s ease;\n}\n\n.frogg-mobile-menu.active {\n    display: flex;\n    opacity: 1;\n    transform: translateX(0);\n}\n\n/* TOPBAR */\n.wdt-topbar {\n    transition: var(--wdtBaseTransition);\n}\n\n/* RESPONSIVE */\n@media screen and (max-width: 1024px) {\n    .wdt-nav-menu { display: none !important; }\n    .frogg-btn-outline,\n    .frogg-btn-primary { display: none !important; }\n    .wdt-mobile-toggle { display: flex !important; }\n    \n    .frogg-logo-img img,\n    .wdt-logo img { height: 36px !important; }\n    \n    .frogg-header.scrolled .frogg-logo-img img,\n    .frogg-header.scrolled .wdt-logo img { height: 30px !important; }\n}\n\n@media screen and (max-width: 767px) {\n    .frogg-logo-img img,\n    .wdt-logo img { height: 32px !important; }\n    \n    .frogg-header.scrolled .frogg-logo-img img,\n    .frogg-header.scrolled .wdt-logo img { height: 26px !important; }\n}\n\n/* NO SCROLL UTILITY */\n.no-scroll { overflow: hidden; }"
+  },
+  "version": "0.4",
+  "title": "FROGG Header",
+  "type": "header"
+}
