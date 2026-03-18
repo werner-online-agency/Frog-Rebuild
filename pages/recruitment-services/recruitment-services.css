@@ -129,7 +129,7 @@ main { padding-top: 150px; }
    PAGE HERO — DARK
    ======================================== */
 .page-hero {
-    background: linear-gradient(to bottom, rgba(10,20,50,.82), rgba(10,20,50,.88)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    background: linear-gradient(to bottom, rgba(10,20,50,.82), rgba(10,20,50,.88)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat;
     padding: 100px 0 120px;
     position: relative;
     overflow: hidden;
