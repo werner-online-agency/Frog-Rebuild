@@ -183,29 +183,36 @@ body {
 /* ===== OUR APPROACH - ADVANCED ===== */
 .approach-section {
     padding: 100px 24px;
-    background: #f8fafc;
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 50%, #f8fafc 100%);
     position: relative;
     overflow: hidden;
 }
 .approach-section::before {
     content: '';
     position: absolute;
-    top: -200px;
-    right: -200px;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(22,98,237,.04) 0%, transparent 70%);
+    top: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(22,98,237,.06) 0%, transparent 65%);
     pointer-events: none;
+    animation: floatOrb 20s ease-in-out infinite;
 }
 .approach-section::after {
     content: '';
     position: absolute;
-    bottom: -150px;
-    left: -150px;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(22,98,237,.03) 0%, transparent 70%);
+    bottom: -100px;
+    left: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(99,102,241,.05) 0%, transparent 65%);
     pointer-events: none;
+    animation: floatOrb 25s ease-in-out infinite reverse;
+}
+@keyframes floatOrb {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(30px, -20px); }
+    66% { transform: translate(-20px, 15px); }
 }
 .approach-container {
     max-width: 1200px;
@@ -217,7 +224,7 @@ body {
 /* Header */
 .approach-header {
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 72px;
 }
 .approach-title {
     font-size: clamp(1.75rem, 3.5vw, 2.75rem);
@@ -240,92 +247,180 @@ body {
     line-height: 1.75;
 }
 
-/* Pillars Grid */
+/* Pillars Grid — Staggered bento */
 .approach-pillars {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0;
+    gap: 24px;
     margin-bottom: 72px;
     position: relative;
 }
+
+/* Individual pillar card */
 .approach-pillar {
     position: relative;
-    padding: 40px 32px;
-    text-align: center;
-    transition: transform .4s cubic-bezier(.25,.46,.45,.94), background .4s;
-    border-radius: 20px;
+    border-radius: 24px;
+    background: rgba(255,255,255,.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,.8);
+    box-shadow:
+        0 1px 3px rgba(0,0,0,.04),
+        0 8px 32px rgba(22,98,237,.06);
+    transition: transform .5s cubic-bezier(.25,.46,.45,.94), box-shadow .5s, border-color .5s;
+    overflow: hidden;
+    z-index: 1;
+}
+/* Stagger: featured cards shift up */
+.approach-pillar.featured {
+    transform: translateY(-16px);
 }
 .approach-pillar:hover {
-    transform: translateY(-8px);
-    background: rgba(22,98,237,.03);
+    transform: translateY(-12px);
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.06),
+        0 20px 60px rgba(22,98,237,.12);
+    border-color: rgba(22,98,237,.15);
+}
+.approach-pillar.featured:hover {
+    transform: translateY(-28px);
+}
+
+/* Animated gradient border glow on hover */
+.pillar-glow {
+    position: absolute;
+    inset: -1px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, transparent 30%, rgba(22,98,237,.15) 50%, transparent 70%);
+    background-size: 300% 300%;
+    opacity: 0;
+    transition: opacity .5s;
+    z-index: 0;
+    pointer-events: none;
+}
+.approach-pillar:hover .pillar-glow {
+    opacity: 1;
+    animation: shimmerBorder 3s ease infinite;
+}
+@keyframes shimmerBorder {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Card content */
+.pillar-content {
+    position: relative;
+    z-index: 1;
+    padding: 36px 28px 32px;
+}
+
+/* Top row: number + icon inline */
+.pillar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
 }
 
 /* Pillar number */
 .pillar-number {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 900;
-    background: linear-gradient(180deg, rgba(22,98,237,.1) 0%, rgba(22,98,237,.02) 100%);
+    background: linear-gradient(180deg, rgba(22,98,237,.12) 0%, rgba(22,98,237,.03) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1;
-    margin-bottom: 20px;
     transition: .4s;
 }
 .approach-pillar:hover .pillar-number {
-    background: linear-gradient(180deg, rgba(22,98,237,.25) 0%, rgba(22,98,237,.05) 100%);
+    background: linear-gradient(180deg, rgba(22,98,237,.3) 0%, rgba(22,98,237,.08) 100%);
     -webkit-background-clip: text;
     background-clip: text;
 }
 
 /* Pillar icon */
 .pillar-icon {
-    width: 64px;
-    height: 64px;
-    margin: 0 auto 24px;
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
-    border-radius: 18px;
+    border-radius: 16px;
     color: #fff;
-    font-size: 1.35rem;
-    box-shadow: 0 8px 24px rgba(22,98,237,.2);
-    transition: transform .4s, box-shadow .4s;
+    font-size: 1.2rem;
+    box-shadow: 0 6px 20px rgba(22,98,237,.2);
+    transition: transform .4s, box-shadow .4s, border-radius .4s;
 }
 .approach-pillar:hover .pillar-icon {
-    transform: scale(1.1) rotate(-4deg);
-    box-shadow: 0 12px 32px rgba(22,98,237,.3);
+    transform: scale(1.12) rotate(-6deg);
+    box-shadow: 0 10px 28px rgba(22,98,237,.3);
+    border-radius: 20px;
 }
 
 /* Pillar text */
 .approach-pillar h3 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: var(--gray-900);
-    margin: 0 0 14px;
+    margin: 0 0 12px;
+    line-height: 1.3;
 }
 .approach-pillar p {
-    font-size: .92rem;
+    font-size: .88rem;
     color: var(--gray-500);
     line-height: 1.7;
-    margin: 0;
+    margin: 0 0 20px;
 }
 
-/* Connecting line between pillars */
-.pillar-line {
-    display: none;
+/* Tag label at bottom */
+.pillar-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: .75rem;
+    font-weight: 600;
+    color: var(--primary-500);
+    background: rgba(22,98,237,.06);
+    padding: 6px 14px;
+    border-radius: 50px;
+    letter-spacing: .02em;
+    transition: background .3s, color .3s;
 }
-.approach-pillar:not(:last-child)::after {
-    content: '';
+.approach-pillar:hover .pillar-tag {
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+    color: #fff;
+}
+
+/* Connecting flow line across pillars */
+.pillar-flow-line {
     position: absolute;
     top: 50%;
-    right: 0;
-    width: 1px;
-    height: 60%;
-    transform: translateY(-50%);
-    background: linear-gradient(180deg, transparent 0%, var(--gray-200) 30%, var(--gray-200) 70%, transparent 100%);
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(22,98,237,.1) 15%, rgba(22,98,237,.15) 50%, rgba(22,98,237,.1) 85%, transparent);
+    z-index: 0;
+    pointer-events: none;
 }
+.pillar-flow-line::before,
+.pillar-flow-line::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary-500);
+    opacity: .2;
+}
+.pillar-flow-line::before { left: 0; }
+.pillar-flow-line::after { right: 0; }
+
+/* Remove old line dividers */
+.pillar-line { display: none; }
 
 /* Stats row */
 .approach-stats {
@@ -386,11 +481,15 @@ body {
 @media (max-width: 1024px) {
     .approach-pillars {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        gap: 20px;
     }
-    .approach-pillar:not(:last-child)::after {
-        display: none;
+    .approach-pillar.featured {
+        transform: translateY(0);
     }
+    .approach-pillar.featured:hover {
+        transform: translateY(-12px);
+    }
+    .pillar-flow-line { display: none; }
     .approach-stats {
         padding: 36px 24px;
     }
@@ -401,15 +500,24 @@ body {
     }
     .approach-pillars {
         grid-template-columns: 1fr;
-        gap: 8px;
+        gap: 16px;
         margin-bottom: 48px;
     }
-    .approach-pillar {
-        padding: 32px 24px;
+    .approach-pillar.featured {
+        transform: translateY(0);
+    }
+    .pillar-content {
+        padding: 28px 22px 24px;
     }
     .pillar-number {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
+    .pillar-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1rem;
+    }
+    .pillar-flow-line { display: none; }
     .approach-stats {
         flex-direction: column;
         gap: 28px;

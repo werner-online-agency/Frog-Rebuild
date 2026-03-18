@@ -185,6 +185,16 @@
     color: #1f2937 !important;
 }
 
+/* Scrolled: keep active page + hover white */
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li.current-menu-item > a,
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li.current-menu-ancestor > a,
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li.current-menu-parent > a,
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu > li.current-menu-item > span.elementor-item--nolink,
+.frogg-header.scrolled .elementor-item.elementor-item-active,
+.frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a.current {
+    color: #ffffff !important;
+}
+
 .frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a:hover,
 .frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a.current,
 .frogg-header.scrolled .wdt-nav-menu .elementor-nav-menu a.active,
