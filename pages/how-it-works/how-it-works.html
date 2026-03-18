@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/elementor-export/frogg-header-styles-fixed.css">
     <link rel="stylesheet" href="../../assets/elementor-export/frogg-footer-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="how-it-works.css">
     <link rel="stylesheet" href="../../assets/css/preloader.css">
 </head>
@@ -113,6 +114,9 @@
     <main>
         <!-- HERO BANNER -->
         <section class="about-hero">
+            <div class="hero-bg-image">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1920&q=85" alt="Professional business meeting" loading="eager">
+            </div>
             <div class="about-hero-content">
                 <div class="breadcrumb">
                     <a href="../../index.html">Home</a>
@@ -124,36 +128,33 @@
             </div>
         </section>
 
-        <!-- SECTION 1: Split Intro Banner — LIGHT -->
-        <section class="intro-banner">
-            <div class="container">
-                <div class="intro-grid">
-                    <div class="intro-employer">
-                        <h2>Are you looking for staff? Request a free quote.</h2>
-                        <p class="intro-quote">"Providers of professional recruitment services, with the power to find exceptional talent".</p>
-                        <a href="../../pages/post-a-job/post-a-job.html#job-form" class="btn btn-primary">Find a Talent</a>
-                    </div>
-                    <div class="intro-divider" aria-hidden="true"></div>
-                    <div class="intro-candidate">
-                        <h3>Are you ready for your next career move?</h3>
-                        <a href="../../pages/job-listings/job-listings.html" class="btn btn-outline">Find a Job</a>
-                    </div>
-                </div>
+        <!-- CTA BANNER -->
+        <div class="about-cta-banner hero-overlap">
+            <div class="cta-col">
+                <h3>Are you looking for staff?</h3>
+                <p>Partner with South Africa's trusted recruitment agency. We connect you with exceptional talent, fast.</p>
+                <a href="../../pages/post-a-job/post-a-job.html#job-form" class="cta-btn">
+                    <i class="fas fa-building"></i> Find Talent
+                    <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
             </div>
-        </section>
+            <div class="cta-col">
+                <h3>Are you ready for your next career move?</h3>
+                <p>Explore open vacancies across South Africa. Your next opportunity is waiting.</p>
+                <a href="../../pages/job-listings/job-listings.html" class="cta-btn">
+                    <i class="fas fa-search"></i> Find a Job
+                    <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
 
         <!-- SECTION 2: Page Hero — DARK -->
         <section class="page-hero">
             <div class="page-hero-bg" aria-hidden="true"></div>
             <div class="container page-hero-grid">
                 <div class="hero-copy">
-                    <div class="breadcrumb">
-                        <a href="../../index.html">Home</a>
-                        <span>/</span>
-                        <span>How It Works</span>
-                    </div>
-                    <span class="eyebrow eyebrow--dark">Employers</span>
-                    <h1>How it works for our clients</h1>
+                    <div class="section-badge section-badge--dark"><i class="fas fa-briefcase"></i> Employers</div>
+                    <h1>How it works for <span class="title-accent-light">our clients</span></h1>
                     <p>
                         Understanding how employment agencies operate is crucial as it saves you time.
                         It's essential that you comprehend the advantages of working with a trustworthy
@@ -186,8 +187,8 @@
         <section class="benefits-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="eyebrow">Why Choose Us</span>
-                    <h2>What are the benefits to our clients of using FROGG Recruitment?</h2>
+                    <div class="section-badge"><i class="fas fa-star"></i> Why Choose Us</div>
+                    <h2>What are the benefits to our clients of using <span class="title-accent">FROGG Recruitment?</span></h2>
                 </div>
                 <div class="benefits-grid">
                     <article class="benefit-card">
@@ -224,50 +225,155 @@
             </div>
         </section>
 
-        <!-- SECTION 4: How We Assist — DARK -->
+        <!-- SECTION 4: How We Assist — DARK (Tabs + Accordions) -->
         <section class="assist-section">
             <div class="assist-bg" aria-hidden="true"></div>
             <div class="container">
                 <div class="section-header section-header--light">
-                    <span class="eyebrow eyebrow--dark">Our Value</span>
-                    <h2>How can we assist you as a valuable client?</h2>
+                    <div class="section-badge section-badge--dark"><i class="fas fa-handshake"></i> Our Value</div>
+                    <h2>How can we assist you as a <span class="title-accent-light">valuable client?</span></h2>
                 </div>
-                <div class="assist-grid">
-                    <div class="assist-item">
-                        <span class="assist-num">01</span>
-                        <p>We recruit permanent and contract employees within various industries and sectors nationally.</p>
+
+                <!-- Tab Navigation -->
+                <div class="assist-tabs">
+                    <div class="assist-tab-nav">
+                        <button class="assist-tab-btn active" data-tab="recruitment" aria-selected="true">
+                            <i class="fas fa-users"></i>
+                            <span>Recruitment</span>
+                        </button>
+                        <button class="assist-tab-btn" data-tab="process" aria-selected="false">
+                            <i class="fas fa-tasks"></i>
+                            <span>Process</span>
+                        </button>
+                        <button class="assist-tab-btn" data-tab="aftercare" aria-selected="false">
+                            <i class="fas fa-heart"></i>
+                            <span>Aftercare</span>
+                        </button>
                     </div>
-                    <div class="assist-item">
-                        <span class="assist-num">02</span>
-                        <p>We work according to your brief, job requirements, and skills, saving even more time.</p>
-                    </div>
-                    <div class="assist-item">
-                        <span class="assist-num">03</span>
-                        <p>We do all ITC (credit), qualification, criminal, and employment performance reference checks.</p>
-                    </div>
-                    <div class="assist-item">
-                        <span class="assist-num">04</span>
-                        <p>A trusted source of up-to-date market intelligence when it comes to market-related salaries and trends.</p>
-                    </div>
-                    <div class="assist-item">
-                        <span class="assist-num">05</span>
-                        <p>As a reputable recruitment agency, we will also do all advertising, sourcing, shortlisting, and interviewing.</p>
-                    </div>
-                    <div class="assist-item">
-                        <span class="assist-num">06</span>
-                        <p>We will only submit relevant applicants who match your job requirements.</p>
-                    </div>
-                    <div class="assist-item">
-                        <span class="assist-num">07</span>
-                        <p>You have the final decision on who you employ.</p>
-                    </div>
-                    <div class="assist-item">
-                        <span class="assist-num">08</span>
-                        <p>The recruitment and selection process progresses efficiently.</p>
-                    </div>
-                    <div class="assist-item assist-item--highlight">
-                        <span class="assist-num">09</span>
-                        <p>We offer exceptional after-service, meaning we continue to grow and build client relationships.</p>
+
+                    <!-- Tab Panels -->
+                    <div class="assist-tab-panels">
+
+                        <!-- Tab 1: Recruitment -->
+                        <div class="assist-tab-panel active" id="tab-recruitment">
+                            <div class="assist-accordion-item open" data-accordion>
+                                <button class="assist-accordion-header" aria-expanded="true">
+                                    <div class="accordion-header-left">
+                                        <span class="assist-num">01</span>
+                                        <span class="accordion-title">National Permanent &amp; Contract Recruitment</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down accordion-chevron"></i>
+                                </button>
+                                <div class="assist-accordion-body" style="max-height: 200px;">
+                                    <p>We recruit permanent and contract employees within various industries and sectors nationally. Our extensive network spans across South Africa, giving you access to the best talent pool available.</p>
+                                </div>
+                            </div>
+                            <div class="assist-accordion-item" data-accordion>
+                                <button class="assist-accordion-header" aria-expanded="false">
+                                    <div class="accordion-header-left">
+                                        <span class="assist-num">02</span>
+                                        <span class="accordion-title">Tailored to Your Brief</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down accordion-chevron"></i>
+                                </button>
+                                <div class="assist-accordion-body">
+                                    <p>We work according to your brief, job requirements, and skills, saving even more time. Every search is custom-built around your specific needs, company culture, and growth objectives.</p>
+                                </div>
+                            </div>
+                            <div class="assist-accordion-item" data-accordion>
+                                <button class="assist-accordion-header" aria-expanded="false">
+                                    <div class="accordion-header-left">
+                                        <span class="assist-num">03</span>
+                                        <span class="accordion-title">Comprehensive Background Checks</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down accordion-chevron"></i>
+                                </button>
+                                <div class="assist-accordion-body">
+                                    <p>We do all ITC (credit), qualification, criminal, and employment performance reference checks. This ensures every candidate placed meets the highest standards of integrity and competence.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 2: Process -->
+                        <div class="assist-tab-panel" id="tab-process">
+                            <div class="assist-accordion-item open" data-accordion>
+                                <button class="assist-accordion-header" aria-expanded="true">
+                                    <div class="accordion-header-left">
+                                        <span class="assist-num">04</span>
+                                        <span class="accordion-title">Market Intelligence &amp; Salary Insights</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down accordion-chevron"></i>
+                                </button>
+                                <div class="assist-accordion-body" style="max-height: 200px;">
+                                    <p>A trusted source of up-to-date market intelligence when it comes to market-related salaries and trends. We help you stay competitive in the ever-changing employment landscape.</p>
+                                </div>
+                            </div>
+                            <div class="assist-accordion-item" data-accordion>
+                                <button class="assist-accordion-header" aria-expanded="false">
+                                    <div class="accordion-header-left">
+                                        <span class="assist-num">05</span>
+                                        <span class="accordion-title">Full-Service Advertising &amp; Sourcing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down accordion-chevron"></i>
+                                </button>
+                                <div class="assist-accordion-body">
+                                    <p>As a reputable recruitment agency, we will also do all advertising, sourcing, shortlisting, and interviewing. From job portals to social media — we handle end-to-end talent acquisition.</p>
+                                </div>
+                            </div>
+                            <div class="assist-accordion-item" data-accordion>
+                                <button class="assist-accordion-header" aria-expanded="false">
+                                    <div class="accordion-header-left">
+                                        <span class="assist-num">06</span>
+                                        <span class="accordion-title">Relevant Candidates Only</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down accordion-chevron"></i>
+                                </button>
+                                <div class="assist-accordion-body">
+                                    <p>We will only submit relevant applicants who match your job requirements. No wasted interviews — every candidate presented is pre-screened and aligned with your specifications.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 3: Aftercare -->
+                        <div class="assist-tab-panel" id="tab-aftercare">
+                            <div class="assist-accordion-item open" data-accordion>
+                                <button class="assist-accordion-header" aria-expanded="true">
+                                    <div class="accordion-header-left">
+                                        <span class="assist-num">07</span>
+                                        <span class="accordion-title">You Make the Final Decision</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down accordion-chevron"></i>
+                                </button>
+                                <div class="assist-accordion-body" style="max-height: 200px;">
+                                    <p>You have the final decision on who you employ. We present the top candidates, facilitate the process, and support you — but the choice is always yours.</p>
+                                </div>
+                            </div>
+                            <div class="assist-accordion-item" data-accordion>
+                                <button class="assist-accordion-header" aria-expanded="false">
+                                    <div class="accordion-header-left">
+                                        <span class="assist-num">08</span>
+                                        <span class="accordion-title">Efficient Selection Process</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down accordion-chevron"></i>
+                                </button>
+                                <div class="assist-accordion-body">
+                                    <p>The recruitment and selection process progresses efficiently. Our structured approach minimises delays and keeps both you and the candidates informed at every stage.</p>
+                                </div>
+                            </div>
+                            <div class="assist-accordion-item assist-accordion-item--highlight" data-accordion>
+                                <button class="assist-accordion-header" aria-expanded="false">
+                                    <div class="accordion-header-left">
+                                        <span class="assist-num">09</span>
+                                        <span class="accordion-title">Exceptional After-Service</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down accordion-chevron"></i>
+                                </button>
+                                <div class="assist-accordion-body">
+                                    <p>We offer exceptional after-service, meaning we continue to grow and build client relationships. Our partnership doesn't end at placement — we're invested in your long-term success.</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -297,8 +403,8 @@
         <section class="process-section" id="process">
             <div class="container">
                 <div class="section-header">
-                    <span class="eyebrow">Step by Step</span>
-                    <h2>Our recruitment and selection process</h2>
+                    <div class="section-badge"><i class="fas fa-list-check"></i> Step by Step</div>
+                    <h2>Our recruitment and <span class="title-accent">selection process</span></h2>
                 </div>
 
                 <div class="process-timeline">
@@ -362,8 +468,8 @@
             <div class="beyond-bg" aria-hidden="true"></div>
             <div class="container beyond-grid">
                 <div class="beyond-copy">
-                    <span class="eyebrow eyebrow--dark">Our Promise</span>
-                    <h2>To find you the best people, we go above and beyond.</h2>
+                    <div class="section-badge section-badge--dark"><i class="fas fa-rocket"></i> Our Promise</div>
+                    <h2>To find you the best people, we go <span class="title-accent-light">above and beyond.</span></h2>
                     <p>
                         Our ability to connect to millions of jobseeker professionals allows us to
                         minimise your concerns in finding permanent talent. We are providers of professional
@@ -381,7 +487,7 @@
                 </div>
                 <div class="beyond-stats">
                     <div class="stat-card">
-                        <strong>16+</strong>
+                        <strong class="stat-counter" data-target="16" data-suffix="+">0</strong>
                         <span>Years Experience</span>
                     </div>
                     <div class="stat-card">
@@ -389,11 +495,11 @@
                         <span>SA Recruitment Agency</span>
                     </div>
                     <div class="stat-card">
-                        <strong>2,500+</strong>
+                        <strong class="stat-counter" data-target="2500" data-suffix="+">0</strong>
                         <span>Active Jobs</span>
                     </div>
                     <div class="stat-card">
-                        <strong>500+</strong>
+                        <strong class="stat-counter" data-target="500" data-suffix="+">0</strong>
                         <span>Companies Hiring</span>
                     </div>
                 </div>
@@ -404,8 +510,8 @@
         <section class="testimonials-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="eyebrow">Reviews</span>
-                    <h2>What Our Clients Say</h2>
+                    <div class="section-badge"><i class="fas fa-quote-left"></i> Reviews</div>
+                    <h2>What Our <span class="title-accent">Clients Say</span></h2>
                     <p>These are just a few of our client's reviews of service. We strive to supply the best recruitment service in our field of expertise.</p>
                 </div>
             </div>
@@ -415,7 +521,8 @@
         <section class="contact-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Get In Touch</h2>
+                    <div class="section-badge"><i class="fas fa-envelope"></i> Contact</div>
+                    <h2>Get In <span class="title-accent">Touch</span></h2>
                     <p>Reach us by phone or email &mdash; we're here to help</p>
                 </div>
                 <div class="contact-grid">
