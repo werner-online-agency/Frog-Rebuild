@@ -515,13 +515,24 @@
 .wdt-topbar-contact {
     display: flex;
     align-items: center;
-    gap: 24px;
     width: 100%;
     justify-content: space-between;
 }
 
-.wdt-topbar-contact-item {
+.topbar-left {
     display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.wdt-topbar-contact-item {
+    display: inline-flex;
     align-items: center;
     gap: 8px;
     color: #d7e3ff;
@@ -529,6 +540,11 @@
     font-size: 13px;
     font-weight: 500;
     text-decoration: none;
+}
+
+.wdt-topbar-contact-item .topbar-icon {
+    color: #ffffff;
+    flex-shrink: 0;
 }
 
 .wdt-topbar-contact-item i {
@@ -672,4 +688,28 @@
    ============================================ */
 .no-scroll {
     overflow: hidden;
+}
+
+/* ============================================
+   BADGE ICONS - HIDDEN GLOBALLY
+   ============================================ */
+.section-badge i,
+.section-badge svg,
+.section-badge-dark i,
+.section-badge-dark svg,
+.section-badge--dark i,
+.section-badge--dark svg,
+.step-icon-badge svg,
+.step-icon-badge--gold svg,
+.hero-badge i,
+.hero-badge .elementor-widget-icon,
+.hero-floating-badge svg,
+.career-img-badge svg,
+.why-image-badge svg,
+.featured-badge i,
+.featured-badge .elementor-widget-icon,
+.wcu__badge i,
+.wcu__content-badge i,
+.impact__badge i {
+    display: none !important;
 }

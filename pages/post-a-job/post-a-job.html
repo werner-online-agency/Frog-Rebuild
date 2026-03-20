@@ -48,9 +48,13 @@
     <div class="wdt-topbar">
         <div class="topbar-inner">
             <div class="wdt-topbar-contact">
-                <span class="wdt-topbar-contact-item">+27 21 556 5598 - Cape Town</span>
-                <span class="wdt-topbar-contact-item">+27 10 824 6772 - Johannesburg</span>
-                <a class="wdt-topbar-contact-item" href="mailto:info@froggsa.co.za">info@froggsa.co.za</a>
+                <div class="topbar-left">
+                    <a class="wdt-topbar-contact-item" href="tel:+27215565598"><svg class="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +27 21 556 5598 - Cape Town</a>
+                    <a class="wdt-topbar-contact-item" href="tel:+27108246772"><svg class="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +27 10 824 6772 - Johannesburg</a>
+                </div>
+                <div class="topbar-right">
+                    <a class="wdt-topbar-contact-item" href="mailto:cv@froggsa.co.za"><svg class="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> cv@froggsa.co.za</a>
+                </div>
             </div>
         </div>
     </div>
@@ -114,15 +118,25 @@
     <main>
         <!-- HERO BANNER -->
         <section class="about-hero">
+            <div class="hero-bg-image">
+                <img src="" alt="Team collaborating in modern office" loading="eager">
+            </div>
+            <div class="hero-grid-overlay"></div>
+            <div class="hero-shapes">
+                <div class="hero-shape hero-shape--1"></div>
+                <div class="hero-shape hero-shape--2"></div>
+                <div class="hero-shape hero-shape--3"></div>
+            </div>
             <div class="about-hero-content">
                 <div class="breadcrumb">
                     <a href="../../index.html">Home</a>
-                    <span>/</span>
+                    <span class="breadcrumb-sep">/</span>
                     <span>Post a Job</span>
                 </div>
                 <h1>Post a <span class="gradient-text">Job Vacancy</span></h1>
                 <p class="about-hero-subtitle">"Providers of professional recruitment services, with the power to find exceptional talent"</p>
             </div>
+            <div class="hero-scroll-indicator"><div class="scroll-line"></div></div>
         </section>
 
         <!-- CTA BANNER -->
@@ -186,7 +200,7 @@
         <section class="process-strip">
             <div class="container">
                 <div class="process-header">
-                    <h2>How It Works</h2>
+                    <h2>How It <span class="gradient-text">Works</span></h2>
                 </div>
                 <div class="process-steps">
                     <div class="process-step">
@@ -214,10 +228,11 @@
             <div class="container">
                 <div class="section-header">
                     <span class="eyebrow">Employer Request</span>
-                    <h2>Submit Your Job Specification</h2>
+                    <h2>Submit Your  <span class="gradient-text">Job Specification</span></h2>
                     <p>Complete the fields below and our team will contact you to start the recruitment process.</p>
                 </div>
                 <div class="form-layout">
+                    <div class="form-border-wrap">
                     <form class="job-form" action="#" method="post" enctype="multipart/form-data">
                         <fieldset class="form-group">
                             <legend>Your Details</legend>
@@ -264,6 +279,7 @@
 
                         <button type="submit" class="btn btn-primary btn-submit">Submit Job Spec</button>
                     </form>
+                    </div>
 
                     <aside class="form-sidebar">
                         <div class="sidebar-card">
@@ -279,39 +295,13 @@
                             <p><a href="mailto:info@froggsa.co.za">info@froggsa.co.za</a></p>
                             <p>Candidates: <a href="mailto:cv@froggsa.co.za">cv@froggsa.co.za</a></p>
                         </div>
+                        <div class="sidebar-card">
+                            <div class="sidebar-card-accent"></div>
+                            <h3>Office Locations</h3>
+                            <p><i class="fas fa-map-marker-alt" style="color:var(--primary-500);margin-right:6px"></i> Cape Town</p>
+                            <p><i class="fas fa-map-marker-alt" style="color:var(--primary-500);margin-right:6px"></i> Johannesburg</p>
+                        </div>
                     </aside>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Get In Touch</h2>
-                    <p>Reach us by phone or email &mdash; we're here to help</p>
-                </div>
-                <div class="contact-grid">
-                    <article class="contact-card">
-                        <div class="contact-card-bar"></div>
-                        <h3>Contact Us</h3>
-                        <p><strong>Cape Town:</strong> <a href="tel:+27215565598">+27 21 556 5598</a></p>
-                        <p><strong>Johannesburg:</strong> <a href="tel:+27108246772">+27 10 824 6772</a></p>
-                    </article>
-                    <article class="contact-card">
-                        <div class="contact-card-bar"></div>
-                        <h3>Looking for a job, email your resume to</h3>
-                        <p><a href="mailto:cv@froggsa.co.za">cv@froggsa.co.za</a></p>
-                    </article>
-                    <article class="contact-card">
-                        <div class="contact-card-bar"></div>
-                        <h3>This email is only if you require information</h3>
-                        <p><a href="mailto:info@froggsa.co.za">info@froggsa.co.za</a></p>
-                    </article>
-                    <article class="contact-card">
-                        <div class="contact-card-bar"></div>
-                        <h3>Are you looking for staff? Email your request to</h3>
-                        <p><a href="mailto:sales@froggsa.co.za">sales@froggsa.co.za</a></p>
-                    </article>
                 </div>
             </div>
         </section>

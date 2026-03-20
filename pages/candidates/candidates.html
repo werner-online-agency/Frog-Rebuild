@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../../assets/elementor-export/frogg-header-styles-fixed.css">
     <link rel="stylesheet" href="../../assets/elementor-export/frogg-footer-styles.css">
+    <link rel="stylesheet" href="../../assets/elementor-export/Frog-home.css">
     <link rel="stylesheet" href="candidates.css">
     <link rel="stylesheet" href="../../assets/css/preloader.css">
 </head>
@@ -47,9 +49,13 @@
     <div class="wdt-topbar">
         <div class="topbar-inner">
             <div class="wdt-topbar-contact">
-                <span class="wdt-topbar-contact-item">+27 21 556 5598 - Cape Town</span>
-                <span class="wdt-topbar-contact-item">+27 10 824 6772 - Johannesburg</span>
-                <a class="wdt-topbar-contact-item" href="mailto:info@froggsa.co.za">info@froggsa.co.za</a>
+                <div class="topbar-left">
+                    <a class="wdt-topbar-contact-item" href="tel:+27215565598"><svg class="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +27 21 556 5598 - Cape Town</a>
+                    <a class="wdt-topbar-contact-item" href="tel:+27108246772"><svg class="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +27 10 824 6772 - Johannesburg</a>
+                </div>
+                <div class="topbar-right">
+                    <a class="wdt-topbar-contact-item" href="mailto:cv@froggsa.co.za"><svg class="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> cv@froggsa.co.za</a>
+                </div>
             </div>
         </div>
     </div>
@@ -103,7 +109,7 @@
                 <li><a href="../../pages/about/about.html">About</a></li>
                 <li><a href="../../pages/post-a-job/post-a-job.html">Post a Job</a></li>
                 <li><a href="../../pages/how-it-works/how-it-works.html">Employers</a></li>
-                <li><a href="../../pages/candidates/candidates.html">Candidates</a></li>
+                <li><a href="../../pages/candidates/candidates.html" class="active">Candidates</a></li>
                 <li><a href="../../pages/resources/resources.html">Resources</a></li>
                 <li><a href="../../pages/contact/contact.html">Contact us</a></li>
             </ul>
@@ -111,215 +117,43 @@
     </header>
 
     <main>
-        <!-- SECTION 1: Hero Banner — DARK -->
-        <section class="page-hero">
-            <div class="page-hero-bg" aria-hidden="true"></div>
-            <div class="container page-hero-grid">
-                <div class="hero-copy">
-                    <div class="breadcrumb">
-                        <a href="../../index.html">Home</a>
-                        <span>/</span>
-                        <span>Candidates</span>
-                    </div>
-                    <span class="eyebrow eyebrow--dark">Candidates</span>
-                    <h1>Ready for your next career move?</h1>
-                    <p>
-                        Are you looking for a new career path or your next job opportunity? Career planning
-                        is important — choose the correct career path. Search job opportunities by keyword
-                        or location and apply today.
-                    </p>
-                    <div class="hero-cta-row">
-                        <a href="../../pages/job-listings/job-listings.html" class="btn btn-hero-primary">Search Jobs</a>
-                        <a href="../../pages/free-cv-template/free-cv-template.html" class="btn btn-hero-outline">Free CV Template</a>
-                    </div>
+        <!-- ============================================================
+             HERO — About-Style Dark with BG Image
+             ============================================================ -->
+        <section class="cand-hero">
+            <div class="hero-bg-image">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1920&q=80" alt="Professional candidates at work" loading="eager">
+            </div>
+            <div class="hero-grid-overlay" aria-hidden="true"></div>
+            <div class="hero-shapes" aria-hidden="true">
+                <div class="hero-shape hero-shape--1"></div>
+                <div class="hero-shape hero-shape--2"></div>
+                <div class="hero-shape hero-shape--3"></div>
+            </div>
+            <div class="cand-hero-content">
+                <div class="breadcrumb">
+                    <a href="../../index.html">Home</a>
+                    <span class="breadcrumb-sep">/</span>
+                    <span>Candidates</span>
                 </div>
-                <div class="hero-visual">
-                    <div class="hero-card">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=85" alt="Candidate ready for their next career move">
-                    </div>
-                    <div class="hero-floating-stat">
-                        <strong>2,500+</strong>
-                        <span>Active Job Opportunities</span>
-                    </div>
-                </div>
+                <h1>Your next career move starts with <span class="gradient-text">FROGG Recruitment.</span></h1>
+                <p class="cand-hero-subtitle">We go above and beyond to match you with your dream role. 100% free for all candidates — since 2010.</p>
+            </div>
+            <div class="hero-scroll-indicator" aria-hidden="true">
+                <div class="scroll-line"></div>
             </div>
         </section>
 
-        <!-- SECTION 2: Why Use a Recruitment Agency — LIGHT -->
-        <section class="why-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="eyebrow">How We Help</span>
-                    <h2>Why should candidates use a trusted recruitment agency?</h2>
-                    <p>Working with a reputable agency gives you access to opportunities you won't find anywhere else.</p>
-                </div>
-                <div class="why-grid">
-                    <article class="why-card">
-                        <div class="why-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-                        </div>
-                        <h3>Client Connections</h3>
-                        <p>We can connect you and our clients to discuss job opportunities directly.</p>
-                    </article>
-                    <article class="why-card">
-                        <div class="why-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                        </div>
-                        <h3>Easy Job Search</h3>
-                        <p>You can <a href="../../pages/job-listings/job-listings.html">search for jobs</a> on our recruitment website with ease, view and apply.</p>
-                    </article>
-                    <article class="why-card">
-                        <div class="why-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
-                        </div>
-                        <h3>Job Alerts</h3>
-                        <p><a href="https://www.froggrecruit-sa.co.za/job-alert/" target="_blank" rel="noopener noreferrer">Job Alerts</a> are easy to create, beneficial, and notify you when new jobs are posted.</p>
-                    </article>
-                    <article class="why-card">
-                        <div class="why-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-                        </div>
-                        <h3>Matched Vacancies</h3>
-                        <p>Vacancies presented to you will match your experience, skills, and qualifications.</p>
-                    </article>
-                    <article class="why-card">
-                        <div class="why-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                        </div>
-                        <h3>Professional Interview</h3>
-                        <p>You will be interviewed by a recruiter professional, a representative of our recruitment agency.</p>
-                    </article>
-                    <article class="why-card">
-                        <div class="why-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-                        </div>
-                        <h3>100% Free</h3>
-                        <p>Best of all — our service is completely free for candidates. No hidden costs.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 3: Benefits — DARK -->
-        <section class="benefits-dark-section">
-            <div class="benefits-dark-bg" aria-hidden="true"></div>
-            <div class="container">
-                <div class="section-header section-header--light">
-                    <span class="eyebrow eyebrow--dark">Benefits</span>
-                    <h2>What are the benefits of using a recruitment agency as a job seeker?</h2>
-                </div>
-                <div class="benefits-dark-grid">
-                    <div class="benefit-dark-item">
-                        <span class="benefit-dark-num">01</span>
-                        <p>Stop wasting time — deal with a reputable recruitment agency that can put you forward to their clients.</p>
-                    </div>
-                    <div class="benefit-dark-item">
-                        <span class="benefit-dark-num">02</span>
-                        <p>Use a professional recruitment website to enhance your career path in finding the best job opportunity.</p>
-                    </div>
-                    <div class="benefit-dark-item">
-                        <span class="benefit-dark-num">03</span>
-                        <p>You can decide if you want to apply for jobs or not — the process is fully in your hands.</p>
-                    </div>
-                    <div class="benefit-dark-item">
-                        <span class="benefit-dark-num">04</span>
-                        <p>Jobs that we advertise range from junior entry level to top senior level positions.</p>
-                    </div>
-                    <div class="benefit-dark-item">
-                        <span class="benefit-dark-num">05</span>
-                        <p>Agencies give solid market-related salary advice so you know your worth.</p>
-                    </div>
-                    <div class="benefit-dark-item benefit-dark-item--highlight">
-                        <span class="benefit-dark-num">06</span>
-                        <p>You can get a <a href="../../pages/free-cv-template/free-cv-template.html">free CV template</a> to help present yourself professionally.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 4: Career Planning — LIGHT -->
-        <section class="career-section">
-            <div class="container career-grid">
-                <div class="career-content">
-                    <span class="eyebrow">Career Planning</span>
-                    <h2>Planning your next career move?</h2>
-                    <p>
-                        We invest in building long-lasting partnerships with our clients to place candidates
-                        into the right positions, empowering them to succeed. We offer jobseekers the
-                        opportunity to view our jobs and to be part of our recruitment articles and blogs.
-                    </p>
-                    <p>
-                        Why does career planning work for you as a job seeker? Why is it so important to
-                        know what a company's values are, and most important of all, how a company's culture
-                        will benefit you?
-                    </p>
-                    <p>
-                        You need a goal. A clear career path to where you would like your career to grow,
-                        a vision in which direction to follow. You need to imagine your future self.
-                        Set an end goal to reach realistically.
-                    </p>
-                    <div class="career-actions">
-                        <a href="../../pages/job-listings/job-listings.html" class="btn btn-primary">View Open Vacancies</a>
-                        <a href="../../pages/resources/resources.html" class="btn btn-outline">Read Our Articles</a>
-                    </div>
-                </div>
-                <div class="career-image">
-                    <div class="career-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=85" alt="Candidate planning their career path">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 5: Beyond — DARK -->
-        <section class="beyond-section">
-            <div class="beyond-bg" aria-hidden="true"></div>
-            <div class="container beyond-grid">
-                <div class="beyond-copy">
-                    <span class="eyebrow eyebrow--dark">Our Reach</span>
-                    <h2>To find you the best people, we go above and beyond.</h2>
-                    <p>
-                        Our ability to connect to millions of jobseeker professionals allows us to
-                        minimise your concerns in finding permanent talent. We are providers of professional
-                        recruitment services with the power to find talent.
-                    </p>
-                    <p>
-                        Our professional recruitment team can help you to effectively recruit entry-level
-                        positions through to senior leadership roles on a permanent or fixed-term contract
-                        basis. Find out how our specialist recruiters can help you achieve your talent
-                        acquisition goals, now and in the future.
-                    </p>
-                    <a href="../../pages/how-it-works/how-it-works.html" class="btn btn-hero-primary">How It Works</a>
-                </div>
-                <div class="beyond-stats">
-                    <div class="stat-card">
-                        <strong>16+</strong>
-                        <span>Years Experience</span>
-                    </div>
-                    <div class="stat-card">
-                        <strong>Top 10</strong>
-                        <span>SA Recruitment Agency</span>
-                    </div>
-                    <div class="stat-card">
-                        <strong>2,500+</strong>
-                        <span>Active Jobs</span>
-                    </div>
-                    <div class="stat-card">
-                        <strong>Free</strong>
-                        <span>For All Candidates</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Banner — DUAL CARDS -->
+        <!-- ============================================================
+             CTA BANNER — Overlapping Hero
+             ============================================================ -->
         <div class="about-cta-banner">
             <div class="cta-col">
                 <h3>Are you looking for staff?</h3>
                 <p>Partner with South Africa's trusted recruitment agency to find the perfect candidates for your business.</p>
                 <a href="../../pages/post-a-job/post-a-job.html#job-form" class="cta-btn">
                     <i class="fas fa-building"></i> Find Talent
-                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </a>
             </div>
             <div class="cta-col">
@@ -327,68 +161,261 @@
                 <p>Explore open vacancies across South Africa. Your next opportunity is waiting.</p>
                 <a href="../../pages/job-listings/job-listings.html" class="cta-btn">
                     <i class="fas fa-search"></i> Find a Job
-                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </a>
             </div>
         </div>
 
-        <!-- SECTION 6: Articles — LIGHT -->
-        <section class="articles-section">
+        <!-- ============================================================
+             SECTION 1: Our Story — Light (About-Style 2-Col)
+             ============================================================ -->
+        <section class="story-section">
+            <div class="container story-container">
+                <div class="story-visual">
+                    <div class="story-image-main">
+                        <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=85" alt="Candidate planning their career path" loading="lazy">
+                    </div>
+                    <div class="story-badge-float">
+                        <span class="badge-year">EST.</span>
+                        <span class="badge-number">2010</span>
+                    </div>
+                    <div class="story-quote-float">
+                        <blockquote>"FROGG Recruitment made the process seamless. From the first interview to landing my dream role — highly recommended!"</blockquote>
+                        <cite>— Sarah M., Finance Professional</cite>
+                    </div>
+                </div>
+                <div class="story-content">
+                    <div class="section-badge"><i class="fas fa-users"></i> For Candidates</div>
+                    <h2>Why use a recruitment agency to <span class="title-accent">find a job?</span></h2>
+                    <p>Working with a trusted recruitment partner gives you access to opportunities, guidance and support that job boards simply can't match.</p>
+                    <div class="story-highlights">
+                        <div class="story-highlight">
+                            <div class="highlight-icon"><i class="fas fa-network-wired"></i></div>
+                            <div>
+                                <h4>Client Connections</h4>
+                                <p>Gain access to our extensive network of employers actively looking to fill roles across South Africa.</p>
+                            </div>
+                        </div>
+                        <div class="story-highlight">
+                            <div class="highlight-icon"><i class="fas fa-search"></i></div>
+                            <div>
+                                <h4>Easy Job Search</h4>
+                                <p>Browse and apply for vacancies quickly through our professional recruitment portal.</p>
+                            </div>
+                        </div>
+                        <div class="story-highlight">
+                            <div class="highlight-icon"><i class="fas fa-bell"></i></div>
+                            <div>
+                                <h4>Job Alerts</h4>
+                                <p>Register once and receive automatic alerts when new positions match your profile and preferences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 2: Process Steps — Dark (Glassmorphism Cards)
+             ============================================================ -->
+        <section class="process-section">
+            <div class="process-section-bg" aria-hidden="true"></div>
+            <div class="container">
+                <div class="section-header section-header--light">
+                    <div class="section-badge light"><i class="fas fa-route"></i> How It Works</div>
+                    <h2>Your journey to a new career in <span class="promise-accent">4 simple steps</span></h2>
+                    <p>From registration to placement — we handle the hard work so you can focus on what matters.</p>
+                </div>
+                <div class="process-grid">
+                    <div class="process-card" data-step="1">
+                        <div class="process-card-glow"></div>
+                        <div class="process-header">
+                            <span class="process-number">01</span>
+                            <div class="process-icon"><i class="fas fa-user-plus"></i></div>
+                        </div>
+                        <h3>Register &amp; Upload CV</h3>
+                        <p>Create your profile on our recruitment portal and upload your latest CV. It's quick, easy and 100% free.</p>
+                        <span class="process-tag">Quick &amp; Easy</span>
+                    </div>
+                    <div class="process-card featured" data-step="2">
+                        <div class="process-card-glow"></div>
+                        <div class="process-header">
+                            <span class="process-number">02</span>
+                            <div class="process-icon"><i class="fas fa-search-plus"></i></div>
+                        </div>
+                        <h3>Browse &amp; Apply</h3>
+                        <p>Search through our active vacancies filtered by role, location and industry. Apply to positions that match your skills.</p>
+                        <span class="process-tag">Smart Matching</span>
+                    </div>
+                    <div class="process-card" data-step="3">
+                        <div class="process-card-glow"></div>
+                        <div class="process-header">
+                            <span class="process-number">03</span>
+                            <div class="process-icon"><i class="fas fa-comments"></i></div>
+                        </div>
+                        <h3>Recruiter Interview</h3>
+                        <p>Our experienced recruiters conduct a professional interview to understand your experience, goals and ideal role.</p>
+                        <span class="process-tag">Personal Touch</span>
+                    </div>
+                    <div class="process-card featured" data-step="4">
+                        <div class="process-card-glow"></div>
+                        <div class="process-header">
+                            <span class="process-number">04</span>
+                            <div class="process-icon"><i class="fas fa-check-circle"></i></div>
+                        </div>
+                        <h3>Get Placed</h3>
+                        <p>We match you with the right employer and support you through the offer process. Your next career chapter starts here.</p>
+                        <span class="process-tag">Success</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 3: Benefits — Light (2-Col Feature List + Stats)
+             ============================================================ -->
+          <section class="articles-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="eyebrow">Resources</span>
-                    <h2>Trending Articles, Advice &amp; Resources</h2>
+                    <div class="section-badge"><i class="fas fa-newspaper"></i> Resources</div>
+                    <h2>Trending Articles, Advice &amp; <span class="title-accent">Resources</span></h2>
                     <p>Expert guidance and insights to help you succeed in your career.</p>
                 </div>
-                <div class="articles-grid">
-                    <article class="article-card">
-                        <div class="article-card-img">
-                            <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?auto=format&fit=crop&w=800&q=85" alt="Professional interview process">
+                <div class="articles-bento">
+                    <!-- Hero card: tall left column -->
+                    <a href="../../pages/hiring-process/hiring-process.html" class="ab-card ab-card--hero">
+                        <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?auto=format&fit=crop&w=800&q=85" alt="Professional interview process" loading="lazy">
+                        <div class="ab-overlay"></div>
+                        <span class="ab-tag">Hiring</span>
+                        <div class="ab-content">
+                            <h3>How to improve your hiring process in 8 easy steps</h3>
+                            <p>Find top-quality candidates for a role and fill your open positions efficiently.</p>
+                            <span class="ab-read">Read Article <i class="fas fa-arrow-right"></i></span>
                         </div>
-                        <h3>How to improve your hiring process in 8 easy steps</h3>
-                        <p>Successful hiring of employees can help you find top-quality candidates for a role and fill your open positions efficiently.</p>
-                        <a href="https://www.froggrecruit-sa.co.za/how-to-improve-your-hiring-process-in-8-easy-steps/" target="_blank" rel="noopener noreferrer" class="article-link">Read More &rarr;</a>
-                    </article>
-                    <article class="article-card">
-                        <div class="article-card-img">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=85" alt="Team building emotional intelligence">
+                    </a>
+
+                    <!-- Top-right -->
+                    <a href="../../pages/emotional-intelligence/emotional-intelligence.html" class="ab-card">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=85" alt="Emotional intelligence" loading="lazy">
+                        <div class="ab-overlay"></div>
+                        <span class="ab-tag">Wellbeing</span>
+                        <div class="ab-content">
+                            <h3>The 4 Keys to Building Emotional Intelligence</h3>
+                            <span class="ab-read">Read Article <i class="fas fa-arrow-right"></i></span>
                         </div>
-                        <h3>The 4 Keys to Building Emotional Intelligence</h3>
-                        <p>Whether you are an employer or a jobseeker, this article on emotional intelligence is meant for you.</p>
-                        <a href="https://www.froggrecruit-sa.co.za/the-4-keys-to-building-emotional-intelligence/" target="_blank" rel="noopener noreferrer" class="article-link">Read More &rarr;</a>
-                    </article>
-                    <article class="article-card">
-                        <div class="article-card-img">
-                            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=85" alt="Happy team at work">
+                    </a>
+
+                    <!-- Mid-right -->
+                    <a href="../../pages/team-performance/team-performance.html" class="ab-card">
+                        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=800&q=85" alt="Team performance" loading="lazy">
+                        <div class="ab-overlay"></div>
+                        <span class="ab-tag">Leadership</span>
+                        <div class="ab-content">
+                            <h3>Increasing your team's performance over the Summer</h3>
+                            <span class="ab-read">Read Article <i class="fas fa-arrow-right"></i></span>
                         </div>
-                        <h3>Drive Job Satisfaction</h3>
-                        <p>Job satisfaction drives people in different ways as everyone does not value the same thing in a job.</p>
-                        <a href="https://www.froggrecruit-sa.co.za/factors-that-drive-job-satisfaction/" target="_blank" rel="noopener noreferrer" class="article-link">Read More &rarr;</a>
-                    </article>
-                </div>
-                <div class="articles-more">
-                    <a href="../../pages/resources/resources.html" class="btn btn-outline">View More Resources</a>
+                    </a>
+
+                    <!-- Bottom row -->
+                    <a href="../../pages/employer-branding/employer-branding.html" class="ab-card">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=85" alt="Employer branding" loading="lazy">
+                        <div class="ab-overlay"></div>
+                        <span class="ab-tag">Branding</span>
+                        <div class="ab-content">
+                            <h3>Improving Employer Branding</h3>
+                            <span class="ab-read">Read Article <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <a href="../../pages/job-satisfaction/job-satisfaction.html" class="ab-card">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=85" alt="Job satisfaction" loading="lazy">
+                        <div class="ab-overlay"></div>
+                        <span class="ab-tag">Career</span>
+                        <div class="ab-content">
+                            <h3>Factors That Drive Job Satisfaction</h3>
+                            <span class="ab-read">Read Article <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- CTA sidebar -->
+                    <a href="../../pages/resources/resources.html" class="ab-sidebar">
+                        <i class="fas fa-arrow-right ab-sidebar-arrow"></i>
+                        <span class="ab-sidebar-label">Explore More</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 7: Testimonials — LIGHT -->
-        <section class="testimonials-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="eyebrow">Reviews</span>
-                    <h2>What Our Clients Say</h2>
-                    <p>These are just a few of our client's reviews of our excellent service. We strive to supply the best recruitment service in our field of expertise.</p>
+        <!-- ============================================================
+             SECTION 4: Career Planning — Dark (Promise-Style 2-Col)
+             ============================================================ -->
+        <section class="career-section">
+            <div class="career-section-bg" aria-hidden="true"></div>
+            <div class="container career-container">
+                <div class="career-left">
+                    <div class="section-badge light"><i class="fas fa-compass"></i> Career Planning</div>
+                    <h2 class="career-title">Planning your next <span class="promise-accent">career move?</span></h2>
+                    <p class="career-lead">We invest in building long-lasting partnerships with our clients to place candidates into the right positions, empowering them to succeed.</p>
+                    <div class="career-values">
+                        <div class="career-value">
+                            <div class="career-value-icon"><i class="fas fa-building"></i></div>
+                            <div>
+                                <h4>Company Culture</h4>
+                                <p>Know a company's values and culture before joining — we give you the inside perspective.</p>
+                            </div>
+                        </div>
+                        <div class="career-value">
+                            <div class="career-value-icon"><i class="fas fa-road"></i></div>
+                            <div>
+                                <h4>Clear Career Path</h4>
+                                <p>Set a clear career path with realistic goals and achievable milestones for success.</p>
+                            </div>
+                        </div>
+                        <div class="career-value">
+                            <div class="career-value-icon"><i class="fas fa-book-open"></i></div>
+                            <div>
+                                <h4>Expert Resources</h4>
+                                <p>Access professional articles, blogs and resources to guide your career decisions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="career-right">
+                    <div class="career-quote-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <blockquote>"What sets FROGG apart is their genuine care for candidates. They didn't just find me a job — they found me the <em>right</em> job. Professional and responsive throughout."</blockquote>
+                        <div class="quote-separator"></div>
+                        <div class="quote-author">
+                            <div class="quote-avatar">J</div>
+                            <div>
+                                <strong>James K.</strong>
+                                <span>IT Specialist</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="career-cta-box">
+                        <h4>Ready to take the next step?</h4>
+                        <p>Browse open vacancies or register your profile for free.</p>
+                        <div class="career-cta-actions">
+                            <a href="../../pages/job-listings/job-listings.html" class="btn-cta btn-cta--primary btn-cta--sm">View Vacancies</a>
+                            <a href="../../pages/resources/resources.html" class="btn-cta btn-cta--outline btn-cta--sm">Read Articles</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 8: Contact — LIGHT -->
+      
+
+        <!-- ============================================================
+             SECTION 6: Contact — Light (Glassmorphism Cards)
+             ============================================================ -->
         <section class="contact-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Get In Touch</h2>
-                    <p>Reach us by phone or email &mdash; we're here to help</p>
+                    <div class="section-badge"><i class="fas fa-envelope"></i> Contact</div>
+                    <h2>Get In <span class="title-accent">Touch</span></h2>
+                    <p>Reach us by phone or email — we're here to help</p>
                 </div>
                 <div class="contact-grid">
                     <article class="contact-card">

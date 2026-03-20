@@ -19,7 +19,8 @@ const FroggApp = {
         TestimonialSlider.init();
         FormHandlers.init();
         BackToTop.init();
-        ServicesTabs.init();
+        WCUTabs.init();
+        ImpactSection.init();
         ResourcesSection.init();
 
         this.hasInitialized = true;
@@ -28,7 +29,7 @@ const FroggApp = {
     reinitDynamicUI() {
         Header.init();
         MobileNav.init();
-        ServicesTabs.init();
+        WCUTabs.init();
     },
 
     bindElementor() {
@@ -155,13 +156,12 @@ const SmoothScroll = {
 
         links.forEach(link => {
             link.addEventListener('click', (e) => {
+                e.preventDefault();
                 const targetId = link.getAttribute('href');
                 if (targetId === '#') return;
 
                 const target = document.querySelector(targetId);
                 if (!target) return;
-
-                e.preventDefault();
 
                 const headerHeight = document.getElementById('header')?.offsetHeight || 0;
                 const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
@@ -451,52 +451,292 @@ const TestimonialSlider = {
 };
 
 /* ============================================
-   SERVICES TABS
+   WHY CHOOSE US - PREMIUM TAB SYSTEM
    ============================================ */
-const ServicesTabs = {
-    getPanelId(btn) {
-        const dataTab = btn.dataset.tab;
-        if (dataTab) return dataTab;
-
-        const dataTarget = btn.dataset.target;
-        if (dataTarget) return dataTarget.replace('#', '');
-
-        const tabId = btn.id || '';
-        if (tabId.startsWith('new-tab-')) {
-            return `new-panel-${tabId.replace('new-tab-', '')}`;
-        }
-
-        return null;
-    },
+const WCUTabs = {
+    autoplayTimer: null,
+    autoplayDuration: 6000,
+    progressRAF: null,
+    progressStart: 0,
+    isPaused: false,
+    isBound: false,
+    particleRAF: null,
 
     init() {
-        // Support old and Elementor/new tab styles
-        const tabBtns = document.querySelectorAll('.tab-btn, .tab-btn-v2, .new-tab-btn');
-        const tabPanels = document.querySelectorAll('.tab-panel, .tab-panel-v2, .new-tab-panel');
-        
-        if (!tabBtns.length) return;
-        
-        tabBtns.forEach(btn => {
-            if (btn.dataset.froggTabBound === '1') return;
+        this.section = document.querySelector('.wcu');
+        if (!this.section) return;
 
+        this.nav = this.section.querySelector('.wcu__nav');
+        this.btns = [...this.section.querySelectorAll('.wcu__nav-btn')];
+        this.panels = [...this.section.querySelectorAll('.wcu__panel')];
+        this.progressBar = this.section.querySelector('.wcu__progress-bar');
+        this.counterCurrent = this.section.querySelector('.wcu__counter-current');
+
+        if (!this.btns.length) return;
+        if (this.isBound) return;
+        this.isBound = true;
+
+        // Click handlers
+        this.btns.forEach((btn, i) => {
             btn.addEventListener('click', () => {
-                const tabId = this.getPanelId(btn);
-                if (!tabId) return;
-                
-                // Remove active class from all buttons and panels
-                tabBtns.forEach(b => b.classList.remove('active'));
-                tabPanels.forEach(p => p.classList.remove('active'));
-                
-                // Add active class to clicked button and corresponding panel
-                btn.classList.add('active');
-                const panel = document.getElementById(tabId);
-                if (panel) {
-                    panel.classList.add('active');
+                this.goTo(i);
+                this.restartAutoplay();
+            });
+        });
+
+        // Hover pause
+        const tabsContainer = this.section.querySelector('.wcu__tabs');
+        if (tabsContainer) {
+            tabsContainer.addEventListener('mouseenter', () => { this.isPaused = true; });
+            tabsContainer.addEventListener('mouseleave', () => {
+                this.isPaused = false;
+                this.restartAutoplay();
+            });
+        }
+
+        // Scroll reveal
+        this.initScrollReveal();
+        // Particles
+        this.initParticles();
+        // Start
+        this.startAutoplay();
+    },
+
+    goTo(index) {
+        const currentActive = this.section.querySelector('.wcu__panel.active');
+        const nextPanel = this.panels[index];
+        if (currentActive === nextPanel) return;
+
+        // Exit current
+        if (currentActive) {
+            currentActive.classList.remove('active');
+            currentActive.classList.add('exiting');
+            setTimeout(() => currentActive.classList.remove('exiting'), 600);
+        }
+
+        // Activate new
+        this.btns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+        this.panels.forEach(p => { if (p !== currentActive) p.classList.remove('active', 'exiting'); });
+
+        this.btns[index].classList.add('active');
+        this.btns[index].setAttribute('aria-selected', 'true');
+        nextPanel.classList.add('active');
+
+        // Update counter
+        if (this.counterCurrent) {
+            this.counterCurrent.textContent = String(index + 1).padStart(2, '0');
+        }
+    },
+
+    getActiveIndex() {
+        return this.btns.findIndex(b => b.classList.contains('active'));
+    },
+
+    startAutoplay() {
+        this.progressStart = performance.now();
+        this.tickProgress();
+    },
+
+    restartAutoplay() {
+        if (this.progressRAF) cancelAnimationFrame(this.progressRAF);
+        this.progressRAF = null;
+        this.progressStart = performance.now();
+        this.lastElapsed = 0;
+        if (this.progressBar) this.progressBar.style.width = '0%';
+        this.tickProgress();
+    },
+
+    tickProgress() {
+        if (this.progressRAF) cancelAnimationFrame(this.progressRAF);
+        this.progressRAF = requestAnimationFrame((now) => {
+            if (this.isPaused) {
+                this.progressStart = now - (this.lastElapsed || 0);
+                this.progressRAF = requestAnimationFrame((n) => this.tickProgress.call(this));
+                return;
+            }
+            const elapsed = now - this.progressStart;
+            this.lastElapsed = elapsed;
+            const pct = Math.min((elapsed / this.autoplayDuration) * 100, 100);
+            if (this.progressBar) this.progressBar.style.width = pct + '%';
+
+            if (elapsed >= this.autoplayDuration) {
+                const next = (this.getActiveIndex() + 1) % this.btns.length;
+                this.goTo(next);
+                this.progressStart = performance.now();
+                this.lastElapsed = 0;
+            }
+            this.progressRAF = requestAnimationFrame(() => this.tickProgress());
+        });
+    },
+
+    initScrollReveal() {
+        const elements = this.section.querySelectorAll('.wcu__header, .wcu__tabs');
+        if (!elements.length) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
                 }
             });
+        }, { threshold: 0.15 });
 
-            btn.dataset.froggTabBound = '1';
+        elements.forEach(el => observer.observe(el));
+    },
+
+    initParticles() {
+        const canvas = this.section.querySelector('.wcu__canvas');
+        if (!canvas) return;
+
+        // Clean up existing canvas if re-initialized
+        if (this.particleRAF) cancelAnimationFrame(this.particleRAF);
+        const existingCvs = canvas.querySelector('canvas');
+        if (existingCvs) existingCvs.remove();
+
+        const cvs = document.createElement('canvas');
+        cvs.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;';
+        canvas.appendChild(cvs);
+
+        const ctx = cvs.getContext('2d');
+        let particles = [];
+        let w, h;
+
+        const resize = () => {
+            w = cvs.width = canvas.offsetWidth;
+            h = cvs.height = canvas.offsetHeight;
+        };
+        resize();
+        window.addEventListener('resize', resize);
+
+        for (let i = 0; i < 40; i++) {
+            particles.push({
+                x: Math.random() * w,
+                y: Math.random() * h,
+                r: Math.random() * 2 + 0.5,
+                dx: (Math.random() - 0.5) * 0.3,
+                dy: (Math.random() - 0.5) * 0.3,
+                o: Math.random() * 0.3 + 0.1
+            });
+        }
+
+        const draw = () => {
+            ctx.clearRect(0, 0, w, h);
+            particles.forEach(p => {
+                p.x += p.dx;
+                p.y += p.dy;
+                if (p.x < 0) p.x = w;
+                if (p.x > w) p.x = 0;
+                if (p.y < 0) p.y = h;
+                if (p.y > h) p.y = 0;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(96, 165, 250, ${p.o})`;
+                ctx.fill();
+            });
+
+            // Draw lines between nearby particles
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(96, 165, 250, ${0.06 * (1 - dist / 120)})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+            this.particleRAF = requestAnimationFrame(draw);
+        };
+        draw();
+    }
+};
+
+/* ============================================
+   RESULTS & IMPACT - ANIMATED COUNTERS
+   ============================================ */
+const ImpactSection = {
+    init() {
+        this.section = document.querySelector('.impact');
+        if (!this.section) return;
+        this.initScrollReveal();
+        this.initCounters();
+    },
+
+    initScrollReveal() {
+        const header = this.section.querySelector('.impact__header');
+        const cards = this.section.querySelectorAll('.impact__card');
+        const trust = this.section.querySelector('.impact__trust');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        if (header) observer.observe(header);
+        if (trust) observer.observe(trust);
+
+        cards.forEach((card, i) => {
+            card.style.transitionDelay = `${i * 0.12}s`;
+            observer.observe(card);
         });
+    },
+
+    initCounters() {
+        const numbers = this.section.querySelectorAll('.impact__card-number[data-target]');
+        if (!numbers.length) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        numbers.forEach(el => observer.observe(el));
+    },
+
+    animateCounter(el) {
+        const target = parseInt(el.dataset.target, 10);
+        const suffix = el.dataset.suffix || '';
+        const format = el.dataset.format || '';
+        const duration = 2000;
+        const start = performance.now();
+
+        const formatNumber = (n) => {
+            if (format === 'short') {
+                if (n >= 1000000) return (n / 1000000).toFixed(0) + 'M';
+                if (n >= 1000) return (n / 1000).toFixed(0) + 'K';
+            }
+            return n.toLocaleString();
+        };
+
+        const tick = (now) => {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(target * eased);
+
+            el.textContent = formatNumber(current) + suffix;
+
+            if (progress < 1) {
+                requestAnimationFrame(tick);
+            }
+        };
+        requestAnimationFrame(tick);
     }
 };
 

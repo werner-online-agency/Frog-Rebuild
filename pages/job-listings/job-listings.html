@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../../assets/elementor-export/frogg-header-styles-fixed.css">
     <link rel="stylesheet" href="../../assets/elementor-export/frogg-footer-styles.css">
+    <link rel="stylesheet" href="../../assets/elementor-export/Frog-home.css">
     <link rel="stylesheet" href="job-listings.css">
     <link rel="stylesheet" href="../../assets/css/preloader.css">
 </head>
@@ -47,9 +49,13 @@
     <div class="wdt-topbar">
         <div class="topbar-inner">
             <div class="wdt-topbar-contact">
-                <span class="wdt-topbar-contact-item">+27 21 556 5598 - Cape Town</span>
-                <span class="wdt-topbar-contact-item">+27 10 824 6772 - Johannesburg</span>
-                <a class="wdt-topbar-contact-item" href="mailto:info@froggsa.co.za">info@froggsa.co.za</a>
+                <div class="topbar-left">
+                    <a class="wdt-topbar-contact-item" href="tel:+27215565598"><svg class="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +27 21 556 5598 - Cape Town</a>
+                    <a class="wdt-topbar-contact-item" href="tel:+27108246772"><svg class="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +27 10 824 6772 - Johannesburg</a>
+                </div>
+                <div class="topbar-right">
+                    <a class="wdt-topbar-contact-item" href="mailto:cv@froggsa.co.za"><svg class="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> cv@froggsa.co.za</a>
+                </div>
             </div>
         </div>
     </div>
@@ -111,32 +117,25 @@
     </header>
 
     <main>
-        <!-- PAGE HERO — DARK -->
+        <!-- PAGE HERO — GLOBAL -->
         <section class="page-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="breadcrumb">
-                        <a href="../../index.html">Home</a>
-                        <span>/</span>
-                        <span>Job Listings</span>
-                    </div>
-                    <span class="eyebrow">Careers</span>
-                    <h1>Find Your Next Opportunity</h1>
-                    <p>Browse our latest vacancies across South Africa. New roles are added regularly.</p>
+            <div class="hero-bg-image">
+                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1920&q=85" alt="Professional working on laptop" loading="eager">
+            </div>
+            <div class="hero-grid-overlay"></div>
+            <div class="hero-shapes">
+                <div class="hero-shape hero-shape--1"></div>
+                <div class="hero-shape hero-shape--2"></div>
+                <div class="hero-shape hero-shape--3"></div>
+            </div>
+            <div class="page-hero-content">
+                <div class="breadcrumb">
+                    <a href="../../index.html">Home</a>
+                    <span class="breadcrumb-sep">/</span>
+                    <span>Job Listings</span>
                 </div>
-                <div class="hero-search">
-                    <form class="hero-search-form" id="heroSearch">
-                        <div class="hero-search-field">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                            <input type="text" id="searchKeyword" placeholder="Job title, keyword or company…" aria-label="Search keyword">
-                        </div>
-                        <div class="hero-search-field">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            <input type="text" id="searchLocation" placeholder="City or province…" aria-label="Search location">
-                        </div>
-                        <button type="submit" class="btn btn-search">Search Jobs</button>
-                    </form>
-                </div>
+                <h1>Find Your Next <span class="gradient-text">Opportunity</span></h1>
+                <p class="page-hero-subtitle">"Browse our latest vacancies across South Africa. New roles are added regularly."</p>
             </div>
         </section>
 
@@ -432,25 +431,47 @@
             Filters
         </button>
 
-        <!-- CTA Banner — DUAL CARDS -->
-        <div class="about-cta-banner">
-            <div class="cta-col">
-                <h3>Are you looking for staff?</h3>
-                <p>Partner with South Africa's trusted recruitment agency to find the perfect candidates for your business.</p>
-                <a href="../../pages/post-a-job/post-a-job.html#job-form" class="cta-btn">
-                    <i class="fas fa-building"></i> Find Talent
-                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
+        <!-- CONTACT SECTION — GLOBAL -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge"><i class="fas fa-envelope"></i> Contact</div>
+                    <h2>Get In <span class="title-accent">Touch</span></h2>
+                    <p>Reach us by phone or email — we're here to help</p>
+                </div>
+                <div class="contact-grid">
+                    <article class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <h3>Contact Us</h3>
+                        <p><strong>Cape Town:</strong> <a href="tel:+27215565598">+27 21 556 5598</a></p>
+                        <p><strong>Johannesburg:</strong> <a href="tel:+27108246772">+27 10 824 6772</a></p>
+                    </article>
+                    <article class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <h3>Looking for a job, email your resume to</h3>
+                        <p><a href="mailto:cv@froggsa.co.za">cv@froggsa.co.za</a></p>
+                    </article>
+                    <article class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        </div>
+                        <h3>This email is only if you require information</h3>
+                        <p><a href="mailto:info@froggsa.co.za">info@froggsa.co.za</a></p>
+                    </article>
+                    <article class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                        </div>
+                        <h3>Are you looking for staff? Email your request to</h3>
+                        <p><a href="mailto:sales@froggsa.co.za">sales@froggsa.co.za</a></p>
+                    </article>
+                </div>
             </div>
-            <div class="cta-col">
-                <h3>Are you ready for your next career move?</h3>
-                <p>Explore open vacancies across South Africa. Your next opportunity is waiting.</p>
-                <a href="../../pages/job-listings/job-listings.html" class="cta-btn">
-                    <i class="fas fa-search"></i> Find a Job
-                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-            </div>
-        </div>
+        </section>
     </main>
 
      <footer class="frogg-footer">

@@ -88,14 +88,20 @@
                 if (!isOpen) {
                     item.classList.add('open');
                     header.setAttribute('aria-expanded', 'true');
-                    body.style.maxHeight = body.scrollHeight + 'px';
+                    body.style.maxHeight = (body.scrollHeight + 44) + 'px';
+                    body.addEventListener('transitionend', function handler() {
+                        if (item.classList.contains('open')) {
+                            body.style.maxHeight = 'none';
+                        }
+                        body.removeEventListener('transitionend', handler);
+                    });
                 }
             });
         });
 
         // Set initial max-height for pre-opened items
         document.querySelectorAll('.assist-accordion-item.open .assist-accordion-body').forEach(function (body) {
-            body.style.maxHeight = body.scrollHeight + 'px';
+            body.style.maxHeight = 'none';
         });
     })();
 
@@ -160,4 +166,110 @@
 
         sections.forEach(function (el) { observer.observe(el); });
     })();
+
+    /* =============================================================
+       Process Section — Horizontal Card Slider (Full-width peek)
+       ============================================================= */
+    (function () {
+        var slider = document.getElementById('processSlider');
+        var prevBtn = document.getElementById('processPrev');
+        var nextBtn = document.getElementById('processNext');
+        var dotsWrap = document.getElementById('processDots');
+        var progressWrap = document.getElementById('processProgress');
+        var wrap = slider ? slider.closest('.process-slider-wrap') : null;
+        var hint = wrap ? wrap.querySelector('.swipe-hint') : null;
+        if (!slider || !prevBtn || !nextBtn || !dotsWrap) return;
+
+        var cards = slider.querySelectorAll('.process-card');
+        var dots = dotsWrap.querySelectorAll('.slider-dot');
+        var progressSteps = progressWrap ? progressWrap.querySelectorAll('.process-progress-step') : [];
+        var current = 0;
+        var total = cards.length;
+
+        function getOffset() {
+            return cards[0].offsetWidth + 28; // card width + gap
+        }
+
+        function hideHint() {
+            if (hint) { hint.style.opacity = '0'; hint.style.pointerEvents = 'none'; }
+        }
+
+        function slideTo(index) {
+            if (index < 0) index = total - 1;
+            if (index >= total) index = 0;
+            current = index;
+            slider.style.transform = 'translateX(-' + (current * getOffset()) + 'px)';
+            slider.style.transition = 'transform .55s cubic-bezier(.4,0,.2,1)';
+            hideHint();
+            updateControls();
+        }
+
+        function updateControls() {
+            // No disabled state — carousel loops
+            prevBtn.disabled = false;
+            nextBtn.disabled = false;
+            dots.forEach(function (d, i) {
+                d.classList.toggle('active', i === current);
+            });
+            cards.forEach(function (c, i) {
+                c.classList.toggle('active', i === current);
+            });
+            // Progress bar
+            progressSteps.forEach(function (step, i) {
+                step.classList.remove('active', 'done');
+                if (i < current) step.classList.add('done');
+                else if (i === current) step.classList.add('active');
+            });
+            // Toggle fade overlay on last slide
+            if (wrap) {
+                wrap.classList.toggle('at-end', current >= total - 1);
+            }
+        }
+
+        prevBtn.addEventListener('click', function () { slideTo(current - 1); });
+        nextBtn.addEventListener('click', function () { slideTo(current + 1); });
+
+        // Click card to go to next slide (loops)
+        cards.forEach(function (card) {
+            card.addEventListener('click', function (e) {
+                // Don't navigate if clicking a link
+                if (e.target.closest('a')) return;
+                slideTo(current + 1);
+            });
+        });
+
+        dots.forEach(function (dot, i) {
+            dot.addEventListener('click', function () { slideTo(i); });
+        });
+
+        // Click on progress step to jump
+        progressSteps.forEach(function (step, i) {
+            step.addEventListener('click', function () { slideTo(i); });
+            step.style.cursor = 'pointer';
+        });
+
+        // Touch/swipe support
+        var startX = 0;
+        var diffX = 0;
+        slider.addEventListener('touchstart', function (e) {
+            startX = e.touches[0].clientX;
+            slider.style.transition = 'none';
+        }, { passive: true });
+        slider.addEventListener('touchmove', function (e) {
+            diffX = e.touches[0].clientX - startX;
+            var base = current * getOffset();
+            slider.style.transform = 'translateX(' + (-base + diffX) + 'px)';
+        }, { passive: true });
+        slider.addEventListener('touchend', function () {
+            if (diffX < -50) slideTo(current + 1);
+            else if (diffX > 50) slideTo(current - 1);
+            else slideTo(current);
+            diffX = 0;
+        });
+
+        // Init
+        slideTo(0);
+    })();
+
+
 })();

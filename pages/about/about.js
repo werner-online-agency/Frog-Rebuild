@@ -102,3 +102,32 @@
         counters.forEach(animateCounter);
     }
 })();
+
+/* ===== CAPABILITY CARD SHOW/HIDE ===== */
+(function () {
+    document.querySelectorAll('.capability-header').forEach(function (header) {
+        function toggle() {
+            var card = header.closest('.capability-card');
+            var isOpen = card.classList.contains('is-open');
+
+            // Close all other cards
+            document.querySelectorAll('.capability-card.is-open').forEach(function (open) {
+                if (open !== card) {
+                    open.classList.remove('is-open');
+                    open.querySelector('.capability-header').setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            card.classList.toggle('is-open', !isOpen);
+            header.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+        }
+
+        header.addEventListener('click', toggle);
+        header.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggle();
+            }
+        });
+    });
+})();

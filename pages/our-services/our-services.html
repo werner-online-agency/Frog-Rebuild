@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../../assets/elementor-export/frogg-header-styles-fixed.css">
     <link rel="stylesheet" href="../../assets/elementor-export/frogg-footer-styles.css">
     <link rel="stylesheet" href="our-services.css">
@@ -47,9 +48,13 @@
     <div class="wdt-topbar">
         <div class="topbar-inner">
             <div class="wdt-topbar-contact">
-                <span class="wdt-topbar-contact-item">+27 21 556 5598 - Cape Town</span>
-                <span class="wdt-topbar-contact-item">+27 10 824 6772 - Johannesburg</span>
-                <a class="wdt-topbar-contact-item" href="mailto:info@froggsa.co.za">info@froggsa.co.za</a>
+                <div class="topbar-left">
+                    <a class="wdt-topbar-contact-item" href="tel:+27215565598"><svg class="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +27 21 556 5598 - Cape Town</a>
+                    <a class="wdt-topbar-contact-item" href="tel:+27108246772"><svg class="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +27 10 824 6772 - Johannesburg</a>
+                </div>
+                <div class="topbar-right">
+                    <a class="wdt-topbar-contact-item" href="mailto:cv@froggsa.co.za"><svg class="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> cv@froggsa.co.za</a>
+                </div>
             </div>
         </div>
     </div>
@@ -111,97 +116,116 @@
     </header>
 
     <main>
-        <!-- PAGE HERO — DARK -->
+        <!-- PAGE HERO — GLOBAL -->
         <section class="page-hero">
-            <div class="container">
+            <div class="hero-bg-image">
+                <img src="" alt="Professional recruitment team at work" loading="eager">
+            </div>
+            <div class="hero-grid-overlay"></div>
+            <div class="hero-shapes">
+                <div class="hero-shape hero-shape--1"></div>
+                <div class="hero-shape hero-shape--2"></div>
+                <div class="hero-shape hero-shape--3"></div>
+            </div>
+            <div class="page-hero-content">
                 <div class="breadcrumb">
                     <a href="../../index.html">Home</a>
-                    <span>/</span>
+                    <span class="breadcrumb-sep">/</span>
                     <span>Our Services</span>
                 </div>
-                <span class="eyebrow">Our Services</span>
-                <h1>Professional Recruitment Services</h1>
-                <p>From permanent placements to executive search, we provide comprehensive recruitment solutions across all major industries in South Africa.</p>
+                <h1>Professional <span class="gradient-text">Recruitment Services</span></h1>
+                <p class="page-hero-subtitle">"From permanent placements to executive search, we provide comprehensive recruitment solutions across all major industries in South Africa."</p>
             </div>
         </section>
 
-        <!-- HOW WE CAN HELP — PREMIUM -->
+        <!-- CTA Banner — DUAL CARDS (GLOBAL) -->
+        <div class="about-cta-banner">
+            <div class="cta-col">
+                <h3>Are you looking for staff?</h3>
+                <p>Partner with South Africa's trusted recruitment agency. We connect you with exceptional talent, fast.</p>
+                <a href="../../pages/post-a-job/post-a-job.html#job-form" class="cta-btn">
+                    <i class="fas fa-building"></i> Find Talent
+                    <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+            <div class="cta-col">
+                <h3>Are you ready for your next career move?</h3>
+                <p>Explore open vacancies across South Africa. Your next opportunity is waiting.</p>
+                <a href="../../pages/job-listings/job-listings.html" class="cta-btn">
+                    <i class="fas fa-search"></i> Find a Job
+                    <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- HOW WE CAN HELP — LIGHT -->
         <section class="help-section">
             <div class="container">
-                <div class="section-header">
-                    <span class="eyebrow help-eyebrow">Our Expertise</span>
-                    <h2>How We Can Help</h2>
-                    <p>Tailored recruitment solutions designed to meet your unique business needs</p>
-                </div>
-                <div class="section-banner">
-                    <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=1920&q=85" alt="Professional recruitment team at work">
+                <div class="help-header">
+                    <div class="section-badge"><i class="fas fa-briefcase"></i> Our Expertise</div>
+                    <h2>How We Can <span class="gradient-accent">Help</span></h2>
+                    <p class="help-lead">Tailored recruitment solutions designed to meet your unique business needs</p>
                 </div>
                 <div class="help-grid">
                     <article class="help-card">
-                        <div class="help-card-number">01</div>
-                        <div class="help-card-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                        <div class="help-card-top">
+                            <span class="help-card-number">01</span>
+                            <div class="help-card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                            </div>
                         </div>
-                        <div class="help-card-content">
-                            <h3>Permanent Recruitment</h3>
-                            <p>Full-service permanent placement from job profiling and candidate sourcing through to onboarding support. We ensure the right cultural and skills fit for lasting appointments.</p>
-                        </div>
-                        <div class="help-card-glow"></div>
+                        <h3>Permanent Recruitment</h3>
+                        <p>Full-service permanent placement from job profiling and candidate sourcing through to onboarding support. We ensure the right cultural and skills fit for lasting appointments.</p>
                     </article>
                     <article class="help-card">
-                        <div class="help-card-number">02</div>
-                        <div class="help-card-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <div class="help-card-top">
+                            <span class="help-card-number">02</span>
+                            <div class="help-card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
                         </div>
-                        <div class="help-card-content">
-                            <h3>Temporary &amp; Contract Staffing</h3>
-                            <p>Flexible workforce solutions for project-based work, seasonal peaks, and fixed-term requirements. Fully managed payroll and compliance included.</p>
-                        </div>
-                        <div class="help-card-glow"></div>
+                        <h3>Temporary &amp; Contract Staffing</h3>
+                        <p>Flexible workforce solutions for project-based work, seasonal peaks, and fixed-term requirements. Fully managed payroll and compliance included.</p>
                     </article>
                     <article class="help-card">
-                        <div class="help-card-number">03</div>
-                        <div class="help-card-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <div class="help-card-top">
+                            <span class="help-card-number">03</span>
+                            <div class="help-card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
                         </div>
-                        <div class="help-card-content">
-                            <h3>Executive Search</h3>
-                            <p>Confidential headhunting for C-suite, director, and senior management positions. We leverage our extensive industry networks to identify exceptional leaders.</p>
-                        </div>
-                        <div class="help-card-glow"></div>
+                        <h3>Executive Search</h3>
+                        <p>Confidential headhunting for C-suite, director, and senior management positions. We leverage our extensive industry networks to identify exceptional leaders.</p>
                     </article>
                     <article class="help-card">
-                        <div class="help-card-number">04</div>
-                        <div class="help-card-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <div class="help-card-top">
+                            <span class="help-card-number">04</span>
+                            <div class="help-card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            </div>
                         </div>
-                        <div class="help-card-content">
-                            <h3>Specialist Recruitment</h3>
-                            <p>Niche recruitment for hard-to-fill roles requiring specialist skills or qualifications. Our consultants have deep sector expertise across multiple industries.</p>
-                        </div>
-                        <div class="help-card-glow"></div>
+                        <h3>Specialist Recruitment</h3>
+                        <p>Niche recruitment for hard-to-fill roles requiring specialist skills or qualifications. Our consultants have deep sector expertise across multiple industries.</p>
                     </article>
                     <article class="help-card">
-                        <div class="help-card-number">05</div>
-                        <div class="help-card-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        <div class="help-card-top">
+                            <span class="help-card-number">05</span>
+                            <div class="help-card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            </div>
                         </div>
-                        <div class="help-card-content">
-                            <h3>Payroll Services</h3>
-                            <p>Comprehensive payroll administration and management for your temporary and contract staff, ensuring compliance with all South African labour legislation.</p>
-                        </div>
-                        <div class="help-card-glow"></div>
+                        <h3>Payroll Services</h3>
+                        <p>Comprehensive payroll administration and management for your temporary and contract staff, ensuring compliance with all South African labour legislation.</p>
                     </article>
                     <article class="help-card">
-                        <div class="help-card-number">06</div>
-                        <div class="help-card-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <div class="help-card-top">
+                            <span class="help-card-number">06</span>
+                            <div class="help-card-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
                         </div>
-                        <div class="help-card-content">
-                            <h3>Psychometric Assessments</h3>
-                            <p>Industry-standard assessments and skills testing to validate candidate suitability and ensure the best possible match for your organisation.</p>
-                        </div>
-                        <div class="help-card-glow"></div>
+                        <h3>Psychometric Assessments</h3>
+                        <p>Industry-standard assessments and skills testing to validate candidate suitability and ensure the best possible match for your organisation.</p>
                     </article>
                 </div>
             </div>
@@ -210,10 +234,10 @@
         <!-- INDUSTRIES — DARK -->
         <section class="industries-section">
             <div class="container">
-                <div class="section-header">
-                    <span class="eyebrow ind-eyebrow">Sector Expertise</span>
-                    <h2>Industries We Serve</h2>
-                    <p>We recruit across a broad range of sectors, bringing specialist knowledge to each</p>
+                <div class="industries-header">
+                    <div class="section-badge light"><i class="fas fa-globe"></i> Sector Expertise</div>
+                    <h2>Industries We <span class="gradient-accent-light">Serve</span></h2>
+                    <p class="industries-lead">We recruit across a broad range of sectors, bringing specialist knowledge to each</p>
                 </div>
                 <div class="industries-grid">
                     <div class="industry-card" style="--i:0">
@@ -276,31 +300,12 @@
             </div>
         </section>
 
-        <!-- CTA Banner — DUAL CARDS -->
-        <div class="about-cta-banner">
-            <div class="cta-col">
-                <h3>Are you looking for staff?</h3>
-                <p>Partner with South Africa's trusted recruitment agency to find the perfect candidates for your business.</p>
-                <a href="../../pages/post-a-job/post-a-job.html#job-form" class="cta-btn">
-                    <i class="fas fa-building"></i> Find Talent
-                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-            </div>
-            <div class="cta-col">
-                <h3>Are you ready for your next career move?</h3>
-                <p>Explore open vacancies across South Africa. Your next opportunity is waiting.</p>
-                <a href="../../pages/job-listings/job-listings.html" class="cta-btn">
-                    <i class="fas fa-search"></i> Find a Job
-                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-            </div>
-        </div>
-
-        <!-- Contact — LIGHT -->
-        <section class="contact-section">
+        <!-- CONTACT — LIGHT -->
+       <section class="contact-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Get In Touch</h2>
+                    <div class="section-badge"><i class="fas fa-envelope"></i> Contact</div>
+                    <h2>Get In <span class="title-accent">Touch</span></h2>
                     <p>Reach us by phone or email &mdash; we're here to help</p>
                 </div>
                 <div class="contact-grid">
@@ -316,12 +321,27 @@
                         <div class="contact-card-icon">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         </div>
-                        <h3>Email Us</h3>
+                        <h3>Looking for a job, email your resume to</h3>
+                        <p><a href="mailto:cv@froggsa.co.za">cv@froggsa.co.za</a></p>
+                    </article>
+                    <article class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        </div>
+                        <h3>This email is only if you require information</h3>
+                        <p><a href="mailto:info@froggsa.co.za">info@froggsa.co.za</a></p>
+                    </article>
+                    <article class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                        </div>
+                        <h3>Are you looking for staff? Email your request to</h3>
                         <p><a href="mailto:sales@froggsa.co.za">sales@froggsa.co.za</a></p>
                     </article>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="frogg-footer">
